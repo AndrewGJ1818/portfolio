@@ -1,16 +1,16 @@
 # 1. Project Planning
 
-- [v] Write initial README documentation.
-- [v] Define and document project requirements.
-- [v] Create wireframe layout.
-- [ ] Style guide — define color palette.
+- [x] Write initial README documentation.
+- [x] Define and document project requirements.
+- [x] Create wireframe layout.
+- [x] Style guide — define color palette.
 - [ ] Style guide — define typography.
 
 ---
 
 # 2. Illustration & Visual Assets
 
-- [ ] Design filing cabinet illustration.  
+- [x] Design filing cabinet illustration.  
 - [ ] Design background illustration.
 - [ ] Design document illustration.  
 - [ ] Create additional illustrations.

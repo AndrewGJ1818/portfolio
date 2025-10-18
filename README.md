@@ -22,7 +22,7 @@ This portfolio is not only intended to showcase my most relevant projects, but a
 
 ## ✍ Wireframe
 
-![Wireframe of the project](/docs/wireframe.png)
+![Wireframe of the project](/docs/img/wireframe.png)
 
 ---
 
@@ -36,14 +36,17 @@ This portfolio is not only intended to showcase my most relevant projects, but a
 │   └── index.html
 ├── css/
 │   └── styles.css
-├── src/                      
+├── src/
+│   └── filing_cabinet_3000px.png 
 ├── docs/
+|   ├── img/
+│   │   ├── colorpalette.png
+│   │   └── wireframe.png
 │   ├── copy.md
 │   ├── designoptions.md
 │   ├── requirements.md
 │   ├── roadmap.md
-│   ├── styleguide.md
-│   └── wireframe.png
+│   └── styleguide.md
 └── README.md
 ```
 
