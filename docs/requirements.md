@@ -6,7 +6,7 @@
 - The website must include the following core sections — Home, About Me, Skills, Projects, and Contact.
 - The main navigation menu must be accessible from all sections.
 - Visual assets must be original and, if animated or interactive, must not interfere with usability or accessibility.
-- The contact form must be fully functional. 
+- The contact form must be fully functional.
 
 ---
 
@@ -24,5 +24,5 @@
 
 ## Constraints
 
-- No JavaScript or frameworks — Vanilla HTML & CSS only (except in contact form).
+- No JavaScript or frameworks — Vanilla HTML & CSS only (except, probably, in contact form).
 - Must be hosted on GitHub Pages.

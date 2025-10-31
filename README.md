@@ -37,7 +37,6 @@ This portfolio is not only intended to showcase my most relevant projects, but a
 ├── css/
 │   └── styles.css
 ├── src/
-│   └── filing_cabinet_3000px.png 
 ├── docs/
 |   ├── img/
 │   │   ├── colorpalette.png
@@ -62,5 +61,5 @@ This portfolio is not only intended to showcase my most relevant projects, but a
 
 - **[Requirements Document](/docs/requirements.md):** Functional goals and specifications.
 - **[Design Notes](/docs/designoptions.md):** Rationale behind interaction and layout decisions.
-- **[Roadmap](/docs/roadmap.md):** Project development phases.  
+- **[Roadmap](/docs/roadmap.md):** Project development phases.
 - **[Style Guide](/docs/styleguide.md):** Color and font design decisions.

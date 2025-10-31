@@ -9,3 +9,11 @@ To ensure the illustration assets remain visually engaging despite the low satur
 ---
 
 # Fonts
+
+---
+
+# Design software
+
+The design and illustration process for this portfolio was carried out entirely using [Inkscape](https://inkscape.org/), an open-source vector graphics editor. Inkscape was chosen for its flexibility, precision, and compatibility with scalable design workflows, making it an ideal tool for creating clean and adaptable visual assets.
+
+All portfolio illustrations were designed as vector graphics within Inkscape, ensuring that each element could be easily resized and adjusted without any loss of quality. To support responsive design across different devices and screen resolutions, every illustration was exported in three distinct resolutions (referred as small, medium and large). This approach allows the visual assets to maintain clarity, proportion, and aesthetic consistency whether displayed on mobile, tablet, or desktop layouts.
