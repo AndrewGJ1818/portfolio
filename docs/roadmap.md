@@ -4,7 +4,7 @@
 - [x] Define and document project requirements.
 - [x] Create wireframe layout.
 - [x] Style guide — define color palette.
-- [ ] Style guide — define typography.
+- [x] Style guide — define typography.
 
 ---
 
@@ -19,7 +19,7 @@
 
 # 3. HTML Structure
 
-- [ ] Write copy.
+- [x] Write copy.
 - [ ] Configure HTML meta tags.
 - [ ] Build header.
 - [ ] Implement “Home” section.
