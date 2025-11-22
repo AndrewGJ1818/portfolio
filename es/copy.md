@@ -8,8 +8,6 @@ Andrew García Jean
 
 Estoy aprendiendo a combinar mi formación en biología con el desarrollo de software, traduciendo el lenguaje de la vida en código. Actualmente, busco mi primera oportunidad profesional.
 
----
-
 # Sobre mi
 
 2018 – 2022 Grado en Biología
@@ -34,62 +32,43 @@ Aunque me considero naturalmente analítico, mi curiosidad me ha llevado a empre
 
 Actualmente, busco oportunidades de trabajo remoto donde pueda aplicar mi formación científica y mis habilidades técnicas a problemas reales de bioinformática. El trabajo en remoto me permite colaborar de forma eficiente, manteniendo al mismo tiempo la autonomía que ha definido mi forma de aprender.
 
----
-
 # Habilidades
 
 ### \> Bioinformática
 
-- **Fundamentos de Biología**
-Genética, microbiología, botánica, zoología, citología, fisiología, ecología, bioquímica.
+- **Fundamentos de Biología.** Genética, microbiología, botánica, zoología, citología, fisiología, ecología, bioquímica.
 
-- **Análisis Estadístico**
-Estadística descriptiva e inferencial; análisis univariante, multivariante y de supervivencia.
+- **Análisis Estadístico.** Estadística descriptiva e inferencial; análisis univariante, multivariante y de supervivencia.
 
-- **Genómica y Análisis Molecular**
-Análisis de datos de secuenciación (FASTQ/FASTA), análisis de microarrays, acoplamiento molecular, ómica computacional.
+- **Genómica y Análisis Molecular.** Análisis de datos de secuenciación (FASTQ/FASTA), análisis de microarrays, acoplamiento molecular, ómica computacional.
 
-- **Machine Learning**
-Redes neuronales, decision trees, random forests, SVM.
+- **Machine Learning.** Redes neuronales, decision trees, random forests, SVM.
 
-- **Método Científico y Proceso de Investigación**
-Planteamiento de hipótesis, diseño experimental, optimización de protocolos, validación de datos, prácticas de reproducibilidad.
+- **Método Científico y Proceso de Investigación**. Planteamiento de hipótesis, diseño experimental, optimización de protocolos, validación de datos, prácticas de reproducibilidad.
 
 ### \> Desarrollo de Software
 
-- **HTML**
-HTML5 semántico, accesibilidad (ARIA), meta tags, optimización de SEO, formularios y validación de campos, menejo responsive de recursos.
+- **HTML.** HTML5 semántico, accesibilidad (ARIA), meta tags, optimización de SEO, formularios y validación de campos, menejo responsive de recursos.
 
-- **CSS**
-Responsive design, Flexbox, Grid, transiciones, animaciones, selectores avanzados, at-rules, custom properties, funciones CSS.
+- **CSS.** Responsive design, Flexbox, Grid, transiciones, animaciones, selectores avanzados, at-rules, custom properties, funciones CSS.
 
-- **JavaScript**
-ES6, manipulación del DOM, eventos, fetch, JSON.
+- **JavaScript.** ES6, manipulación del DOM, eventos, fetch, JSON.
 
-- **Python**
-Backend, Django, POO, testing, librerías científicas (Pandas, NumPy, SciPy).
+- **Python.** Backend, Django, POO, testing, librerías científicas (Pandas, NumPy, SciPy).
 
-- **Bases de Datos**
-SQL, MongoDB, optimización de consultas, operaciones CRUD.
+- **Bases de Datos.** SQL, MongoDB, optimización de consultas, operaciones CRUD.
 
-- **Control de Versiones**
-Git, GitHub, branching, merging, pull requests, flujos de trabajo.
+- **Control de Versiones.** Git, GitHub, branching, merging, pull requests, flujos de trabajo.
 
-- **Otros Lenguajes y Herramientas**
-Bash, R, Lua.
+- **Otros Lenguajes y Herramientas.** Bash, R, Lua.
 
 ### \> Soft Skills
 
-- **Autonomía en la Resolución de Problemas**
-Nada me da más satisfacción que abordar un problema por mi cuenta y encontrar la solución de manera independiente.
+- **Autonomía en la Resolución de Problemas.** Nada me da más satisfacción que abordar un problema por mi cuenta y encontrar la solución de manera independiente.
 
-- **Atención Meticulosa al Detalle**
-Mi rigurosidad siempre me ha dado excelentes resultados en Matemáticas, Estadística y, años después, en Bioestadística.
+- **Atención Meticulosa al Detalle.** Mi rigurosidad siempre me ha dado excelentes resultados en Matemáticas, Estadística y, años después, en Bioestadística.
 
-- **Aprendizaje Rápido e Interdisciplinar**
-Me encanta explorar dos mundos tan extensos como la Biología y la Informática, y disfruto aún más aplicando conocimientos de uno en el otro.
-
----
+- **Aprendizaje Rápido e Interdisciplinar.** Me encanta explorar dos mundos tan extensos como la Biología y la Informática, y disfruto aún más aplicando conocimientos de uno en el otro.
 
 # Proyectos
 
@@ -98,8 +77,6 @@ Me encanta explorar dos mundos tan extensos como la Biología y la Informática,
 Un reto técnico y creativo diseñado bajo una regla principal: nada de JavaScript. El sitio mantiene interactividad y animaciones únicamente con HTML y CSS, apoyándose en una planificación y documentación que imitan un flujo de trabajo real. Todas las ilustraciones están hechas a mano, dando al portfolio un estilo visual distintivo y personal.
 
 HTML CSS
-
----
 
 # Formulario de Contacto
 

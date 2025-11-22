@@ -8,8 +8,6 @@ Andrew Garcia Jean
 
 I’m learning to combine my background in biology with software development, translating the language of life into code. Currently, I'm seeking my first professional opportunity.
 
----
-
 # About Me
 
 2018 – 2022	BSc in Biology
@@ -34,63 +32,43 @@ While I consider myself naturally analytical, my curiosity has driven me to take
 
 I’m now seeking remote opportunities where I can apply my scientific background and technical skills to real bioinformatics problems. Remote work allows me to collaborate efficiently while maintaining the independence that have shaped my learning path.
 
----
-
 # Skills
 
 ### \> Bioinformatics
 
-- **Biology Fundamentals**
-Genetics, microbiology, botany, zoology, cytology, physiology, ecology, biochemistry.
+- **Biology Fundamentals.** Genetics, microbiology, botany, zoology, cytology, physiology, ecology, biochemistry.
 
-- **Statistical Analysis**
-Descriptive and inferential statistics; univariate, multivariate and survival analysis.
+- **Statistical Analysis.** Descriptive and inferential statistics; univariate, multivariate and survival analysis.
 
-- **Genomics & Molecular Analysis**
-Sequencing data analysis (FASTQ/FASTA), microarray analysis, molecular docking, computational omics.
+- **Genomics & Molecular Analysis.** Sequencing data analysis (FASTQ/FASTA), microarray analysis, molecular docking, computational omics.
 
-- **Machine Learning**
-Neural networks, decision trees, random forests, SVMs.
+- **Machine Learning.** Neural networks, decision trees, random forests, SVMs.
 
-- **Scientific Method & Research Workflow**
-Hypothesis formulation, experimental design, protocol optimization, data validation, reproducibility practices.
-
+- **Scientific Method & Research Workflow.** Hypothesis formulation, experimental design, protocol optimization, data validation, reproducibility practices.
 
 ### \> Software Development
 
-- **HTML**
-Semantic HTML5, accessibility (ARIA), meta tags, SEO optimization, forms and validadtion, responsive media handling.
+- **HTML.** Semantic HTML5, accessibility (ARIA), meta tags, SEO optimization, forms and validadtion, responsive media handling.
 
-- **CSS**
-Responsive design, Flexbox, Grid, transitions, animations, advanced selectors, at-rules, custom properties, CSS functions.
+- **CSS.** Responsive design, Flexbox, Grid, transitions, animations, advanced selectors, at-rules, custom properties, CSS functions.
 
-- **JavaScript**
-ES6, DOM, events, fetch, JSON.
+- **JavaScript.** ES6, DOM, events, fetch, JSON.
 
-- **Python**
-Backend, Django, OOP, testing, scientific libraries (Pandas, NumPy, SciPy).
+- **Python.** Backend, Django, OOP, testing, scientific libraries (Pandas, NumPy, SciPy).
 
-- **Databases**
-SQL, MongoDB, query optimization, CRUD.
+- **Databases.** SQL, MongoDB, query optimization, CRUD.
 
-- **Version Control**
-Git, GitHub, branching, merging, pull request, workflows.
+- **Version Control.** Git, GitHub, branching, merging, pull request, workflows.
 
-- **Other Tools & Languages**
-Bash, R, Lua.
+- **Other Tools & Languages.** Bash, R, Lua.
 
 ### \> Soft Skills
 
-- **Autonomy in Problem Solving**
-Nothing gives me more satisfaction than tackling a problem on my own and finding a solution independently.
+- **Autonomy in Problem Solving.** Nothing gives me more satisfaction than tackling a problem on my own and finding a solution independently.
 
-- **Meticulous Attention to Detail**
-My rigor has allowed me to achieve excellent results in Mathematics, Statistics, and later in Biostatistics.
+- **Meticulous Attention to Detail.** My rigor has allowed me to achieve excellent results in Mathematics, Statistics, and later in Biostatistics.
 
-- **Cross-Disciplinary Learning Agility**
-I love exploring two vast worlds, such as Biology and Computer Science, and I enjoy even more applying knowledge from one to the other.
-
----
+- **Cross-Disciplinary Learning Agility.** I love exploring two vast worlds, such as Biology and Computer Science, and I enjoy even more applying knowledge from one to the other.
 
 # Projects
 
@@ -99,8 +77,6 @@ I love exploring two vast worlds, such as Biology and Computer Science, and I en
 A creative and technical challenge built under one rule: no JavaScript. The site delivers interactivity and animation using only HTML and CSS, supported by thorough planning and documentation that mimic a real development workflow. All illustrations are hand-drawn, giving the portfolio a distinctive and personal visual style.
 
 HTML CSS
-
----
 
 # Contact Form
 

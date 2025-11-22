@@ -8,8 +8,6 @@
 - Visual assets must be original and, if animated or interactive, must not interfere with usability or accessibility.
 - The contact form must be fully functional.
 
----
-
 ## Non-Functional Requirements
 
 - The website must be fully responsive and function correctly on desktops, tablets, and mobile devices.
@@ -19,8 +17,6 @@
 - The website must have a Lighthouse accessibility score ≥ 90.
 - The website must load within 2 seconds on a standard internet connection.
 - All images must be optimized for web usage to minimize loading times.
-
----
 
 ## Constraints
 

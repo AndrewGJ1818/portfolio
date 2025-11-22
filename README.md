@@ -11,20 +11,14 @@ This portfolio is not only intended to showcase my most relevant projects, but a
 - Fully responsive design, adapted for all screen sizes.
 - Built with HTML and CSS.
 
----
-
 ## 🚀 Technologies
 
 - **HTML5**
 - **CSS3**
 
----
-
 ## ✍ Wireframe
 
 ![Wireframe of the project](/docs/img/wireframe.png)
-
----
 
 ## 📁 Folder Structure
 
@@ -50,13 +44,9 @@ This portfolio is not only intended to showcase my most relevant projects, but a
 └── README.md
 ```
 
----
-
 ## 📌 Project Status
 
 **🚧 In progress**
-
----
 
 ## 📄 Additional Documentation
 

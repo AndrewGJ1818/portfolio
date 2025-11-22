@@ -24,8 +24,6 @@ Use a continuous scroll animation that opens drawers and reveals documents as th
 **Conclusion.**
 Visually strong, but not practical for structured navigation or recruiter-friendly usage.
 
----
-
 ### 2. Two-Level Navigation
 
 **Idea.**  
@@ -43,8 +41,6 @@ Use the scroll animation to navigate between drawers, and include a secondary na
 
 **Conclusion.**
 Too heavy for the project’s scope and potentially confusing for users.
-
----
 
 ### 3. Controlled Details-Based Content Reveal (Final Choice ✅)
 
@@ -68,8 +64,6 @@ Use the scroll animation to navigate between drawers, and represent documents us
 **Conclusion.**
 Best balance between creativity, usability, and technical feasibility. Offers full interaction without JavaScript, while maintaining content accessibility. When navigating via anchor link,
 the target drawer opens (through scroll animation) and the corresponding document auto-expands while others collapse.
-
----
 
 ## Navigation Design — Access to content
 

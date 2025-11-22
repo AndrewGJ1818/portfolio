@@ -6,16 +6,12 @@
 - [x] Style guide — define color palette.
 - [x] Style guide — define typography.
 
----
-
 # 2. Illustrations & Visual Assets
 
 - [x] Design filing cabinet illustration.
 - [x] Design background illustration.
 - [x] Design document illustrations.
 - [x] Create additional illustrations.
-
----
 
 # 3. HTML Structure
 
@@ -29,8 +25,6 @@
 - [ ] Implement “Contact” section.
 - [ ] Build footer.
 
----
-
 # 4. CSS Styling & Layout
 
 - [ ] Apply basic layout and base styles.
@@ -38,8 +32,6 @@
 - [ ] Style project cards.
 - [ ] Add responsive design for all screen sizes.
 - [ ] Apply additional animations and transitions.
-
----
 
 # 5. Final Review & Deployment
 
