@@ -16,13 +16,17 @@ All fonts are served directly through the Google Fonts API to ensure optimal per
 
 The following families are used throughout the project:
 
-- **[Dynalight.](https://fonts.google.com/specimen/Dynalight)** A decorative script font used exclusively in the Home section, where it appears on the diploma illustration that introduces the site. Dynalight was selected after evaluating other calligraphic options whose uppercase characters felt overly ornate and hindered readability. Its smoother letterforms preserve a handwritten aesthetic while maintaining clear legibility, making it ideal for a signature-like display use.
+- **[Dynalight.](https://fonts.google.com/specimen/Dynalight)**
+A decorative script font used exclusively in the Home section, where it appears on the diploma illustration that introduces the site. Dynalight was selected after evaluating other calligraphic options whose uppercase characters felt overly ornate and hindered readability. Its smoother letterforms preserve a handwritten aesthetic while maintaining clear legibility, making it ideal for a signature-like display use.
 
-- **[Indie Flower.](https://fonts.google.com/specimen/Indie+Flower)** This handwriting-style font appears across all interface elements designed to resemble sticky notes, such as the Skills document, the navigation bar, and other annotations throughout the interface. Despite its handwritten nature, Indie Flower was chosen for its exceptional legibility and balanced proportions, allowing it to convey a casual, personal tone without compromising clarity.
+- **[Indie Flower.](https://fonts.google.com/specimen/Indie+Flower)** 
+This handwriting-style font appears across all interface elements designed to resemble sticky notes, such as the Skills document, the navigation bar, and other annotations throughout the interface. Despite its handwritten nature, Indie Flower was chosen for its exceptional legibility and balanced proportions, allowing it to convey a casual, personal tone without compromising clarity.
 
-- **[PT Serif.](https://fonts.google.com/specimen/PT+Serif)** Used exclusively in the About Me document and the Home section, which is structured as a stack of papers containing longer passages of text. Its traditional serif design and high readability at paragraph scale help convey a sense of formality, professionalism, and textual density—ideal for representing an “official report” within the filing cabinet narrative.
+- **[PT Serif.](https://fonts.google.com/specimen/PT+Serif)** 
+Used exclusively in the About Me document and the Home section, which is structured as a stack of papers containing longer passages of text. Its traditional serif design and high readability at paragraph scale help convey a sense of formality, professionalism, and textual density—ideal for representing an “official report” within the filing cabinet narrative.
 
-- **[Roboto.](https://fonts.google.com/specimen/Roboto)** The main sans-serif family used across the Projects, Contact, and Footer sections, as well as other general text elements. Roboto’s geometric yet friendly shapes provide a neutral and modern tone that complements the more expressive fonts used elsewhere. It ensures high readability in all screen sizes and serves as the typographic foundation of the portfolio.
+- **[Roboto.](https://fonts.google.com/specimen/Roboto)** 
+The main sans-serif family used across the Projects, Contact, and Footer sections, as well as other general text elements. Roboto’s geometric yet friendly shapes provide a neutral and modern tone that complements the more expressive fonts used elsewhere. It ensures high readability in all screen sizes and serves as the typographic foundation of the portfolio.
 
 To improve performance, only the required weights (regular and bold) are loaded for each family, and the use of preconnect directives ensures faster resource fetching from Google’s CDN. Each section of the website uses a single primary font to preserve typographic consistency within that “document,” while maintaining visual distinction between sections.
 

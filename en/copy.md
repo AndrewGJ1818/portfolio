@@ -40,61 +40,59 @@ I’m now seeking remote opportunities where I can apply my scientific backgroun
 
 ### \> Bioinformatics
 
-**Biology Fundamentals** *(Brote)*
+- **Biology Fundamentals**
 Genetics, microbiology, botany, zoology, cytology, physiology, ecology, biochemistry.
 
-**Statistical Analysis** *(Sumatorio)*
+- **Statistical Analysis**
 Descriptive and inferential statistics; univariate, multivariate and survival analysis.
 
-**Genomics & Molecular Analysis** *(ADN)*
+- **Genomics & Molecular Analysis**
 Sequencing data analysis (FASTQ/FASTA), microarray analysis, molecular docking, computational omics.
 
-**Machine Learning** *(Cerebro con Engranaje)*
+- **Machine Learning**
 Neural networks, decision trees, random forests, SVMs.
 
-**Scientific Method & Research Workflow** *(Bombilla)*
+- **Scientific Method & Research Workflow**
 Hypothesis formulation, experimental design, protocol optimization, data validation, reproducibility practices.
 
 
 ### \> Software Development
 
-**HTML** *(HTML)*
+- **HTML**
 Semantic HTML5, accessibility (ARIA), meta tags, SEO optimization, forms and validadtion, responsive media handling.
 
-**CSS** *(CSS)*
+- **CSS**
 Responsive design, Flexbox, Grid, transitions, animations, advanced selectors, at-rules, custom properties, CSS functions.
 
-**JavaScript** *(JS)*
+- **JavaScript**
 ES6, DOM, events, fetch, JSON.
 
-**Python** *(Python o Serpiente)*
+- **Python**
 Backend, Django, OOP, testing, scientific libraries (Pandas, NumPy, SciPy).
 
-**Databases** *(Cilindro)*
+- **Databases**
 SQL, MongoDB, query optimization, CRUD.
 
-**Version Control** *(Git)*
+- **Version Control**
 Git, GitHub, branching, merging, pull request, workflows.
 
-**Other Tools & Languages** *(Llave inglesa)*
+- **Other Tools & Languages**
 Bash, R, Lua.
 
 ### \> Soft Skills
 
-**Autonomy in Problem Solving** *(Brujula)*
+- **Autonomy in Problem Solving**
 Nothing gives me more satisfaction than tackling a problem on my own and finding a solution independently.
 
-**Meticulous Attention to Detail** *(Lupa)*
+- **Meticulous Attention to Detail**
 My rigor has allowed me to achieve excellent results in Mathematics, Statistics, and later in Biostatistics.
 
-**Cross-Disciplinary Learning Agility** *(Libro)*
+- **Cross-Disciplinary Learning Agility**
 I love exploring two vast worlds, such as Biology and Computer Science, and I enjoy even more applying knowledge from one to the other.
 
 ---
 
 # Projects
-
----
 
 ## Personal Portfolio
 

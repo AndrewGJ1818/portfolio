@@ -40,60 +40,58 @@ Actualmente, busco oportunidades de trabajo remoto donde pueda aplicar mi formac
 
 ### \> Bioinformática
 
-**Fundamentos de Biología**
+- **Fundamentos de Biología**
 Genética, microbiología, botánica, zoología, citología, fisiología, ecología, bioquímica.
 
-**Análisis Estadístico**
+- **Análisis Estadístico**
 Estadística descriptiva e inferencial; análisis univariante, multivariante y de supervivencia.
 
-**Genómica y Análisis Molecular**
+- **Genómica y Análisis Molecular**
 Análisis de datos de secuenciación (FASTQ/FASTA), análisis de microarrays, acoplamiento molecular, ómica computacional.
 
-**Machine Learning**
+- **Machine Learning**
 Redes neuronales, decision trees, random forests, SVM.
 
-**Método Científico y Proceso de Investigación**
+- **Método Científico y Proceso de Investigación**
 Planteamiento de hipótesis, diseño experimental, optimización de protocolos, validación de datos, prácticas de reproducibilidad.
 
 ### \> Desarrollo de Software
 
-**HTML**
+- **HTML**
 HTML5 semántico, accesibilidad (ARIA), meta tags, optimización de SEO, formularios y validación de campos, menejo responsive de recursos.
 
-**CSS**
+- **CSS**
 Responsive design, Flexbox, Grid, transiciones, animaciones, selectores avanzados, at-rules, custom properties, funciones CSS.
 
-**JavaScript**
+- **JavaScript**
 ES6, manipulación del DOM, eventos, fetch, JSON.
 
-**Python**
+- **Python**
 Backend, Django, POO, testing, librerías científicas (Pandas, NumPy, SciPy).
 
-**Bases de Datos**
+- **Bases de Datos**
 SQL, MongoDB, optimización de consultas, operaciones CRUD.
 
-**Control de Versiones**
+- **Control de Versiones**
 Git, GitHub, branching, merging, pull requests, flujos de trabajo.
 
-**Otros Lenguajes y Herramientas**
+- **Otros Lenguajes y Herramientas**
 Bash, R, Lua.
 
 ### \> Soft Skills
 
-**Autonomía en la Resolución de Problemas**
+- **Autonomía en la Resolución de Problemas**
 Nada me da más satisfacción que abordar un problema por mi cuenta y encontrar la solución de manera independiente.
 
-**Atención Meticulosa al Detalle**
+- **Atención Meticulosa al Detalle**
 Mi rigurosidad siempre me ha dado excelentes resultados en Matemáticas, Estadística y, años después, en Bioestadística.
 
-**Aprendizaje Rápido e Interdisciplinar**
+- **Aprendizaje Rápido e Interdisciplinar**
 Me encanta explorar dos mundos tan extensos como la Biología y la Informática, y disfruto aún más aplicando conocimientos de uno en el otro.
 
 ---
 
 # Proyectos
-
----
 
 ## Portfolio Personal
 

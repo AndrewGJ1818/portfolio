@@ -24,5 +24,5 @@
 
 ## Constraints
 
-- No JavaScript or frameworks — Vanilla HTML & CSS only (except, probably, in contact form).
+- No JavaScript or frameworks — Vanilla HTML & CSS only.
 - Must be hosted on GitHub Pages.

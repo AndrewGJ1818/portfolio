@@ -9,7 +9,7 @@ This portfolio is not only intended to showcase my most relevant projects, but a
 - Extensive use of animations and transitions to enhance user experience.
 - Basic SEO optimization and accessibility compliance.
 - Fully responsive design, adapted for all screen sizes.
-- Built with HTML and CSS (JavaScript only for contact form).
+- Built with HTML and CSS.
 
 ---
 
@@ -30,22 +30,23 @@ This portfolio is not only intended to showcase my most relevant projects, but a
 
 ```
 /portfolio
-├── es/
-│   └── index.html
-├── en/
-│   └── index.html
+├── docs/
 ├── css/
 │   └── styles.css
-├── src/
-├── docs/
 |   ├── img/
 │   │   ├── colorpalette.png
 │   │   └── wireframe.png
-│   ├── copy.md
 │   ├── designoptions.md
 │   ├── requirements.md
 │   ├── roadmap.md
 │   └── styleguide.md
+├── en/
+│   ├── copy.md
+│   └── index.html
+├── es/
+│   ├── copy.md
+│   └── index.html
+├── src/
 └── README.md
 ```
 
