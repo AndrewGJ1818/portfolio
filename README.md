@@ -24,9 +24,9 @@ This portfolio is not only intended to showcase my most relevant projects, but a
 
 ```
 /portfolio
-├── docs/
 ├── css/
 │   └── styles.css
+├── docs/
 |   ├── img/
 │   │   ├── colorpalette.png
 │   │   └── wireframe.png
@@ -41,6 +41,8 @@ This portfolio is not only intended to showcase my most relevant projects, but a
 │   ├── copy.md
 │   └── index.html
 ├── src/
+├── .gitignore
+├── index.html
 └── README.md
 ```
 

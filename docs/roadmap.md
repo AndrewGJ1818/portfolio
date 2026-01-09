@@ -16,14 +16,14 @@
 # 3. HTML Structure
 
 - [x] Write copy.
-- [ ] Configure HTML meta tags.
-- [ ] Build header.
-- [ ] Implement “Home” section.
-- [ ] Implement “About Me” section.
-- [ ] Implement “Skills” section.
-- [ ] Implement “Projects” section.
-- [ ] Implement “Contact” section.
-- [ ] Build footer.
+- [x] Configure HTML meta tags.
+- [x] Build HUD.
+- [x] Implement “Home” section.
+- [x] Implement “About Me” section.
+- [x] Implement “Skills” section.
+- [x] Implement “Projects” section.
+- [x] Implement “Contact” section.
+- [x] Build footer.
 
 # 4. CSS Styling & Layout
 
