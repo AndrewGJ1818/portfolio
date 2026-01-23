@@ -30,7 +30,7 @@
 - [ ] Apply basic layout and base styles.
 - [ ] Implement the main scroll navigation.
 - [ ] Style project cards.
-- [ ] Add responsive design for all screen sizes.
+- [x] Add responsive design for all screen sizes.
 - [ ] Apply additional animations and transitions.
 
 # 5. Final Review & Deployment

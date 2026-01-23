@@ -73,31 +73,32 @@ body {
 /* BACKGROUND IMAGES */
 
 html {
-    width: 100%;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 body {
     background:
-        radial-gradient(transparent, 60%, #130D0C77 80%, #130D0C99 100%) no-repeat,
+        radial-gradient(ellipse 60% 50%, transparent 65%, #130D0C55 95%, #130D0C77 100%) no-repeat,
         url(../src/background_large.png) no-repeat center / cover;
         background-color: #9C655D;
     width: 100%;
     min-height: 100vh;
     display: block flow-root;
+    position: relative;
 }
 
-.section-home {
+.section-home-container {
     background: url(../src/certificate_large.png) no-repeat center / contain;
     aspect-ratio: 1539/1034;
-    min-width: 25rem;
-    max-width: 95%;
-    width: 50vw;
+    width: 40vw;
+    max-width: 80rem;
     position: relative;
     margin: 10vh auto 0;
     filter: drop-shadow(0 0 5px #130D0C);
 }
 
-.section-home__wrapper {
+.section-home {
     position: absolute;
     inset: 15% 10%;
     text-align: center;
@@ -105,10 +106,10 @@ body {
 
 .filing-cabinet {
     position: relative;
-    aspect-ratio: 2126/3543;
-    width: 70vw;
-    min-width: 30rem;
-    top: -10vh;
+    aspect-ratio: 1657/3217;
+    max-width: 80rem;
+    width: 40vw;
+    top: -2vh;
     margin: 0 auto;
 }
 
@@ -123,7 +124,6 @@ body {
 .filing-cabinet__back {
     background-image: url(../src/fcabinet_slots_large.png);
 }
-
 
 .filing-cabinet__front {
     background-image: url(../src/fcabinet_structure_large.png);
@@ -145,14 +145,85 @@ body {
 
 /* UI ELEMENTS */
 
-.options {
-    background-image: url(../src/sheet_large.png);
-    height: 200px;
+.nav-container {
+    background: url(../src/postit_large.png) no-repeat center / contain;
+    aspect-ratio: 1021/1109;
+    height: 45vh;
+    position: fixed;
+    top: -5vh;
+    left: 2vw;
+    transform: rotate(4deg);
+    z-index: 10;
+    filter: drop-shadow(0 0 5px #130D0C);
 }
 
-.nav {
-    background-image: url(../src/postit_large.png);
-    height: 100px;
+.options-container {
+    background: url(../src/sheet_large.png) no-repeat center / contain;
+    display: block flow-root;
+    aspect-ratio: 1106/655;
+    height: 25vh;
+    position: fixed;
+    bottom: -2vh;
+    left: 2vw;
+    transform: rotate(-2deg);
+    z-index: 10;
+    filter: drop-shadow(0 0 5px #130D0C);
+}
+
+.viewport-overlay-gradient {
+    background: linear-gradient(#130D0C88, 2%, transparent 10% 90%, 98%, #130D0C88);
+    position: fixed;
+    inset: 0 0 0 0;
+}
+
+.footer-overlay-gradient {
+    background: linear-gradient(transparent, #130D0C 70%);
+    height: 70vh;
+    max-height: 30%;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+}
+
+/* STRUCTURE MEDIA QUERIES */
+
+@media (orientation: portrait) and (max-width: 1200px) {
+    .section-home-container {
+        width: 90vw;
+        margin-top: 20vh;
+    }
+    .filing-cabinet {
+        width: 95vw;
+        top: -1vh;
+    }
+    .nav-container {
+        height: 60vw;
+        /* height: 27vh; */
+        max-height: 30vh;
+        top: -4vh;
+        left: -30px;
+        transform: rotate(5deg);
+    }
+    .options-container {
+        height: clamp(25vw, 18vh, 30vw);
+        left: auto;
+        right: -2vw;
+        transform: rotateY(180deg) rotate(3deg);
+        & .options {
+            transform: rotatey(180deg);
+        }
+    }
+}
+
+@media (orientation: landscape) and (max-width:1400px) {
+    .section-home-container {
+        width: 50vw;
+        left: 15vw;
+    }
+    .filing-cabinet {
+        width: 50vw;
+        left: 15vw;
+    }
 }
 
 /****************************************
@@ -180,7 +251,7 @@ body {
     width: calc(665px/5);
     height: calc(396px/2);
     border: 5px solid red;
-    animation: 1.8s steps(1) infinite static-animation ;
+    animation: 1.8s steps(1) infinite static-animation;
 }
 
 .activator {
