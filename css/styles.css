@@ -23,7 +23,6 @@
 }
 
 h1, h2, h3, h4, a, body, p, ul, ol, menu, div, article {
-    margin: 0;
     outline:purple 1px solid; /* Structuring */
     list-style: none;
 }
@@ -73,8 +72,7 @@ body {
 /* BACKGROUND IMAGES */
 
 html {
-    width: 100vw;
-    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -82,10 +80,10 @@ body {
         radial-gradient(ellipse 60% 50%, transparent 65%, #130D0C55 95%, #130D0C77 100%) no-repeat,
         url(../src/background_large.png) no-repeat center / cover;
         background-color: #9C655D;
-    width: 100%;
     min-height: 100vh;
     display: block flow-root;
     position: relative;
+    overflow-x: hidden;
 }
 
 .section-home-container {
@@ -142,6 +140,53 @@ body {
 
 /* SCROLL ANIMATION */
 
+/* .section-home-container {
+    animation-name: scroll-follow-home;
+    animation-timing-function: ease-in;
+    animation-timeline: scroll();
+}
+
+.filing-cabinet {
+    animation-name: scroll-follow-fcabinet;
+    animation-timing-function: ease-in;
+    animation-timeline: scroll();
+}
+
+@keyframes scroll-follow-home {
+    from { top: 0vh; }
+    to { top: 10vh; }
+}
+
+@keyframes scroll-follow-fcabinet {
+    from { margin-top: 0; }
+    to { margin-top: 15vh }
+} */
+
+.filing-cabinet__drawer-1 {
+    animation-name: scroll-open-drawer-1;
+    animation-timing-function: linear;
+    animation-timeline: scroll();
+}
+
+.filing-cabinet__drawer-2 {
+    animation-name: scroll-open-drawer-2;
+    animation-timing-function: linear;
+    animation-timeline: scroll();
+}
+
+@keyframes scroll-open-drawer-1 {
+    15% { top: 0; scale: 1}
+    35% { top: 40vh; scale: 1.5}
+    40% { top: 40vh; scale: 1.5}
+    55% { top: 0; scale: 1}
+}
+
+@keyframes scroll-open-drawer-2 {
+    61% { top: 0; scale: 1}
+    76%{ top: 40vh; scale: 1.5}
+    81%{ top: 40vh; scale: 1.5}
+    96% { top: 0; scale: 1}
+}
 
 /* UI ELEMENTS */
 
@@ -180,9 +225,8 @@ body {
     background: linear-gradient(transparent, #130D0C 70%);
     height: 70vh;
     max-height: 30%;
-    width: 100vw;
     position: absolute;
-    bottom: 0;
+    inset: auto 0 0 0;
 }
 
 /* STRUCTURE MEDIA QUERIES */
@@ -198,7 +242,6 @@ body {
     }
     .nav-container {
         height: 60vw;
-        /* height: 27vh; */
         max-height: 30vh;
         top: -4vh;
         left: -30px;
