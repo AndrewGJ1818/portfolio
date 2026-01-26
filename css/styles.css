@@ -33,11 +33,7 @@ body {
 }
 
 h1, h2, h3, h4, a, body, p, ul, ol, menu, div, article {
-<<<<<<< HEAD
     margin: 0;
-    outline:purple 1px solid; /* Structuring */
-=======
->>>>>>> a764bb9 (style: complete basic scroll animation and drawers' animation)
     list-style: none;
 }
 
@@ -157,8 +153,6 @@ body {
 
 /* SCROLL ANIMATION */
 
-<<<<<<< HEAD
-=======
 .section-home-container {
     animation: 1ms linear scroll-follow-home; /* 'animation-duration: 1ms' is a Firefox requirement (MDN) */
     animation-timeline: scroll();
@@ -198,7 +192,6 @@ body {
     55%, 95% { transform: translateY(0); scale: 1; }
     70%, 80% { transform: translateY(40%); scale: 1.08; }
 }
->>>>>>> a764bb9 (style: complete basic scroll animation and drawers' animation)
 
 /* UI ELEMENTS */
 
