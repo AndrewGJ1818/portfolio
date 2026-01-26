@@ -33,7 +33,6 @@ body {
 }
 
 h1, h2, h3, h4, a, body, p, ul, ol, menu, div, article {
-    margin: 0;
     list-style: none;
 }
 
@@ -81,8 +80,7 @@ body {
 /* BACKGROUND IMAGES */
 
 html {
-    width: 100vw;
-    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -90,7 +88,6 @@ body {
         radial-gradient(ellipse 60% 50%, transparent 65%, #130D0C55 95%, #130D0C77 100%) no-repeat,
         url(../src/background_large.png) no-repeat center / cover;
         background-color: #9C655D;
-    width: 100%;
     min-height: 100vh;
     display: block flow-root;
     position: relative;
@@ -238,9 +235,8 @@ body {
     background: radial-gradient(110% 80% at center bottom, #1D130F 60%, 85%, transparent);
     height: 70vh;
     max-height: 30%;
-    width: 100vw;
     position: absolute;
-    bottom: 0;
+    inset: auto 0 0 0;
 }
 
 /* STRUCTURE MEDIA QUERIES */
@@ -256,7 +252,6 @@ body {
     }
     .nav-container {
         height: 60vw;
-        /* height: 27vh; */
         max-height: 30vh;
         top: -4vh;
         left: -30px;
