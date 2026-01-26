@@ -14,6 +14,16 @@
     --font-sans: "Roboto", sans-serif;
 }
 
+/*  STRUCTURING */
+
+/* h1, h2, h3, h4, a, body, p, ul, ol, menu, div, article, header, aside {
+    outline:purple 1px solid;
+}
+
+body {
+    outline: red solid 5px;
+} */
+
 /* CSS RESET */
 
 * {
@@ -23,7 +33,6 @@
 }
 
 h1, h2, h3, h4, a, body, p, ul, ol, menu, div, article {
-    outline:purple 1px solid; /* Structuring */
     list-style: none;
 }
 
@@ -41,7 +50,6 @@ p, small {
 }
 
 body {
-    outline: red solid 5px;
     color: var(--main-text-color);
 }
 
@@ -112,7 +120,6 @@ body {
 }
 
 .filing-cabinet > div {
-    inset: 0;
     position: absolute;
     background-repeat: no-repeat;
     background-position: center;
@@ -121,78 +128,74 @@ body {
 
 .filing-cabinet__back {
     background-image: url(../src/fcabinet_slots_large.png);
+    inset: 20.44% 7.22% 29.37% 7.22%;
 }
 
 .filing-cabinet__front {
     background-image: url(../src/fcabinet_structure_large.png);
+    inset: 0;
     filter: drop-shadow(0 0 5px #130D0C);
 }
 
 .filing-cabinet__drawer-1 {
     background-image: url(../src/fcabinet_drawer1_large.png);
+    inset: 20.44% 7.22% 55.07% 7.22%;
     filter: drop-shadow(0 0 5px #130D0C);
 }
 
 .filing-cabinet__drawer-2 {
     background-image: url(../src/fcabinet_drawer2_large.png);
+    inset: 48.5% 9.07% 29.37% 9.07%;
     filter: drop-shadow(0 0 5px #130D0C);
 }
 
 /* SCROLL ANIMATION */
 
-/* .section-home-container {
-    animation-name: scroll-follow-home;
-    animation-timing-function: ease-in;
+.section-home-container {
+    animation: 1ms linear scroll-follow-home; /* 'animation-duration: 1ms' is a Firefox requirement (MDN) */
     animation-timeline: scroll();
 }
 
 .filing-cabinet {
-    animation-name: scroll-follow-fcabinet;
-    animation-timing-function: ease-in;
+    animation: 1ms linear scroll-follow-fcabinet; /* 'animation-duration: 1ms' is a Firefox requirement (MDN) */
     animation-timeline: scroll();
 }
 
 @keyframes scroll-follow-home {
-    from { top: 0vh; }
-    to { top: 10vh; }
+    from { transform: translateY(0); }
+    to { transform: translateY(min(-3vh, -6vw)); }
 }
 
 @keyframes scroll-follow-fcabinet {
-    from { margin-top: 0; }
-    to { margin-top: 15vh }
-} */
+    from { transform: translateY(0); }
+    to { transform: translateY(min(-5vh, -10vw)); }
+}
 
 .filing-cabinet__drawer-1 {
-    animation-name: scroll-open-drawer-1;
-    animation-timing-function: linear;
+    animation: 1ms linear scroll-open-drawer-1; /* 'animation-duration: 1ms' is a Firefox requirement (MDN) */
     animation-timeline: scroll();
 }
 
 .filing-cabinet__drawer-2 {
-    animation-name: scroll-open-drawer-2;
-    animation-timing-function: linear;
-    animation-timeline: scroll();
+    animation: 1ms linear scroll-open-drawer-2; /* 'animation-duration: 1ms' is a Firefox requirement (MDN) */
+    animation-timeline: scroll()
 }
 
 @keyframes scroll-open-drawer-1 {
-    15% { top: 0; scale: 1}
-    35% { top: 40vh; scale: 1.5}
-    40% { top: 40vh; scale: 1.5}
-    55% { top: 0; scale: 1}
+    10%, 50% { transform: translateY(0); scale: 1; }
+    25%, 35% { transform: translateY(40%); scale: 1.08; }
 }
 
 @keyframes scroll-open-drawer-2 {
-    61% { top: 0; scale: 1}
-    76%{ top: 40vh; scale: 1.5}
-    81%{ top: 40vh; scale: 1.5}
-    96% { top: 0; scale: 1}
+    55%, 95% { transform: translateY(0); scale: 1; }
+    70%, 80% { transform: translateY(40%); scale: 1.08; }
 }
 
 /* UI ELEMENTS */
 
 .nav-container {
     background: url(../src/postit_large.png) no-repeat center / contain;
-    aspect-ratio: 1021/1109;
+    aspect-ratio: 939/925;
     height: 45vh;
     position: fixed;
     top: -5vh;
@@ -215,14 +218,22 @@ body {
     filter: drop-shadow(0 0 5px #130D0C);
 }
 
-.viewport-overlay-gradient {
-    background: linear-gradient(#130D0C88, 2%, transparent 10% 90%, 98%, #130D0C88);
+.viewport-overlay-upper-gradient {
+    background: linear-gradient(#130D0C88, transparent);
     position: fixed;
-    inset: 0 0 0 0;
+    inset: 0 0 auto 0;
+    height: 10vh;
+}
+
+.viewport-overlay-lower-gradient {
+    background: linear-gradient(transparent, #130D0C88);
+    position: fixed;
+    inset: auto 0 0 0;
+    height: 10vh;
 }
 
 .footer-overlay-gradient {
-    background: linear-gradient(transparent, #130D0C 70%);
+    background: radial-gradient(110% 80% at center bottom, #1D130F 60%, 85%, transparent);
     height: 70vh;
     max-height: 30%;
     position: absolute;
