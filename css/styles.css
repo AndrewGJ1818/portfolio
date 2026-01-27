@@ -18,11 +18,11 @@
 
 /* h1, h2, h3, h4, a, body, p, ul, ol, menu, div, article, header, aside {
     outline:purple 1px solid;
-}
+} */
 
 body {
     outline: red solid 5px;
-} */
+}
 
 /* CSS RESET */
 
@@ -103,12 +103,6 @@ body {
     filter: drop-shadow(0 0 5px #130D0C);
 }
 
-.section-home {
-    position: absolute;
-    inset: 15% 10%;
-    text-align: center;
-}
-
 .filing-cabinet {
     position: relative;
     aspect-ratio: 1657/3217;
@@ -127,7 +121,17 @@ body {
 
 .filing-cabinet__back {
     background-image: url(../src/fcabinet_slots_large.png);
-    inset: 20.44% 7.22% 29.37% 7.22%;
+    inset: 20.44% 7.22% 29.37%;
+}
+
+.filing-cabinet__folders-1 {
+    background-image: url(../src/fcabinet_folders_large.png);
+    inset: 11.49% 11.89% 79.46%;
+}
+
+.filing-cabinet__folders-2 {
+    background-image: url(../src/fcabinet_folders_large.png);
+    inset: 39.54% 11.89% 51.42%;
 }
 
 .filing-cabinet__front {
@@ -138,13 +142,13 @@ body {
 
 .filing-cabinet__drawer-1 {
     background-image: url(../src/fcabinet_drawer1_large.png);
-    inset: 20.44% 7.22% 55.07% 7.22%;
+    inset: 20.44% 7.22% 55.07%;
     filter: drop-shadow(0 0 5px #130D0C);
 }
 
 .filing-cabinet__drawer-2 {
     background-image: url(../src/fcabinet_drawer2_large.png);
-    inset: 48.5% 9.07% 29.37% 9.07%;
+    inset: 48.5% 9.07% 29.37%;
     filter: drop-shadow(0 0 5px #130D0C);
 }
 
@@ -180,6 +184,16 @@ body {
     animation-timeline: scroll()
 }
 
+.filing-cabinet__folders-1 {
+    animation: 1ms linear scroll-open-folders-1; /* 'animation-duration: 1ms' is a Firefox requirement (MDN) */
+    animation-timeline: scroll();
+}
+
+.filing-cabinet__folders-2 {
+    animation: 1ms linear scroll-open-folders-2; /* 'animation-duration: 1ms' is a Firefox requirement (MDN) */
+    animation-timeline: scroll();
+}
+
 @keyframes scroll-open-drawer-1 {
     10%, 50% { transform: translateY(0); scale: 1; }
     25%, 35% { transform: translateY(40%); scale: 1.08; }
@@ -190,12 +204,22 @@ body {
     70%, 80% { transform: translateY(40%); scale: 1.08; }
 }
 
+@keyframes scroll-open-folders-1 {
+    10%, 55% { transform: translateY(0); scale: 1; }
+    25%, 35% { transform: translateY(96%); scale: 1.08; }
+}
+
+@keyframes scroll-open-folders-2 {
+    55%, 95% { transform: translateY(0); scale: 1; }
+    70%, 80% { transform: translateY(90%); scale: 1.05; }
+}
+
 /* UI ELEMENTS */
 
 .nav-container {
     background: url(../src/postit_large.png) no-repeat center / contain;
     aspect-ratio: 939/925;
-    height: 45vh;
+    height: max(45vh, 23vw);
     position: fixed;
     top: -5vh;
     left: 2vw;
@@ -208,10 +232,10 @@ body {
     background: url(../src/sheet_large.png) no-repeat center / contain;
     display: block flow-root;
     aspect-ratio: 1106/655;
-    height: 25vh;
+    height: max(25vh, 13vw);
     position: fixed;
     bottom: -2vh;
-    left: 2vw;
+    left: 2.5vw;
     transform: rotate(-2deg);
     z-index: 10;
     filter: drop-shadow(0 0 5px #130D0C);
@@ -268,7 +292,7 @@ body {
     }
 }
 
-@media (orientation: landscape) and (max-width:1400px) {
+@media (orientation: landscape) and (max-width:1500px) {
     .section-home-container {
         width: 50vw;
         left: 15vw;
@@ -283,6 +307,13 @@ body {
                  NAV
 *****************************************/
 
+.nav {
+    position: fixed;
+    inset: 20% 10% 10% 20%;
+    text-align: center;
+    font-size: max(4vw, 3vh);
+}
+
 /****************************************
            LANGUAGE SELECTOR
 *****************************************/
@@ -290,6 +321,12 @@ body {
 /****************************************
                  HOME
 *****************************************/
+
+.section-home {
+    position: absolute;
+    inset: 15% 10%;
+    text-align: center;
+}
 
 /****************************************
                 SKILLS
