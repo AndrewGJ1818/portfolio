@@ -27,15 +27,16 @@
 
 # 4. CSS Styling & Layout
 
-- [ ] Apply basic layout and base styles.
-- [ ] Implement the main scroll navigation.
+- [x] Apply basic layout and base styles.
+- [x] Implement the main scroll navigation.
+- [ ] Style portfolio section documents.
 - [ ] Style project cards.
 - [x] Add responsive design for all screen sizes.
-- [ ] Apply additional animations and transitions.
+- [x] Apply additional animations and transitions.
 
 # 5. Final Review & Deployment
 
 - [ ] Accessibility check — color contrast, keyboard navigation, etc.
 - [ ] Basic SEO optimization.
 - [ ] Cross-browser testing.
-- [ ] Deploy to GitHub Pages.
+- [x] Deploy to GitHub Pages.

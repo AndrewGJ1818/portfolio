@@ -47,6 +47,11 @@ h1, h2, h3, h4 {
 
 p, small {
     text-wrap: pretty;
+    hyphens: auto;
+}
+
+small {
+    font-size: .8rem;
 }
 
 body {
@@ -77,7 +82,7 @@ body {
                STRUCTURE
 *****************************************/
 
-/* BACKGROUND IMAGES */
+/* PORTFOLIO SECTIONS */
 
 html {
     scroll-behavior: smooth;
@@ -93,7 +98,7 @@ body {
     position: relative;
 }
 
-.section-home-container {
+.home {
     background: url(../src/certificate_large.png) no-repeat center / contain;
     aspect-ratio: 1539/1034;
     width: 40vw;
@@ -102,6 +107,103 @@ body {
     margin: 10vh auto 0;
     filter: drop-shadow(0 0 5px #130D0C);
 }
+
+.section-doc {
+    position: fixed;
+    z-index: 5;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; 
+    height: 95vh;
+    max-width: 95vw;
+    inset: 2.5vh 0 auto 0;
+    margin: 0 auto;
+    filter: drop-shadow(0 0 5px #130D0C);
+    overflow: clip;
+    overflow-clip-margin: content-box;
+}
+
+.about-me {
+    background-image: url(../src/document4_large.png);
+    aspect-ratio: 1225/1610;
+    padding: 4%;
+}
+
+.skills {
+    background-image: url(../src/document1_large.png);
+    aspect-ratio: 1134/1525;
+    height: 90vh;
+    top: 6vh;
+    padding: 4%;
+}
+
+.projects {
+    background-image: url(../src/document3_large.png);
+    aspect-ratio: 1161/1625;
+    padding: 6% 4% 4%;
+}
+
+.contact {
+    background-image: url(../src/document2_large.png);
+    aspect-ratio: 1249/1736;
+    padding: 8% 4% 4%;
+}
+
+/* SECTION LABELS & ANCHORS */
+
+/* 
+Labels (summary elements) allow the opening of the different sections (details elements). They
+appear inside the drawers of the filing cabinet.
+
+Anchors (span elements) are necessary since the section documents have a fixed position in
+the viewport. They are transparent and are positioned at different heights of the filing cabinet in
+order to trigger the scroll animation correctly when using the post-it nav. 
+*/
+
+.section-label {
+    display: none;
+}
+
+/* .home-label {
+}
+
+.about-me-label {
+}
+
+.skills-label {
+}
+
+.projects-label {
+}
+
+.contact-label {
+} */
+
+.section-anchor {
+    position: absolute;
+}
+
+#home-anchor {
+    top: -20vh;
+}
+
+#about-me-anchor {
+    top: calc((100% - 100dvh) * .3);
+}
+
+#skills-anchor {
+    top: calc((100% - 100dvh) * .3);
+}
+
+#projects-anchor {
+    top: calc((100% - 100dvh) * .75);
+}
+
+#contact-anchor {
+    top: calc((100% - 100dvh) * .75);   
+}
+
+/* SCENE */
 
 .filing-cabinet {
     position: relative;
@@ -127,11 +229,13 @@ body {
 .filing-cabinet__folders-1 {
     background-image: url(../src/fcabinet_folders_large.png);
     inset: 11.49% 11.89% 79.46%;
+    filter: drop-shadow(0 0 5px #130D0C);
 }
 
 .filing-cabinet__folders-2 {
     background-image: url(../src/fcabinet_folders_large.png);
     inset: 39.54% 11.89% 51.42%;
+    filter: drop-shadow(0 0 5px #130D0C);
 }
 
 .filing-cabinet__front {
@@ -152,26 +256,64 @@ body {
     filter: drop-shadow(0 0 5px #130D0C);
 }
 
-/* SCROLL ANIMATION */
-
-.section-home-container {
-    animation: 1ms linear scroll-follow-home; /* 'animation-duration: 1ms' is a Firefox requirement (MDN) */
-    animation-timeline: scroll();
+.viewport-overlay-upper-gradient {
+    background: linear-gradient(#130D0C88, transparent);
+    position: fixed;
+    inset: 0 0 auto 0;
+    height: 10vh;
 }
+
+.viewport-overlay-lower-gradient {
+    background: linear-gradient(transparent, #130D0C88);
+    position: fixed;
+    inset: auto 0 0 0;
+    height: 10vh;
+}
+
+.footer-overlay-gradient {
+    background: radial-gradient(110% 80% at center bottom, #1D130F 60%, 85%, transparent);
+    height: 70vh;
+    max-height: 30%;
+    position: absolute;
+    inset: auto 0 0 0;
+}
+
+/* VIEWPORT FIXED UI ELEMENTS */
+
+.nav {
+    background: url(../src/postit_large.png) no-repeat center / contain;
+    aspect-ratio: 939/925;
+    height: max(45vh, 23vw);
+    position: fixed;
+    top: -5vh;
+    left: 2vw;
+    transform: rotate(4deg);
+    z-index: 10;
+    filter: drop-shadow(0 0 5px #130D0C);
+}
+
+.options {
+    background: url(../src/sheet_large.png) no-repeat center / contain;
+    aspect-ratio: 1106/655;
+    height: max(25vh, 13vw);
+    position: fixed;
+    bottom: -2vh;
+    left: 2.5vw;
+    transform: rotate(-2deg);
+    z-index: 10;
+    filter: drop-shadow(0 0 5px #130D0C);
+}
+
+/* SCROLL ANIMATION */
 
 .filing-cabinet {
     animation: 1ms linear scroll-follow-fcabinet; /* 'animation-duration: 1ms' is a Firefox requirement (MDN) */
     animation-timeline: scroll();
 }
 
-@keyframes scroll-follow-home {
-    from { transform: translateY(0); }
-    to { transform: translateY(min(-3vh, -6vw)); }
-}
-
 @keyframes scroll-follow-fcabinet {
     from { transform: translateY(0); }
-    to { transform: translateY(min(-5vh, -10vw)); }
+    to { transform: translateY(max(-7vh, -4.5vw)); }
 }
 
 .filing-cabinet__drawer-1 {
@@ -214,59 +356,64 @@ body {
     70%, 80% { transform: translateY(90%); scale: 1.05; }
 }
 
-/* UI ELEMENTS */
+/* TIME ANIMATIONS */
 
-.nav-container {
-    background: url(../src/postit_large.png) no-repeat center / contain;
-    aspect-ratio: 939/925;
-    height: max(45vh, 23vw);
-    position: fixed;
-    top: -5vh;
-    left: 2vw;
-    transform: rotate(4deg);
-    z-index: 10;
-    filter: drop-shadow(0 0 5px #130D0C);
+/*
+The very next declaration block is necessary to ensure that the anchor is accessible for the main
+nav to reach. 
+
+When including animations in 'details' elements, the typical approach is to add 'content-visibility'
+to the animation. However, by doing so, timing conflicts between anchor behavior and 'details' 
+unfolding came up.
+
+With 'content-visibility: visible', anchors are always available and, even if the 'details' content
+is no longer hidden, the animation allows for manual hiding. The use of 'details' is still
+desirable since its reduces complexity and provides the accordion menu behavior.
+*/
+
+details::details-content {
+    content-visibility: visible;
 }
 
-.options-container {
-    background: url(../src/sheet_large.png) no-repeat center / contain;
-    display: block flow-root;
-    aspect-ratio: 1106/655;
-    height: max(25vh, 13vw);
-    position: fixed;
-    bottom: -2vh;
-    left: 2.5vw;
-    transform: rotate(-2deg);
-    z-index: 10;
-    filter: drop-shadow(0 0 5px #130D0C);
+.section-doc {
+    animation: hide-document .3s both;
 }
 
-.viewport-overlay-upper-gradient {
-    background: linear-gradient(#130D0C88, transparent);
-    position: fixed;
-    inset: 0 0 auto 0;
-    height: 10vh;
+details[open] .section-doc {
+    animation: show-document 1s .2s both;
 }
 
-.viewport-overlay-lower-gradient {
-    background: linear-gradient(transparent, #130D0C88);
-    position: fixed;
-    inset: auto 0 0 0;
-    height: 10vh;
+@keyframes show-document {
+    0% {
+        transform: translateY(20vh);
+        opacity: 0;
+        scale: .7 .4;        
+    }
+    50% {
+        transform: translateY(-50vh);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        scale: 1;
+    }
 }
 
-.footer-overlay-gradient {
-    background: radial-gradient(110% 80% at center bottom, #1D130F 60%, 85%, transparent);
-    height: 70vh;
-    max-height: 30%;
-    position: absolute;
-    inset: auto 0 0 0;
+@keyframes hide-document {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100vh);
+        opacity: 0;
+    }
 }
 
 /* STRUCTURE MEDIA QUERIES */
 
 @media (orientation: portrait) and (max-width: 1200px) {
-    .section-home-container {
+    .home {
         width: 90vw;
         margin-top: 20vh;
     }
@@ -274,14 +421,14 @@ body {
         width: 95vw;
         top: -1vh;
     }
-    .nav-container {
+    .nav {
         height: 60vw;
         max-height: 30vh;
         top: -4vh;
         left: -30px;
         transform: rotate(5deg);
     }
-    .options-container {
+    .options {
         height: clamp(25vw, 18vh, 30vw);
         left: auto;
         right: -2vw;
@@ -293,7 +440,7 @@ body {
 }
 
 @media (orientation: landscape) and (max-width:1500px) {
-    .section-home-container {
+    .home {
         width: 50vw;
         left: 15vw;
     }
@@ -301,17 +448,38 @@ body {
         width: 50vw;
         left: 15vw;
     }
+    .section-doc {
+        left: 30vw;
+    }
 }
 
 /****************************************
                  NAV
 *****************************************/
 
-.nav {
+.nav-list {
     position: fixed;
-    inset: 20% 10% 10% 20%;
+    inset: 20% 20% 10% 10%;
     text-align: center;
-    font-size: max(4vw, 3vh);
+    font-size: 2.8rem;
+    user-select: none;
+}
+
+.nav-anchor {
+    padding: 0 20px;
+    border-radius: 50%;
+}
+
+.nav-anchor:hover {
+    box-shadow: 0 0 10px 10px #D4DEED55;
+    text-shadow: 0 0 5px #D4DEED;
+}
+
+@media (max-width: 1050px) and (max-height: 1050px) {
+    .nav-list {
+        font-size: max(max(1.1rem, 2.8vh), 2.5vw);
+        inset: 20% 10% 10% 10%;
+    }
 }
 
 /****************************************
@@ -321,12 +489,6 @@ body {
 /****************************************
                  HOME
 *****************************************/
-
-.section-home {
-    position: absolute;
-    inset: 15% 10%;
-    text-align: center;
-}
 
 /****************************************
                 SKILLS
@@ -353,7 +515,7 @@ body {
     top: -400px;
     right: -400px;
     border-radius: 50%;
-    transition: 1s box-shadow, 0.5s scale;
+    transition: 1s box-shadow, .5s scale;
 }
 
 .activator:hover {
@@ -363,8 +525,8 @@ body {
 
 .animation:has(+.activator:hover) {
     animation: 
-        0.5s steps(1) trans-animation,
-        1.8s 0.5s steps(1) infinite speak-animation;
+        .5s steps(1) trans-animation,
+        1.8s .5s steps(1) infinite speak-animation;
 }
 
 @keyframes static-animation {
@@ -403,6 +565,13 @@ body {
 /****************************************
                 CONTACT
 *****************************************/
+
+.contact-fake-text {
+    font-size: .8rem;
+    color: #543732;
+    filter: blur(.5px);
+    hyphens: auto;
+}
 
 /****************************************
                 FOOTER
