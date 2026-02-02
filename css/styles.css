@@ -58,6 +58,14 @@ body {
     color: var(--main-text-color);
 }
 
+/* BACKGROUND IMAGES */
+
+body, .home, .section-doc, .nav, .options, .filing-cabinet > div {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; 
+}
+
 /* FONTS */
 
 .dyna-font {
@@ -89,18 +97,30 @@ html {
 }
 
 body {
-    background:
-        radial-gradient(ellipse 60% 50%, transparent 65%, #130D0C55 95%, #130D0C77 100%) no-repeat,
-        url(../src/background_large.png) no-repeat center / cover;
-        background-color: #9C655D;
+    background-color: #9C655D;
+    background-size: cover;
+    background-image:
+        radial-gradient(ellipse 60% 50%, transparent 65%, #130D0C55 95%, #130D0C77 100%),
+        url(../src/background/background_alt.png);
+    background-image:
+        radial-gradient(ellipse 60% 50%, transparent 65%, #130D0C55 95%, #130D0C77 100%),
+        image-set(
+            url(../src/background/background_medium.webp) 1x,
+            url(../src/background/background_large.webp) 2x
+        );
     min-height: 100vh;
     display: block flow-root;
     position: relative;
 }
 
 .home {
-    background: url(../src/certificate_large.png) no-repeat center / contain;
-    aspect-ratio: 1539/1034;
+    background-image: url(../src/fcabinet/certificate_alt.png);
+    background-image: 
+        image-set(
+            url(../src/fcabinet/certificate_medium.webp) 1x,
+            url(../src/fcabinet/certificate_large.webp) 2x
+        );
+    aspect-ratio: 1550/1042;
     width: 40vw;
     max-width: 80rem;
     position: relative;
@@ -111,9 +131,6 @@ body {
 .section-doc {
     position: fixed;
     z-index: 5;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain; 
     height: 95vh;
     max-width: 95vw;
     inset: 2.5vh 0 auto 0;
@@ -124,29 +141,46 @@ body {
 }
 
 .about-me {
-    background-image: url(../src/document4_large.png);
-    aspect-ratio: 1225/1610;
-    padding: 4%;
+    background-image: url(../src/documents/document1_alt.png);
+    background-image: 
+        image-set(
+            url(../src/documents/document1_medium.webp) 1x,
+            url(../src/documents/document1_large.webp) 2x
+        );
+    aspect-ratio: 1218/1600;
 }
 
 .skills {
-    background-image: url(../src/document1_large.png);
-    aspect-ratio: 1134/1525;
+    background-image: url(../src/documents/document2_alt.png);
+    background-image: 
+        image-set(
+            url(../src/documents/document2_medium.webp) 1x,
+            url(../src/documents/document2_large.webp) 2x
+        );
+    aspect-ratio: 1190/1600;
     height: 90vh;
     top: 6vh;
-    padding: 4%;
 }
 
 .projects {
-    background-image: url(../src/document3_large.png);
-    aspect-ratio: 1161/1625;
-    padding: 6% 4% 4%;
+    background-image: url(../src/documents/document3_alt.png);
+    background-image: 
+        image-set(
+            url(../src/documents/document3_medium.webp) 1x,
+            url(../src/documents/document3_large.webp) 2x
+        );
+    aspect-ratio: 1144/1600;
 }
 
 .contact {
-    background-image: url(../src/document2_large.png);
-    aspect-ratio: 1249/1736;
-    padding: 8% 4% 4%;
+    background-image: url(../src/documents/document4_alt.png);
+    background-image: 
+        image-set(
+            url(../src/documents/document4_medium.webp) 1x,
+            url(../src/documents/document4_large.webp) 2x
+        );
+    aspect-ratio: 1151/1600;
+    top: 1.5vh;
 }
 
 /* SECTION LABELS & ANCHORS */
@@ -216,42 +250,65 @@ order to trigger the scroll animation correctly when using the post-it nav.
 
 .filing-cabinet > div {
     position: absolute;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
 }
 
 .filing-cabinet__back {
-    background-image: url(../src/fcabinet_slots_large.png);
+    background-image: url(../src/fcabinet/fcabinet_slots_alt.png);
+    background-image:
+        image-set(
+            url(../src/fcabinet/fcabinet_slots_medium.webp) 1x,
+            url(../src/fcabinet/fcabinet_slots_large.webp) 2x
+        );
     inset: 20.44% 7.22% 29.37%;
 }
 
-.filing-cabinet__folders-1 {
-    background-image: url(../src/fcabinet_folders_large.png);
-    inset: 11.49% 11.89% 79.46%;
+.filing-cabinet__folders-1, .filing-cabinet__folders-2 {
+    background-image: url(../src/fcabinet/fcabinet_folders_alt.png);
+    background-image:
+        image-set(
+            url(../src/fcabinet/fcabinet_folders_medium.webp) 1x,
+            url(../src/fcabinet/fcabinet_folders_large.webp) 2x
+        );
     filter: drop-shadow(0 0 5px #130D0C);
+}
+
+.filing-cabinet__folders-1 {
+    inset: 11.49% 11.89% 79.46%;
 }
 
 .filing-cabinet__folders-2 {
-    background-image: url(../src/fcabinet_folders_large.png);
     inset: 39.54% 11.89% 51.42%;
-    filter: drop-shadow(0 0 5px #130D0C);
 }
 
 .filing-cabinet__front {
-    background-image: url(../src/fcabinet_structure_large.png);
+    background-image: url(../src/fcabinet/fcabinet_structure_alt.png);
+    background-image:
+        image-set(
+            url(../src/fcabinet/fcabinet_structure_medium.webp) 1x,
+            url(../src/fcabinet/fcabinet_structure_large.webp) 2x
+        );
     inset: 0;
     filter: drop-shadow(0 0 5px #130D0C);
 }
 
 .filing-cabinet__drawer-1 {
-    background-image: url(../src/fcabinet_drawer1_large.png);
+    background-image: url(../src/fcabinet/fcabinet_drawer1_alt.png);
+    background-image:
+        image-set(
+            url(../src/fcabinet/fcabinet_drawer1_medium.webp) 1x,
+            url(../src/fcabinet/fcabinet_drawer1_large.webp) 2x
+        );
     inset: 20.44% 7.22% 55.07%;
     filter: drop-shadow(0 0 5px #130D0C);
 }
 
 .filing-cabinet__drawer-2 {
-    background-image: url(../src/fcabinet_drawer2_large.png);
+    background-image: url(../src/fcabinet/fcabinet_drawer2_alt.png);
+    background-image:
+        image-set(
+            url(../src/fcabinet/fcabinet_drawer2_medium.webp) 1x,
+            url(../src/fcabinet/fcabinet_drawer2_large.webp) 2x
+        );
     inset: 48.5% 9.07% 29.37%;
     filter: drop-shadow(0 0 5px #130D0C);
 }
@@ -281,8 +338,13 @@ order to trigger the scroll animation correctly when using the post-it nav.
 /* VIEWPORT FIXED UI ELEMENTS */
 
 .nav {
-    background: url(../src/postit_large.png) no-repeat center / contain;
-    aspect-ratio: 939/925;
+    background-image: url(../src/ui/postit_alt.png);
+    background-image:
+        image-set(
+            url(../src/ui/postit_medium.webp) 1x,
+            url(../src/ui/postit_large.webp) 2x
+        );
+    aspect-ratio: 930/916;
     height: max(45vh, 23vw);
     position: fixed;
     top: -5vh;
@@ -293,8 +355,13 @@ order to trigger the scroll animation correctly when using the post-it nav.
 }
 
 .options {
-    background: url(../src/sheet_large.png) no-repeat center / contain;
-    aspect-ratio: 1106/655;
+    background-image: url(../src/ui/sheet_alt.png);
+    background-image:
+        image-set(
+            url(../src/ui/sheet_medium.webp) 1x,
+            url(../src/ui/sheet_large.webp) 2x
+        );
+    aspect-ratio: 930/551;
     height: max(25vh, 13vw);
     position: fixed;
     bottom: -2vh;
@@ -450,6 +517,103 @@ details[open] .section-doc {
     }
     .section-doc {
         left: 30vw;
+    }
+}
+
+/* IMAGES MEDIA QUERY */
+
+@media (max-width:1200px) {
+    body {
+        background-image: 
+            radial-gradient(ellipse 60% 50%, transparent 65%, #130D0C55 95%, #130D0C77 100%),
+            image-set(
+                url(../src/background/background_small.webp) 1x,
+                url(../src/background/background_medium.webp) 2x
+            );
+    }
+    .home {
+        background-image: 
+            image-set(
+                url(../src/fcabinet/certificate_small.webp) 1x,
+                url(../src/fcabinet/certificate_medium.webp) 2x
+            );
+    }
+    .about-me {
+        background-image: 
+            image-set(
+                url(../src/documents/document1_small.webp) 1x,
+                url(../src/documents/document1_medium.webp) 2x
+            );
+    }
+    .skills {
+        background-image: 
+            image-set(
+                url(../src/documents/document2_small.webp) 1x,
+                url(../src/documents/document2_medium.webp) 2x
+            );
+    }
+    .projects {
+        background-image: 
+            image-set(
+                url(../src/documents/document3_small.webp) 1x,
+                url(../src/documents/document3_medium.webp) 2x
+            );
+    }
+    .contact {
+        background-image: 
+            image-set(
+                url(../src/documents/document4_small.webp) 1x,
+                url(../src/documents/document4_medium.webp) 2x
+            );
+    }
+    .filing-cabinet__back {
+        background-image: 
+            image-set(
+                url(../src/fcabinet/fcabinet_slots_small.webp) 1x,
+                url(../src/fcabinet/fcabinet_slots_medium.webp) 2x
+            );
+    }
+    .filing-cabinet__folders-1, .filing-cabinet__folders-2 {
+        background-image: 
+            image-set(
+                url(../src/fcabinet/fcabinet_folders_small.webp) 1x,
+                url(../src/fcabinet/fcabinet_folders_medium.webp) 2x
+            );
+    }
+    .filing-cabinet__front {
+        background-image: 
+            image-set(
+                url(../src/fcabinet/fcabinet_structure_small.webp) 1x,
+                url(../src/fcabinet/fcabinet_structure_medium.webp) 2x
+            );
+    }
+    .filing-cabinet__drawer-1 {
+        background-image: 
+            image-set(
+                url(../src/fcabinet/fcabinet_drawer1_small.webp) 1x,
+                url(../src/fcabinet/fcabinet_drawer1_medium.webp) 2x
+            );
+    }
+    .filing-cabinet__drawer-2 {
+        background-image: 
+            image-set(
+                url(../src/fcabinet/fcabinet_drawer2_small.webp) 1x,
+                url(../src/fcabinet/fcabinet_drawer2_medium.webp) 2x
+            );
+    }
+    .nav {
+        background-image: 
+            image-set(
+                url(../src/ui/postit_small.webp) 1x,
+                url(../src/ui/postit_medium.webp) 2x
+            );
+    }
+    .options {
+        background-image: 
+            image-set(
+                url(../src/ui/sheet_small.webp) 1x,
+                url(../src/ui/sheet_medium.webp) 2x
+            );
     }
 }
 

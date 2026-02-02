@@ -48,7 +48,7 @@ I’m now seeking remote opportunities where I can apply my scientific backgroun
 
 ### \> Software Development
 
-- **HTML.** Semantic HTML5, accessibility (ARIA), meta tags, SEO optimization, forms and validadtion, responsive media handling.
+- **HTML.** Semantic HTML5, accessibility (ARIA), meta tags, SEO optimization, forms and validation, responsive media handling.
 
 - **CSS.** Responsive design, Flexbox, Grid, transitions, animations, advanced selectors, at-rules, custom properties, CSS functions.
 
@@ -58,7 +58,7 @@ I’m now seeking remote opportunities where I can apply my scientific backgroun
 
 - **Databases.** SQL, MongoDB, query optimization, CRUD.
 
-- **Version Control.** Git, GitHub, branching, merging, pull request, workflows.
+- **Version Control.** Git, GitHub, branching (reset, rebase, cherry-pick), merging, pull request, workflows.
 
 - **Other Tools & Languages.** Bash, R, Lua.
 
