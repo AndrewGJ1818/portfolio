@@ -58,7 +58,7 @@ Actualmente, busco oportunidades de trabajo remoto donde pueda aplicar mi formac
 
 - **Bases de Datos.** SQL, MongoDB, optimización de consultas, operaciones CRUD.
 
-- **Control de Versiones.** Git, GitHub, branching, merging, pull requests, flujos de trabajo.
+- **Control de Versiones.** Git, GitHub, branching (reset, rebase, cherry-pick), merging, pull requests, flujos de trabajo.
 
 - **Otros Lenguajes y Herramientas.** Bash, R, Lua.
 
