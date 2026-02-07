@@ -60,7 +60,7 @@ body {
 
 /* BACKGROUND IMAGES */
 
-body, .home, .section-doc, .nav, .options, .filing-cabinet > div {
+body, .home, .section-doc, .nav, .options, .filing-cabinet > div > div {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain; 
@@ -130,7 +130,7 @@ body {
 
 .section-doc {
     position: fixed;
-    z-index: 5;
+    z-index: 30;
     height: 95vh;
     max-width: 95vw;
     inset: 2.5vh 0 auto 0;
@@ -186,10 +186,10 @@ body {
 /* SECTION LABELS & ANCHORS */
 
 /* 
-Labels (summary elements) allow the opening of the different sections (details elements). They
+Labels ('summary' elements) allow the opening of the different sections ('details' elements). They
 appear inside the drawers of the filing cabinet.
 
-Anchors (span elements) are necessary since the section documents have a fixed position in
+Anchors ('span' elements) are necessary since the section documents have a fixed position in
 the viewport. They are transparent and are positioned at different heights of the filing cabinet in
 order to trigger the scroll animation correctly when using the post-it nav. 
 */
@@ -199,12 +199,29 @@ order to trigger the scroll animation correctly when using the post-it nav.
 }
 
 /* .home-label {
-}
+} */
 
-.about-me-label {
-}
+/* .about-me-label {
+    height: 30px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    border: #13110C 2px solid;
+    border-bottom: none;
+    border-radius: 20% 20% 0 0 / 90% 90% 0 0;
+    filter: drop-shadow(0 -2px 5px #130D0C);
+    background-color: #786848;
+    list-style: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 5;
+} */
 
-.skills-label {
+/* .skills-label {
 }
 
 .projects-label {
@@ -221,23 +238,54 @@ order to trigger the scroll animation correctly when using the post-it nav.
     top: -20vh;
 }
 
-#about-me-anchor {
-    top: calc((100% - 100dvh) * .3);
+/* 
+The following calculation allows the anchors to be positioned in the perfect spots to coincide
+with the drawers’ opening in the scroll animation. Even if it seems tricky, it comes from this
+next simple reasoning.
+
+First, the total height of the webpage is calculated as follows:
+
+'total-height = certificate-margin-top + certificate-height + fcabinet-height'
+
+The value of 'certificate-margin-top' is 10vh, while the value of 'fcabinet-height', as it is
+the container, is 100%.
+
+The value of 'certificate-height' needs to be calculated from its width and inverse aspect ratio:
+
+'certificate-height = max(certificate-width, certificate-maxwidth) / aspect-ratio'
+
+Once the 'total-height' is obtained, the dynamic viewport height needs to be subtracted from it,
+resulting in the total scrollable height of the webpage.
+
+As the drawers’ animation peaks at 30% and 75% of the scroll, respectively, we can obtain those heights
+by multiplying the total scrollable height by 0.3 and 0.75.
+
+However, the anchors are positioned relative to the filing cabinet, so it is necessary to subtract
+'certificate-top-margin' and 'certificate-height' from the calculation. Additionally, since the filing
+cabinet is scroll-animated, a small correction needs to be included too. Unfortunately, this animation 
+also causes small shifts in the anchors when using them.
+
+Therefore, the anchors’ top offset for the About Me and Skills sections is:
+
+sweet-point-1 = (cert-mgt + cert-h + fcab-h - view-h) · 0.3 - cert-mgt - cert-h - fcab-corr
+
+And for the Projects and Contact sections:
+
+sweet-point-2 = (cert-mgt + cert-h + fcab-h - view-h) · 0.75 - cert-mgt - cert-h - fcab-corr
+
+As the numbers are slightly different at smaller resolutions, media queries provide alternatives 
+to this expression.
+*/
+
+#about-me-anchor, #skills-anchor {
+    top: calc((min(40vw,80rem)*1042/1550 + 10vh + 100% - 100dvh) * .3 - min(40vw,80rem)*1042/1550 - 10vh + 3.5vh);
 }
 
-#skills-anchor {
-    top: calc((100% - 100dvh) * .3);
+#projects-anchor, #contact-anchor {
+    top: calc((min(40vw,80rem)*1042/1550 + 10vh + 100% - 100dvh) * .75 - min(40vw,80rem)*1042/1550 - 10vh + 5.75vh);
 }
 
-#projects-anchor {
-    top: calc((100% - 100dvh) * .75);
-}
-
-#contact-anchor {
-    top: calc((100% - 100dvh) * .75);   
-}
-
-/* SCENE */
+/* FILING CABINET */
 
 .filing-cabinet {
     position: relative;
@@ -248,7 +296,7 @@ order to trigger the scroll animation correctly when using the post-it nav.
     margin: 0 auto;
 }
 
-.filing-cabinet > div {
+.filing-cabinet > div > div {
     position: absolute;
 }
 
@@ -313,29 +361,7 @@ order to trigger the scroll animation correctly when using the post-it nav.
     filter: drop-shadow(0 0 5px #130D0C);
 }
 
-.viewport-overlay-upper-gradient {
-    background: linear-gradient(#130D0C88, transparent);
-    position: fixed;
-    inset: 0 0 auto 0;
-    height: 10vh;
-}
-
-.viewport-overlay-lower-gradient {
-    background: linear-gradient(transparent, #130D0C88);
-    position: fixed;
-    inset: auto 0 0 0;
-    height: 10vh;
-}
-
-.footer-overlay-gradient {
-    background: radial-gradient(110% 80% at center bottom, #1D130F 60%, 85%, transparent);
-    height: 70vh;
-    max-height: 30%;
-    position: absolute;
-    inset: auto 0 0 0;
-}
-
-/* VIEWPORT FIXED UI ELEMENTS */
+/* VIEWPORT FIXED ELEMENTS & FOOTER */
 
 .nav {
     background-image: url(../src/ui/postit_alt.png);
@@ -350,7 +376,7 @@ order to trigger the scroll animation correctly when using the post-it nav.
     top: -5vh;
     left: 2vw;
     transform: rotate(4deg);
-    z-index: 10;
+    z-index: 50;
     filter: drop-shadow(0 0 5px #130D0C);
 }
 
@@ -367,8 +393,33 @@ order to trigger the scroll animation correctly when using the post-it nav.
     bottom: -2vh;
     left: 2.5vw;
     transform: rotate(-2deg);
-    z-index: 10;
+    z-index: 50;
     filter: drop-shadow(0 0 5px #130D0C);
+}
+
+.viewport-overlay-upper-gradient {
+    background: linear-gradient(#130D0C88, transparent);
+    position: fixed;
+    inset: 0 0 auto 0;
+    height: 10vh;
+    z-index: 40;
+}
+
+.viewport-overlay-lower-gradient {
+    background: linear-gradient(transparent, #130D0C88);
+    position: fixed;
+    inset: auto 0 0 0;
+    height: 10vh;
+    z-index: 40;
+}
+
+.footer-overlay-gradient {
+    background: radial-gradient(110% 80% at center bottom, #1D130F 60%, 85%, transparent);
+    height: 70vh;
+    max-height: 30%;
+    position: absolute;
+    inset: auto 0 0 0;
+    z-index: 10;
 }
 
 /* SCROLL ANIMATION */
@@ -378,9 +429,13 @@ order to trigger the scroll animation correctly when using the post-it nav.
     animation-timeline: scroll();
 }
 
+/* 
+Using the 'transform: translateY()' property instead of 'top' in the animation would prevent the section documents 
+from having fixed positioning, since 'filing-cabinet' is their container.
+*/
+
 @keyframes scroll-follow-fcabinet {
-    from { transform: translateY(0); }
-    to { transform: translateY(max(-7vh, -4.5vw)); }
+    to { top: max(-7vh, -4.5vw); }
 }
 
 .filing-cabinet__drawer-1 {
@@ -504,6 +559,12 @@ details[open] .section-doc {
             transform: rotatey(180deg);
         }
     }
+    #about-me-anchor, #skills-anchor {
+    top: calc((90vw*1042/1550 + 20vh + 100% - 100dvh) * .3 - 90vw*1042/1550 - 20vh + 2.5vh);
+    }
+    #projects-anchor, #contact-anchor {
+    top: calc((90vw*1042/1550 + 20vh + 100% - 100dvh) * .75 - 90vw*1042/1550 - 20vh + 4.75vh);
+    }
 }
 
 @media (orientation: landscape) and (max-width:1500px) {
@@ -517,6 +578,12 @@ details[open] .section-doc {
     }
     .section-doc {
         left: 30vw;
+    }
+    #about-me-anchor, #skills-anchor {
+    top: calc((50vw*1042/1550 + 10vh + 100% - 100dvh) * .3 - 50vw*1042/1550 - 10vh + 3.5vh);
+    }
+    #projects-anchor, #contact-anchor {
+    top: calc((50vw*1042/1550 + 10vh + 100% - 100dvh) * .75 - 50vw*1042/1550 - 10vh + 5.75vh);
     }
 }
 
