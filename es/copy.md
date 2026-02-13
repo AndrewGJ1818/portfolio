@@ -50,7 +50,7 @@ Actualmente, busco oportunidades de trabajo remoto donde pueda aplicar mi formac
 
 - **HTML.** HTML5 semántico, accesibilidad (ARIA), meta tags, optimización de SEO, formularios y validación de campos, menejo responsive de recursos.
 
-- **CSS.** Responsive design, Flexbox, Grid, transiciones, animaciones, selectores avanzados, at-rules, custom properties, funciones CSS.
+- **CSS.** Responsive design, Flexbox, Grid, animaciones, anchor positioning, selectores avanzados, at-rules, custom properties, funciones CSS.
 
 - **JavaScript.** ES6, manipulación del DOM, eventos, fetch, JSON.
 
