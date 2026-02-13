@@ -50,7 +50,7 @@ I’m now seeking remote opportunities where I can apply my scientific backgroun
 
 - **HTML.** Semantic HTML5, accessibility (ARIA), meta tags, SEO optimization, forms and validation, responsive media handling.
 
-- **CSS.** Responsive design, Flexbox, Grid, transitions, animations, advanced selectors, at-rules, custom properties, CSS functions.
+- **CSS.** Responsive design, Flexbox, Grid, animations, anchor positioning, advanced selectors, at-rules, custom properties, CSS functions.
 
 - **JavaScript.** ES6, DOM, events, fetch, JSON.
 
