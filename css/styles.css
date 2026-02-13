@@ -228,7 +228,6 @@ The home label behaves as a close document button.
 */
 
 .home-label {
-    visibility: hidden;
     display: grid;
     place-content: center;
     position: fixed;
@@ -244,24 +243,16 @@ The home label behaves as a close document button.
     list-style: none;
     cursor: pointer;
     user-select: none;
-    &::after, 
-    &::before {
+    &::before, 
+    &::after {
         content: "";
         position: absolute;
         inset: 0;
         margin: auto;
-        height: 80%;
-        width: 7%;
+        height: 7%;
+        width: 80%;
         background-color: var(--dark-ui-color);
-        transform: rotate(45deg);
-    } 
-    &::before {
-       transform: rotate(-45deg); 
     }
-}
-
-main:has(.filing-cabinet details[open]) .home details .home-label {
-    visibility: visible;
 }
 
 .about-me-label {
@@ -293,7 +284,7 @@ main:has(.filing-cabinet details[open]) .home details .home-label {
 }
 
 /* 
-The following calculation allows the anchors to be positioned in the perfect spots to coincide
+The following calculation allows the anchors' targets to be positioned in the perfect spots to coincide
 with the drawers’ opening in the scroll animation. Even if it seems tricky, it comes from this
 next simple reasoning.
 
@@ -314,12 +305,12 @@ resulting in the total scrollable height of the webpage.
 As the drawers’ animation peaks at 30% and 75% of the scroll, respectively, we can obtain those heights
 by multiplying the total scrollable height by 0.3 and 0.75.
 
-However, the anchors are positioned relative to the filing cabinet, so it is necessary to subtract
-'certificate-top-margin' and 'certificate-height' from the calculation. Additionally, since the filing
-cabinet is scroll-animated, a small correction needs to be included too. Unfortunately, this animation 
-also causes small shifts in the anchors when using them.
+However, the anchors' targets are positioned relative to the filing cabinet, so it is necessary to 
+subtract 'certificate-top-margin' and 'certificate-height' from the calculation. Additionally, since 
+the filing cabinet is scroll-animated, a small correction needs to be included too. Unfortunately, 
+this animation also causes small shifts in the anchors when using them.
 
-Therefore, the anchors’ top offset for the About Me and Skills sections is:
+Therefore, the targets’ top offset for the About Me and Skills sections is:
 
 sweet-point-1 = (cert-mgt + cert-h + fcab-h - view-h) · 0.3 - cert-mgt - cert-h - fcab-corr
 
@@ -576,7 +567,7 @@ When including animations in 'details' elements, the typical approach is to add 
 to the animation. However, by doing so, timing conflicts between anchor behavior and 'details' 
 unfolding came up.
 
-With 'content-visibility: visible', anchors are always available and, even if the 'details' content
+With 'content-visibility: visible', anchors' targets are always available and, even if the 'details' content
 is no longer hidden, the animation allows for manual hiding. The use of 'details' is still
 desirable since its reduces complexity and provides the accordion menu behavior.
 */
@@ -619,6 +610,34 @@ details[open] .section-doc {
         opacity: 0;
     }
 }
+
+.home-label {
+    visibility: hidden;
+    transform: translateY(-25vh);
+    transition:
+        visibility 1s allow-discrete,
+        transform 1s ease-in-out;
+    &::before, &::after {
+        transition: transform .3s;
+    }
+}
+
+main:has(.filing-cabinet details[open]) .home details .home-label {
+    visibility: visible;
+    transform: translateY(0) rotate(360deg);
+    transition:
+        visibility 1s .5s allow-discrete,
+        transform 1s .5s linear(0, 0.402 7.4%, 0.711 15.3%, 0.929 23.7%, 1.008 28.2%, 1.067 33%, 1.099 36.9%, 1.12 41%, 1.13 45.4%, 1.13 50.1%, 1.111 58.5%, 1.019 83.2%, 1.004 91.3%, 1);
+    &::before {
+        transform: rotate(45deg);
+        transition: transform .5s .7s cubic-bezier(0.32, 0, 0.67, 0);
+    }
+    &::after {
+        transform: rotate(-45deg);
+        transition: transform .5s .7s cubic-bezier(0.32, 0, 0.67, 0);
+    }
+}
+
 
 /* STRUCTURE MEDIA QUERIES */
 
@@ -821,7 +840,7 @@ details[open] .section-doc {
 
 /* STICKMAN ANIMATION */
 
-.animation{
+.animation {
     margin: 200px 20px 20px;
     background-image: url(../src/skillanimation_sprite_large.png);
     background-repeat: no-repeat;
