@@ -214,7 +214,6 @@ the post-it nav.
         place-content: center;
         height: 80%;
         width: 80%;
-        background-color: #B3AB9C;
         border: #32271F 1px solid;
         border-radius: max(.2vw, 1px);
         font: max(.8vw, .8vh) var(--font-sans);
@@ -556,7 +555,7 @@ Therefore, they were also animated on scroll.
     70%, 80% { transform: translateY(343%); scale: 1.07; }
 }
 
-/* TIME ANIMATIONS */
+/* TIME ANIMATIONS & TRANSITIONS */
 
 /*
 The very next declaration block is necessary to ensure that the anchor is accessible for the main
@@ -647,6 +646,24 @@ main:has(.filing-cabinet details[open]) .home details .home-label {
 
 .home-label:active,  .home-label:focus  {
     background-color: hsl(from var(--light-ui-color) h calc(s - 10) calc(l - 20));
+}
+
+.section-label {
+    & > div {
+        background-color: #B3AB9C;
+    }
+    &:hover {
+        filter: drop-shadow(0 -3px 2px #DFCEAC66);
+        & > div {
+            background-color: hsl(from #B3AB9C h s calc(l + 10));
+        }
+    }
+    &:active, &:focus {
+        filter: drop-shadow(0 -3px 2px #DFCEAC66);
+        & > div {
+            background-color: hsl(from #B3AB9C h s calc(l - 10));
+        }
+    }
 }
 
 
@@ -831,6 +848,8 @@ main:has(.filing-cabinet details[open]) .home details .home-label {
         color: hsl(from var(--main-text-color) h calc(s + 10) calc(l + 20))
     }
     &:active, &:focus {
+        text-decoration: underline solid 6% currentColor;
+        text-shadow: 0 0 10px #D4DEED;
         color: hsl(from var(--main-text-color) h calc(s - 10) calc(l - 20))
     }
 }
