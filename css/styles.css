@@ -135,8 +135,8 @@ body {
     z-index: 30;
     height: 95vh;
     max-width: 95vw;
-    inset: 2.5vh 0 auto 0;
-    margin: 0 auto;
+    inset: 0;
+    margin: auto;
     filter: drop-shadow(0 0 5px #130D0C);
     overflow: clip;
     overflow-clip-margin: content-box;
@@ -161,7 +161,6 @@ body {
         );
     aspect-ratio: 1190/1600;
     height: 90vh;
-    top: 6vh;
 }
 
 .projects {
@@ -182,7 +181,6 @@ body {
             url(../src/documents/document4_large.webp) 2x
         );
     aspect-ratio: 1151/1600;
-    top: 1.5vh;
 }
 
 /* SECTION LABELS & ANCHORS' TARGETS */
@@ -623,7 +621,7 @@ details[open] .section-doc {
     }
 }
 
-main:has(.filing-cabinet details[open]) .home details .home-label {
+main:has(.filing-cabinet details[open]) .home-label {
     visibility: visible;
     transform: translateY(0) rotate(360deg);
     transition:
@@ -678,8 +676,13 @@ main:has(.filing-cabinet details[open]) .home details .home-label {
         width: 95vw;
         top: -1vh;
     }
+    .section-doc {
+        max-width: 110vw;
+        max-height: 85vh;
+        inset: 0 -20vw;
+    }
     .home-label {
-        top: max(calc(50vh - (95vw*1600/1190)/2 - 5vh), 2vh);
+        top: max(calc(50dvh - (120dvw*1600/1190)/2), 2dvh);
         right: 7vw;
     }
     #about-me-anchor, #skills-anchor {
@@ -726,6 +729,35 @@ main:has(.filing-cabinet details[open]) .home details .home-label {
     }
     #projects-anchor, #contact-anchor {
         top: calc((50vw*806/1200 + 10vh + 100% - 100dvh) * .75 - 50vw*806/1200 - 10vh);
+    }
+    @media (min-aspect-ratio: 1.8) {
+        .section-doc-wrapper {
+            display: block flow-root;
+            position: fixed;
+            width: 55vw;
+            height: 100dvh;
+            inset: 0 0 0 30vw;
+            margin: auto;
+            overflow: hidden auto;
+            z-index: 30;
+            opacity: 0;
+            transform: translateX(60vw);
+            transition: opacity .3s, transform .3s;
+        }
+        details[open] .section-doc-wrapper {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .section-doc {
+            position: static;
+            margin: 5vh auto;
+            height: auto;
+            max-height: 180vh;
+            width: 90%;
+        }
+        .home-label {
+            right: 1.5vw;
+        }
     }
 }
 
@@ -835,13 +867,12 @@ main:has(.filing-cabinet details[open]) .home details .home-label {
     flex-flow: column nowrap;
     justify-content: center;
     position: fixed;
-    inset: 20% 10% 10% 15%;
+    inset: 22% 10% 10% 25%;
     font-size: max(max(1.1rem, 2.8vh), 2.3vw);
     user-select: none;
 }
 
 .nav-anchor {
-    padding: 0 20px;
     &:hover {
         text-decoration: underline solid 6% currentColor;
         text-shadow: 0 0 10px #D4DEED;
