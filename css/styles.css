@@ -96,6 +96,7 @@ body, .home, .section-doc, .nav, .options, .filing-cabinet > div > div {
 
 html {
     scroll-behavior: smooth;
+    scrollbar-color: var(--dark-ui-color) var(--light-ui-color);
 }
 
 body {
@@ -619,6 +620,17 @@ details[open] .section-doc {
         background-color: var(--dark-ui-color);
         transition: transform .3s;
     }
+    &:hover, &:focus-visible {
+        background-color: hsl(from var(--light-ui-color) h s calc(l + 10));
+        filter: drop-shadow(0 0 5px #DFCEAC);
+    }
+    &:active {
+        background-color: hsl(from var(--light-ui-color) h calc(s - 10) calc(l - 20));
+    }
+    &:focus-visible {
+        outline: #C4AA76 solid 2px;
+        outline-offset: 1px;
+    }
 }
 
 main:has(.filing-cabinet details[open]) .home-label {
@@ -637,30 +649,25 @@ main:has(.filing-cabinet details[open]) .home-label {
     }
 }
 
-.home-label:hover {
-    background-color: hsl(from var(--light-ui-color) h s calc(l + 10));
-    filter: drop-shadow(0 0 5px #DFCEAC);
-}
-
-.home-label:active,  .home-label:focus  {
-    background-color: hsl(from var(--light-ui-color) h calc(s - 10) calc(l - 20));
-}
-
 .section-label {
     & > div {
         background-color: #B3AB9C;
     }
-    &:hover {
+    &:hover, &:focus-visible {
         filter: drop-shadow(0 -3px 2px #DFCEAC66);
         & > div {
             background-color: hsl(from #B3AB9C h s calc(l + 10));
         }
     }
-    &:active, &:focus {
+    &:active {
         filter: drop-shadow(0 -3px 2px #DFCEAC66);
         & > div {
             background-color: hsl(from #B3AB9C h s calc(l - 10));
         }
+    }
+    &:focus-visible {
+        outline: #C4AA76 solid 2px;
+        outline-offset: 1px; 
     }
 }
 
@@ -743,6 +750,8 @@ main:has(.filing-cabinet details[open]) .home-label {
             opacity: 0;
             transform: translateX(60vw);
             transition: opacity .3s, transform .3s;
+            scrollbar-color: var(--light-ui-color) transparent;
+            scrollbar-width: thin;
         }
         details[open] .section-doc-wrapper {
             opacity: 1;
@@ -873,15 +882,21 @@ main:has(.filing-cabinet details[open]) .home-label {
 }
 
 .nav-anchor {
-    &:hover {
+    border-radius: max(1.2vw, 10px);
+    padding: 0 10px;
+    &:hover, &:focus-visible {
         text-decoration: underline solid 6% currentColor;
         text-shadow: 0 0 10px #D4DEED;
         color: hsl(from var(--main-text-color) h calc(s + 10) calc(l + 20))
     }
-    &:active, &:focus {
+    &:active {
         text-decoration: underline solid 6% currentColor;
         text-shadow: 0 0 10px #D4DEED;
         color: hsl(from var(--main-text-color) h calc(s - 10) calc(l - 20))
+    }
+    &:focus-visible {
+        outline: hsl(from var(--main-text-color) h calc(s + 10) calc(l + 20)) solid 3px;
+        outline-offset: 2px; 
     }
 }
 
