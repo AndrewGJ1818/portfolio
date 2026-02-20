@@ -215,14 +215,25 @@ the post-it nav.
         width: 80%;
         border: #32271F 1px solid;
         border-radius: max(.2vw, 1px);
-        font: max(.8vw, .8vh) var(--font-sans);
+        font: .8vmax var(--font-sans);
         letter-spacing: 2px;
         text-transform: uppercase;
     }
 }
 
+@supports (font-size: 1cqw) {
+    .section-label {
+        container-type: inline-size;
+        & > div {
+            font-size: 11cqw;
+            border-width: 1.2cqw;
+            letter-spacing: 1.6cqw;
+        }
+    }
+}
+
 /* 
-The home label behaves as a close document button.
+The home label behaves as a closing document button.
 */
 
 .home-label {
@@ -230,10 +241,10 @@ The home label behaves as a close document button.
     place-content: center;
     position: fixed;
     top: 11vh;
-    right: calc(50vw - (95vh*1218/1600)/2 - 4.5vw);
+    right: calc(50vw - (95vh*1218/1600)/2 - 5vw);
     aspect-ratio: 1;
-    width: clamp(40px, min(10vw, 8vh), 300px);
-    border: 3px var(--dark-ui-color) solid;
+    width: max(9vh, 4.5vw);
+    border: clamp(.45vh, .3vw, 8px) var(--dark-ui-color) solid;
     border-radius: 50%;
     z-index: 50;
     list-style: none;
@@ -689,8 +700,9 @@ main:has(.filing-cabinet details[open]) .home-label {
         inset: 0 -20vw;
     }
     .home-label {
-        top: max(calc(50dvh - (120dvw*1600/1190)/2), 2dvh);
+        top: max(50dvh - 120dvw*1600/1190/2, 2dvh);
         right: 7vw;
+        width: max(10vw, 5.5vh);
     }
     #about-me-anchor, #skills-anchor {
         top: calc((90vw*806/1200 + 20vh + 100% - 100dvh) * .3 - 90vw*806/1200 - 20vh);
@@ -729,7 +741,7 @@ main:has(.filing-cabinet details[open]) .home-label {
         left: 30vw;
     }
     .home-label {
-        right: max(calc(35vw - (95vh*1218/1600)/2 - 7vw), 1vw);
+        right: max(35vw - 95vh*1218/1600/2 - 7vw, 1vw);
     }
     #about-me-anchor, #skills-anchor {
         top: calc((50vw*806/1200 + 10vh + 100% - 100dvh) * .3 - 50vw*806/1200 - 10vh);
@@ -737,6 +749,7 @@ main:has(.filing-cabinet details[open]) .home-label {
     #projects-anchor, #contact-anchor {
         top: calc((50vw*806/1200 + 10vh + 100% - 100dvh) * .75 - 50vw*806/1200 - 10vh);
     }
+    
     @media (min-aspect-ratio: 1.8) {
         .section-doc-wrapper {
             display: block flow-root;
@@ -876,14 +889,23 @@ main:has(.filing-cabinet details[open]) .home-label {
     flex-flow: column nowrap;
     justify-content: center;
     position: fixed;
-    inset: 22% 10% 10% 25%;
-    font-size: max(max(1.1rem, 2.8vh), 2.3vw);
+    inset: 22% 10% 10% 22%;
+    font-size: max(1.4rem, 4.5vmin);
     user-select: none;
 }
 
+@supports (font-size: 1cqw) {
+    .nav {
+        container-type: inline-size;
+    }
+    .nav-list {
+        font-size: 10cqw;
+    }
+}
+
 .nav-anchor {
-    border-radius: max(1.2vw, 10px);
-    padding: 0 10px;
+    border-radius: 1.2vmin;
+    padding: 0 5%;
     &:hover, &:focus-visible {
         text-decoration: underline solid 6% currentColor;
         text-shadow: 0 0 10px #D4DEED;
@@ -898,9 +920,6 @@ main:has(.filing-cabinet details[open]) .home-label {
         outline: hsl(from var(--main-text-color) h calc(s + 10) calc(l + 20)) solid 3px;
         outline-offset: 2px; 
     }
-}
-
-@media (max-width: 1050px) and (max-height: 1050px) {
 }
 
 /****************************************
