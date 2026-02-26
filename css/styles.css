@@ -70,23 +70,11 @@ body, .home, .section-doc, .nav, .options, .filing-cabinet > div > div {
 
 /* FONTS */
 
-.dyna-font {
-    font: 3rem var(--font-script);
-    text-wrap: nowrap;
-    color: #784E48;
-}
+/* 
+Container query units are used along all the texts when the browser supports them.
+As a fallback, this system with custom properties is used.
+*/
 
-.flower-font {
-    font: 1rem/1.4 var(--font-handwritten);
-}
-
-.pt-font {
-    font: 1rem/1.5 var(--font-serif);
-}
-
-.roboto-font {
-    font: 1rem/1.5 var(--font-sans);
-}
 
 /****************************************
                STRUCTURE
@@ -236,7 +224,7 @@ the post-it nav.
 The home label behaves as a closing document button.
 */
 
-.home-label {
+.close-btn {
     display: grid;
     place-content: center;
     position: fixed;
@@ -619,7 +607,7 @@ details[open] .section-doc {
     }
 }
 
-.home-label {
+.close-btn {
     visibility: hidden;
     background-color: var(--light-ui-color);
     filter: drop-shadow(0 0 3px #130D0C);
@@ -644,7 +632,7 @@ details[open] .section-doc {
     }
 }
 
-main:has(.filing-cabinet details[open]) .home-label {
+main:has(.filing-cabinet details[open]) .close-btn {
     visibility: visible;
     transform: translateY(0) rotate(360deg);
     transition:
@@ -699,7 +687,7 @@ main:has(.filing-cabinet details[open]) .home-label {
         max-height: 85vh;
         inset: 0 -20vw;
     }
-    .home-label {
+    .close-btn {
         top: max(50dvh - 120dvw*1600/1190/2, 2dvh);
         right: 7vw;
         width: max(10vw, 5.5vh);
@@ -740,7 +728,7 @@ main:has(.filing-cabinet details[open]) .home-label {
     .section-doc {
         left: 30vw;
     }
-    .home-label {
+    .close-btn {
         right: max(35vw - 95vh*1218/1600/2 - 7vw, 1vw);
     }
     #about-me-anchor, #skills-anchor {
@@ -777,7 +765,7 @@ main:has(.filing-cabinet details[open]) .home-label {
             max-height: 180vh;
             width: 90%;
         }
-        .home-label {
+        .close-btn {
             right: 1.5vw;
         }
     }
@@ -890,17 +878,8 @@ main:has(.filing-cabinet details[open]) .home-label {
     justify-content: center;
     position: fixed;
     inset: 22% 10% 10% 22%;
-    font-size: max(1.4rem, 4.5vmin);
+    font: max(1.4rem, 4.5vmin) var(--font-handwritten);
     user-select: none;
-}
-
-@supports (font-size: 1cqw) {
-    .nav {
-        container-type: inline-size;
-    }
-    .nav-list {
-        font-size: 10cqw;
-    }
 }
 
 .nav-anchor {
@@ -922,6 +901,15 @@ main:has(.filing-cabinet details[open]) .home-label {
     }
 }
 
+@supports (font-size: 1cqw) {
+    .nav {
+        container-type: inline-size;
+        & > .nav-list {
+           font-size: 10cqw;
+        }
+    }
+}
+
 /****************************************
            LANGUAGE SELECTOR
 *****************************************/
@@ -929,6 +917,58 @@ main:has(.filing-cabinet details[open]) .home-label {
 /****************************************
                  HOME
 *****************************************/
+
+.home-text-wrapper, .home-text-wrapper header, .home-text-wrapper hgroup {
+    display: flex;
+    text-align: center;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-text-wrapper {
+    position: absolute;
+    inset: 14% 10%;
+    row-gap: 15%;
+    color: hsl(from var(--main-text-color) h s l / 85%);
+    letter-spacing: .08vmax;
+}
+
+.home-text-wrapper header {
+    row-gap: 30%;
+}
+
+.home-text-wrapper small {
+    color: hsl(from var(--main-text-color) h calc(s - 20) calc(l + 35) / 70%);
+    font-weight: bold;
+}
+
+.home-text-wrapper h1 {
+    font: 10px var(--font-script);
+    letter-spacing: normal;
+    color: #784E48;
+    text-wrap: nowrap;
+    line-height: .95;
+}
+
+.home-text-wrapper p {
+    hyphens: none;
+}
+
+@supports (font-size: 1cqw) {
+    .home-text-wrapper {
+        container-type: inline-size;
+        & > * {
+            font-size: 4cqw;
+        }
+        & small {
+            font-size: 5cqw;
+        }
+        & h1 {
+            font-size: 14cqw;
+        }
+    }
+}
 
 /****************************************
                 SKILLS
