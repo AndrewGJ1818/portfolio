@@ -6,7 +6,7 @@ Hello there, my name is
 
 Andrew Garcia Jean
 
-I’m learning to combine my background in biology with software development, translating the language of life into code. Currently, I'm seeking my first professional opportunity.
+I want to combine my background in biology with software development to support the scientific community through my code. I’m currently looking for my first professional opportunity.
 
 # About Me
 

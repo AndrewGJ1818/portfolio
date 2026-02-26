@@ -6,7 +6,7 @@ Certificado de Ciencia y Software
 
 Andrew García Jean
 
-Estoy aprendiendo a combinar mi formación en biología con el desarrollo de software, traduciendo el lenguaje de la vida en código. Actualmente, busco mi primera oportunidad profesional.
+Me gustaría combinar mi formación en biología con el desarrollo de software para ayudar a la comunidad científica con mi código. Actualmente, estoy buscando mi primera oportunidad laboral.
 
 # Sobre mi
 
