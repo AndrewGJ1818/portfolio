@@ -123,7 +123,6 @@ body {
     position: fixed;
     z-index: 30;
     height: 95vh;
-    /* max-width: 95vw; */
     inset: 0;
     margin: auto;
     filter: drop-shadow(0 0 5px #130D0C);
@@ -568,7 +567,7 @@ is no longer hidden, the animation allows for manual hiding. The use of 'details
 desirable since its reduces complexity and provides the accordion menu behavior.
 */
 
-details::details-content {
+.filing-cabinet > details::details-content {
     content-visibility: visible;
 }
 
@@ -632,7 +631,7 @@ details[open] .section-doc {
     }
 }
 
-main:has(.filing-cabinet details[open]) .close-btn {
+main:has(.filing-cabinet > details[open]) .close-btn {
     visibility: visible;
     transform: translateY(0) rotate(360deg);
     transition:
@@ -1051,6 +1050,7 @@ main:has(.filing-cabinet details[open]) .close-btn {
             font-size: 2.5cqw;
         }
     }
+}
 
 /* MEDIA QUERY */
 
@@ -1061,7 +1061,7 @@ main:has(.filing-cabinet details[open]) .close-btn {
     }
     @supports (font-size: 1cqw) {
         .about-me-text {
-            font-size: 3cqw;
+            font-size: 2.95cqw;
         }
     }
 }
@@ -1069,6 +1069,12 @@ main:has(.filing-cabinet details[open]) .close-btn {
 /****************************************
                 SKILLS
 *****************************************/
+
+/* SKILLSTAMPS */
+
+.skills-content-wrapper img {
+    object-fit: 50% 30%;
+}
 
 /* STICKMAN ANIMATION */
 
