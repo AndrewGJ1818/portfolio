@@ -22,9 +22,9 @@
     outline:purple 1px solid;
 } */
 
-body {
+/* body {
     outline: red solid 5px;
-}
+} */
 
 /* CSS RESET */
 
@@ -52,8 +52,8 @@ p, small {
     hyphens: auto;
 }
 
-small {
-    font-size: .8rem;
+input, button, textarea, select {
+    font: inherit;
 }
 
 body {
@@ -123,7 +123,7 @@ body {
     position: fixed;
     z-index: 30;
     height: 95vh;
-    max-width: 95vw;
+    /* max-width: 95vw; */
     inset: 0;
     margin: auto;
     filter: drop-shadow(0 0 5px #130D0C);
@@ -683,12 +683,12 @@ main:has(.filing-cabinet details[open]) .close-btn {
         top: -1vh;
     }
     .section-doc {
-        max-width: 110vw;
+        height: calc(120vw*1600/1190);
         max-height: 85vh;
         inset: 0 -20vw;
     }
     .close-btn {
-        top: max(50dvh - 120dvw*1600/1190/2, 2dvh);
+        top: max(50dvh - 120dvw*1600/1190/2 - 3dvh, 2dvh);
         right: 7vw;
         width: max(10vw, 5.5vh);
     }
@@ -918,7 +918,7 @@ main:has(.filing-cabinet details[open]) .close-btn {
                  HOME
 *****************************************/
 
-.home-text-wrapper, .home-text-wrapper header, .home-text-wrapper hgroup {
+.home-content-wrapper, .home-content-wrapper header, .home-content-wrapper hgroup {
     display: flex;
     text-align: center;
     flex-flow: column nowrap;
@@ -926,46 +926,142 @@ main:has(.filing-cabinet details[open]) .close-btn {
     align-items: center;
 }
 
-.home-text-wrapper {
+.home-content-wrapper {
     position: absolute;
     inset: 14% 10%;
     row-gap: 15%;
+    font: 10px var(--font-serif);
     color: hsl(from var(--main-text-color) h s l / 85%);
     letter-spacing: .08vmax;
-}
-
-.home-text-wrapper header {
-    row-gap: 30%;
-}
-
-.home-text-wrapper small {
-    color: hsl(from var(--main-text-color) h calc(s - 20) calc(l + 35) / 70%);
-    font-weight: bold;
-}
-
-.home-text-wrapper h1 {
-    font: 10px var(--font-script);
-    letter-spacing: normal;
-    color: #784E48;
-    text-wrap: nowrap;
-    line-height: .95;
-}
-
-.home-text-wrapper p {
-    hyphens: none;
+    & header {
+        row-gap: 30%;
+    }
+    & small {
+        color: hsl(from var(--main-text-color) h calc(s - 20) calc(l + 35) / 50%);
+        font-weight: bold;
+        filter: blur(.5px);
+    }
+    & h1 {
+        font: 20px var(--font-script);
+        letter-spacing: normal;
+        color: #784E48;
+        text-wrap: nowrap;
+        line-height: .95;
+    }
+    & p {
+        hyphens: none;
+    }
 }
 
 @supports (font-size: 1cqw) {
-    .home-text-wrapper {
+    .home-content-wrapper {
         container-type: inline-size;
         & > * {
-            font-size: 4cqw;
+            font-size: 3.5cqw;
         }
         & small {
             font-size: 5cqw;
         }
         & h1 {
             font-size: 14cqw;
+        }
+    }
+}
+
+/****************************************
+               ABOUT ME
+*****************************************/
+
+.about-me-content-wrapper {
+    position: absolute;
+    font: 10px var(--font-serif);
+    inset: 8% 11% 5%;
+    hyphens: auto;
+}
+
+.about-me-content-wrapper header {
+    margin-bottom: 3%;
+    text-align: center
+}
+
+/* TIMELINE */
+
+.about-me-timeline ul {
+    display: flex;
+    flex-flow: row nowrap;
+    column-gap: 2%;
+    justify-content: center;
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        height: 3%;
+        width: 75%;
+        background-color: var(--main-text-color);
+        top: 0;
+    }
+}
+
+.about-me-timeline ul li {
+    padding: 1% 2% 0;
+    flex: 0 0 30%;
+    text-align: center;
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        background-color: var(--main-text-color);
+        width: 6%;
+        aspect-ratio: 1;
+        left: calc(50% - 3%);
+        top: calc(-5%)
+    }
+}
+
+.about-me-timeline time {
+    text-wrap: nowrap;
+}
+
+/* TEXT */
+
+.about-me-text h3 {
+    margin-block: 3.2% .5%;
+    padding-left: 3%; 
+}
+
+.about-me-text p {
+    text-align: justify;
+}
+
+/* CONTAINER QUERY SIZING */
+
+@supports (font-size: 1cqw) {
+    .about-me-content-wrapper {
+        container-type: inline-size;
+        & > * {
+            font-size: 3.05cqw;
+        }
+    }
+    .about-me-timeline {
+        & time {
+            font-size: 3.5cqw;
+        }
+        & p {
+            font-size: 2.5cqw;
+        }
+    }
+
+/* MEDIA QUERY */
+
+@media (max-aspect-ratio: .6) and (max-width: 1200px) {
+    .about-me-text {
+        width: 92%;
+        margin: 0 auto;
+    }
+    @supports (font-size: 1cqw) {
+        .about-me-text {
+            font-size: 3cqw;
         }
     }
 }
