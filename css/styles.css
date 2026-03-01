@@ -62,7 +62,7 @@ body {
 
 /* BACKGROUND IMAGES */
 
-body, .home, .section-doc, .nav, .options, .filing-cabinet > div > div {
+body, .home, .section-doc, .nav, .options, .filing-cabinet > div > div, .skills-stamp {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain; 
@@ -715,7 +715,7 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     }
 }
 
-@media (orientation: landscape) and (max-width:1500px) {
+@media (orientation: landscape) and (max-width: 1500px) {
     .home {
         width: 50vw;
         left: 15vw;
@@ -772,7 +772,7 @@ main:has(.filing-cabinet > details[open]) .close-btn {
 
 /* IMAGES MEDIA QUERY */
 
-@media (max-width:1200px) {
+@media (max-width: 1200px) {
     body {
         background-image: 
             radial-gradient(ellipse 60% 50%, transparent 65%, #130D0C55 95%, #130D0C77 100%),
@@ -933,12 +933,12 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     color: hsl(from var(--main-text-color) h s l / 85%);
     letter-spacing: .08vmax;
     & header {
-        row-gap: 30%;
+        row-gap: 2vmax;
     }
     & small {
         color: hsl(from var(--main-text-color) h calc(s - 20) calc(l + 35) / 50%);
         font-weight: bold;
-        filter: blur(.5px);
+        filter: blur(.05vmax);
     }
     & h1 {
         font: 20px var(--font-script);
@@ -975,7 +975,6 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     position: absolute;
     font: 10px var(--font-serif);
     inset: 8% 11% 5%;
-    hyphens: auto;
 }
 
 .about-me-content-wrapper header {
@@ -1070,11 +1069,125 @@ main:has(.filing-cabinet > details[open]) .close-btn {
                 SKILLS
 *****************************************/
 
+.skills-content-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 1%;
+    position: absolute;
+    font: 10px var(--font-handwritten);
+    inset: 5% 5% 5%;
+}
+
+.skills-content-wrapper header {
+    text-align: right;
+    padding-right: 6%;
+    text-transform: uppercase;
+    letter-spacing: .3vmax;
+}
+
+.skills-group {
+    flex: 0 0 20%;
+    & h3 {
+        text-align: center;
+        text-decoration: underline solid currentColor .3vmin;
+    }
+}
+
 /* SKILLSTAMPS */
 
-.skills-content-wrapper img {
-    object-fit: 50% 30%;
+.skills-list {
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 0%;
+    justify-content: center;
 }
+
+.skills-list li {
+    flex: 0 0 20%;
+}
+
+.skills-list summary {
+    list-style: none;
+    text-align: center;
+    line-height: .8;
+}
+
+.skills-stamp {
+    width: 100%;
+    margin: 0 auto;
+    aspect-ratio: 1;
+    background-size: 500% 300%;
+    background-repeat: no-repeat;
+    background-image: url(../src/sprites/skillstamps_sprite_alt.png);
+    background-image:
+        image-set(
+            url(../src/sprites/skillstamps_sprite_medium.webp) 1x,
+            url(../src/sprites/skillstamps_sprite_large.webp) 2x
+        );
+}
+
+@media (max-width: 1200px) {
+    .skills-stamp {
+        background-image:         
+            image-set(
+                url(../src/sprites/skillstamps_sprite_small.webp) 1x,
+                url(../src/sprites/skillstamps_sprite_medium.webp) 2x
+            );
+    }
+}
+
+.skills-stamp-1 {
+    background-position: 0 0;
+}
+.skills-stamp-2 {
+    background-position: 25% 0;
+}
+.skills-stamp-3 {
+    background-position: 50% 0;
+}
+.skills-stamp-4 {
+    background-position: 75% 0;
+}
+.skills-stamp-5 {
+    background-position: 100% 0;
+}
+.skills-stamp-6 {
+    background-position: 0 50%;
+}
+.skills-stamp-7 {
+    background-position: 25% 50%;
+}
+.skills-stamp-8 {
+    background-position: 50% 50%;
+}
+.skills-stamp-9 {
+    background-position: 75% 50%;
+}
+.skills-stamp-10 {
+    background-position: 100% 50%;
+}
+.skills-stamp-11 {
+    background-position: 0 100%;
+}
+.skills-stamp-12 {
+    background-position: 25% 100%;
+}
+.skills-stamp-13 {
+    background-position: 50% 100%;
+}
+.skills-stamp-14 {
+    background-position: 75% 100%;
+}
+.skills-stamp-15 {
+    background-position: 100% 100%;
+}
+
+.skills-description {
+    position: absolute;
+    border: 1px solid black;
+    inset: 90% 20% 0% 20%;
+}
+
 
 /* STICKMAN ANIMATION */
 
@@ -1139,6 +1252,30 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     71.5%  { background-position: -399px -198px; }
     85.8% { background-position: -532px -198px; }
 }
+
+/* CONTAINER QUERY SIZING */
+
+@supports (font-size: 1cqw) {
+    .skills-content-wrapper {
+        container-type: inline-size;
+        & > * {
+            font-size: 3cqw;
+        }
+        & header {
+            font-size: 5cqw;
+        }
+    }
+}
+
+/* BORDES VISUALES */
+
+/* .skills-content-wrapper > * {
+    border: 1px red solid;
+}
+
+.skills-list > * {
+    border: blue 1px solid;
+} */
 
 /****************************************
                PROJECTS
