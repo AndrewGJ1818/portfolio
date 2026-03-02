@@ -44,7 +44,7 @@ Actualmente, busco oportunidades de trabajo remoto donde pueda aplicar mi formac
 
 - **Machine Learning.** Redes neuronales, decision trees, random forests, SVM.
 
-- **Método Científico y Proceso de Investigación**. Planteamiento de hipótesis, diseño experimental, optimización de protocolos, validación de datos, prácticas de reproducibilidad.
+- **Método Científico e Investigación.**. Planteamiento de hipótesis, diseño experimental, optimización de protocolos, validación de datos, prácticas de reproducibilidad.
 
 ### \> Desarrollo de Software
 

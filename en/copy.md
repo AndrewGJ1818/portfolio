@@ -44,7 +44,7 @@ I’m now seeking remote opportunities where I can apply my scientific backgroun
 
 - **Machine Learning.** Neural networks, decision trees, random forests, SVMs.
 
-- **Scientific Method & Research Workflow.** Hypothesis formulation, experimental design, protocol optimization, data validation, reproducibility practices.
+- **Scientific Method & Research.** Hypothesis formulation, experimental design, protocol optimization, data validation, reproducibility practices.
 
 ### \> Software Development
 
