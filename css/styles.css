@@ -886,12 +886,12 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     padding: 0 5%;
     &:hover, &:focus-visible {
         text-decoration: underline solid 6% currentColor;
-        text-shadow: 0 0 10px #D4DEED;
+        text-shadow: 0 0 10px hsl(from var(--main-text-color) h calc(s + 90) calc(l + 80));
         color: hsl(from var(--main-text-color) h calc(s + 10) calc(l + 20))
     }
     &:active {
         text-decoration: underline solid 6% currentColor;
-        text-shadow: 0 0 10px #D4DEED;
+        text-shadow: 0 0 10px hsl(from var(--main-text-color) h calc(s + 90) calc(l + 80));
         color: hsl(from var(--main-text-color) h calc(s - 10) calc(l - 20))
     }
     &:focus-visible {
@@ -1073,7 +1073,7 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     display: flex;
     flex-flow: column nowrap;
     position: absolute;
-    font: 10px var(--font-handwritten);
+    font: bold 10px var(--font-handwritten);
     inset: 2% 4% 5%;
 }
 
@@ -1091,10 +1091,11 @@ main:has(.filing-cabinet > details[open]) .close-btn {
 
 .skills-group h3 {
     position: absolute;
+    color: #784E48;
     text-wrap: nowrap;
     position-anchor: --skills-group-border;
     left: anchor(right);
-    top: calc(anchor(top) + 3%);
+    top: calc(anchor(top) + 4%);
     writing-mode: sideways-rl;
 }
 
@@ -1107,7 +1108,7 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     justify-content: center;
     anchor-name: --skills-group-border;
     padding-block: 2%;
-    border-bottom: .2vmax dashed #784E4855;
+    border-bottom: .2vmax dashed #784E4877;
     /* border-radius: 2vmax; */
     column-gap: 5%;
     & li {
@@ -1123,6 +1124,7 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     width: 73%;
     padding: none;
     border: none;
+    column-gap: 8%;
     & li {
         flex: 0 0 24.7%;
     }
@@ -1130,7 +1132,6 @@ main:has(.filing-cabinet > details[open]) .close-btn {
 
 .skills-list summary {
     list-style: none;
-    font-weight: bold;
     text-align: center;
     line-height: .95;
 }
@@ -1205,11 +1206,68 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     background-position: 100% 100%;
 }
 
+.skills-list summary:hover, .skills-list summary:focus-visible {
+    scale: 1.05;
+    text-shadow: 0 0 10px hsl(from var(--main-text-color) h calc(s + 90) calc(l + 80));
+    color: hsl(from var(--main-text-color) h calc(s + 10) calc(l + 20));
+    & .skills-stamp {
+        filter: invert(32%) sepia(22%) saturate(820%) hue-rotate(319deg) brightness(110%) contrast(86%) drop-shadow(0 0 3px #DFCEAC);
+    }
+}
+
+.skills-list summary:active {
+    scale: .95;
+    text-shadow: 0 0 10px hsl(from var(--main-text-color) h calc(s + 90) calc(l + 80));
+    color: hsl(from var(--main-text-color) h calc(s + 10) calc(l + 20));
+    & .skills-stamp {
+        scale: .95;
+        filter: invert(32%) sepia(22%) saturate(780%) hue-rotate(319deg) brightness(70%) contrast(86%) drop-shadow(0 0 3px #DFCEAC);
+    }
+}
+
+.skills-list summary:focus-visible {
+    border-radius: 1.2vmin;
+    outline: hsl(from var(--main-text-color) h calc(s + 10) calc(l + 20)) solid 2px;
+    outline-offset: 1px;
+}
+
+.skills-list details:open summary {
+    scale: 1.1;
+    color: hsl(from var(--alt-text-color) h calc(s + 10) calc(l + 30));
+    & .skills-stamp {
+        filter: invert(50%) sepia(8%) saturate(1755%) hue-rotate(177deg) brightness(88%) contrast(91%) drop-shadow(0 0 3px #DFCEAC);
+    }
+    &:focus-visible {
+        outline-color: hsl(from var(--alt-text-color) h calc(s + 10) calc(l + 30));
+    }
+}
+
+.skills-list summary {
+    transition: scale .3s, filter .3s, color .3s;
+    & .skills-stamp {
+        transition: filter .2s;
+    }
+}
+
 .skills-description {
-    font-weight: bold;
+    font-weight: normal;
     position: absolute;
     inset: 9% 18% 81% 22%;
     hyphens: auto;
+}
+
+.skills-list details::details-content {
+    opacity: 0;
+    transition: 
+        opacity .3s,
+        content-visibility 1s allow-discrete;
+}
+
+.skills-list details:open::details-content {
+    opacity: 1;
+    transition: 
+        opacity .3s .2s,
+        content-visibility 1s allow-discrete;
 }
 
 /* STICKMAN ANIMATION */
@@ -1222,8 +1280,8 @@ main:has(.filing-cabinet > details[open]) .close-btn {
 }
 
 .skills-stickman-animation {
-    margin-top: 2%;
-    aspect-ratio: 133/198;
+    margin-top: 10%;
+    aspect-ratio: 200/229.5;
     background-position: 0 0;
     background-size: 500% 200%;
     background-image: url(../src/sprites/skillanimation_sprite_alt.png);
@@ -1233,10 +1291,10 @@ main:has(.filing-cabinet > details[open]) .close-btn {
             url(../src/sprites/skillanimation_sprite_large.webp) 2x
         );
     filter: invert(32%) sepia(22%) saturate(796%) hue-rotate(319deg) brightness(20%) contrast(86%);
-    animation: 1.8s steps(1) infinite static-animation;
+    animation: 1.3s steps(1) infinite static-animation;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
     .skills-stickman-animation {
         background-image:       
             image-set(
@@ -1265,10 +1323,10 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     }
 }
 
-.animation:has(+.activator:hover) {
-    animation: 
-        .5s steps(1) trans-animation,
-        1.8s .5s steps(1) infinite speak-animation;
+.skills-content-wrapper:has(details:open) .skills-stickman-animation {
+    animation:
+        .37s steps(1) trans-animation,
+        1.3s .37s steps(1) infinite speak-animation;
 }
 
 @keyframes static-animation {
@@ -1283,21 +1341,21 @@ main:has(.filing-cabinet > details[open]) .close-btn {
 
 @keyframes trans-animation {
     0% {
-        background-position: -532px 0;
+        background-position: 100% 0;
     }
     50% {
-        background-position: 0 -198px;
+        background-position: 0 100%;
     }
 }
 
 @keyframes speak-animation {
-    0% { background-position: -133px -198px; }
-    14.3%  { background-position: -266px -198px; }
-    28.6%  { background-position: -399px -198px; }
-    42.9%  { background-position: -133px -198px; }
-    57.2%  { background-position: -266px -198px; }
-    71.5%  { background-position: -399px -198px; }
-    85.8% { background-position: -532px -198px; }
+    0% { background-position: 25% 100%; }
+    14.3%  { background-position: 50% 100%; }
+    28.6%  { background-position: 75% 100%; }
+    42.9%  { background-position: 25% 100%; }
+    57.2%  { background-position: 50% 100%; }
+    71.5%  { background-position: 75% 100%; }
+    85.8% { background-position: 100% 100%; }
 }
 
 /* CONTAINER QUERY SIZING */
