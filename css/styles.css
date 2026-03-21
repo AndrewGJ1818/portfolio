@@ -36,6 +36,9 @@
 
 h1, h2, h3, h4, a, body, p, ul, ol, menu, div, article {
     list-style: none;
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
 }
 
 a {
@@ -195,6 +198,7 @@ the post-it nav.
     cursor: pointer;
     user-select: none;
     z-index: 5;
+    
     & > div {
         display: grid;
         place-content: center;
@@ -211,6 +215,7 @@ the post-it nav.
 @supports (font-size: 1cqw) {
     .section-label {
         container-type: inline-size;
+        
         & > div {
             font-size: 11cqw;
             border-width: 1.2cqw;
@@ -237,6 +242,7 @@ The home label behaves as a closing document button.
     list-style: none;
     cursor: pointer;
     user-select: none;
+    
     &::before, 
     &::after {
         content: "";
@@ -270,10 +276,6 @@ The home label behaves as a closing document button.
 
 .section-anchor {
     position: absolute;
-    /* background-color: green;
-    z-index: 100;
-    height: 5px;
-    width: 100px; */
 }
 
 #home-anchor {
@@ -334,12 +336,13 @@ to this expression.
     width: 40vw;
     top: -2vh;
     margin: 0 auto;
+    
     & > div > div {
         position: absolute;
     }
 }
 
-.filing-cabinet__back {
+.filing-cabinet-back {
     background-image: url(../src/fcabinet/fcabinet_slots_alt.png);
     background-image:
         image-set(
@@ -349,7 +352,7 @@ to this expression.
     inset: 20.44% 7.22% 29.37%;
 }
 
-.filing-cabinet__folders-1, .filing-cabinet__folders-2 {
+.filing-cabinet-folders-1, .filing-cabinet-folders-2 {
     background-image: url(../src/fcabinet/fcabinet_folders_alt.png);
     background-image:
         image-set(
@@ -359,15 +362,15 @@ to this expression.
     filter: drop-shadow(0 0 5px #130D0C);
 }
 
-.filing-cabinet__folders-1 {
+.filing-cabinet-folders-1 {
     inset: 11.49% 11.89% 79.46%;
 }
 
-.filing-cabinet__folders-2 {
+.filing-cabinet-folders-2 {
     inset: 39.54% 11.89% 51.42%;
 }
 
-.filing-cabinet__front {
+.filing-cabinet-front {
     background-image: url(../src/fcabinet/fcabinet_structure_alt.png);
     background-image:
         image-set(
@@ -380,7 +383,7 @@ to this expression.
     filter: drop-shadow(0 0 5px #130D0C);
 }
 
-.filing-cabinet__drawer-1 {
+.filing-cabinet-drawer-1 {
     background-image: url(../src/fcabinet/fcabinet_drawer1_alt.png);
     background-image:
         image-set(
@@ -392,7 +395,7 @@ to this expression.
     filter: drop-shadow(0 0 5px #130D0C);
 }
 
-.filing-cabinet__drawer-2 {
+.filing-cabinet-drawer-2 {
     background-image: url(../src/fcabinet/fcabinet_drawer2_alt.png);
     background-image:
         image-set(
@@ -446,6 +449,7 @@ to this expression.
     inset: 0 0 auto 0;
     height: 10vh;
     z-index: 40;
+    pointer-events: none;
 }
 
 .viewport-overlay-lower-gradient {
@@ -454,6 +458,7 @@ to this expression.
     inset: auto 0 0 0;
     height: 10vh;
     z-index: 40;
+    pointer-events: none;
 }
 
 .footer-overlay-gradient {
@@ -467,22 +472,22 @@ to this expression.
 
 /* SCROLL ANIMATION */
 
-.filing-cabinet__drawer-1 {
+.filing-cabinet-drawer-1 {
     animation: 1ms linear scroll-open-drawer-1; /* 'animation-duration: 1ms' is a Firefox requirement (MDN) */
     animation-timeline: scroll();
 }
 
-.filing-cabinet__drawer-2 {
+.filing-cabinet-drawer-2 {
     animation: 1ms linear scroll-open-drawer-2; /* 'animation-duration: 1ms' is a Firefox requirement (MDN) */
     animation-timeline: scroll()
 }
 
-.filing-cabinet__folders-1 {
+.filing-cabinet-folders-1 {
     animation: 1ms linear scroll-open-folders-1; /* 'animation-duration: 1ms' is a Firefox requirement (MDN) */
     animation-timeline: scroll();
 }
 
-.filing-cabinet__folders-2 {
+.filing-cabinet-folders-2 {
     animation: 1ms linear scroll-open-folders-2; /* 'animation-duration: 1ms' is a Firefox requirement (MDN) */
     animation-timeline: scroll();
 }
@@ -614,17 +619,21 @@ details[open] .section-doc {
     transition:
         visibility 1s allow-discrete,
         transform 1s ease-in-out;
+    
     &::before, &::after {
         background-color: var(--dark-ui-color);
         transition: transform .3s;
     }
+    
     &:hover, &:focus-visible {
         background-color: hsl(from var(--light-ui-color) h s calc(l + 10));
         filter: drop-shadow(0 0 5px #DFCEAC);
     }
+    
     &:active {
         background-color: hsl(from var(--light-ui-color) h calc(s - 10) calc(l - 20));
     }
+    
     &:focus-visible {
         outline: #C4AA76 solid 2px;
         outline-offset: 1px;
@@ -637,10 +646,12 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     transition:
         visibility 1s .5s allow-discrete,
         transform 1s .5s linear(0, 0.402 7.4%, 0.711 15.3%, 0.929 23.7%, 1.008 28.2%, 1.067 33%, 1.099 36.9%, 1.12 41%, 1.13 45.4%, 1.13 50.1%, 1.111 58.5%, 1.019 83.2%, 1.004 91.3%, 1);
+    
     &::before {
         transform: rotate(45deg);
         transition: transform .5s .7s cubic-bezier(0.32, 0, 0.67, 0);
     }
+    
     &::after {
         transform: rotate(-45deg);
         transition: transform .5s .7s cubic-bezier(0.32, 0, 0.67, 0);
@@ -651,18 +662,23 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     & > div {
         background-color: #B3AB9C;
     }
+    
     &:hover, &:focus-visible {
         filter: drop-shadow(0 -3px 2px #DFCEAC66);
+        
         & > div {
             background-color: hsl(from #B3AB9C h s calc(l + 10));
         }
     }
+    
     &:active {
         filter: drop-shadow(0 -3px 2px #DFCEAC66);
+        
         & > div {
             background-color: hsl(from #B3AB9C h s calc(l - 10));
         }
     }
+    
     &:focus-visible {
         outline: #C4AA76 solid 2px;
         outline-offset: 1px; 
@@ -709,6 +725,7 @@ main:has(.filing-cabinet > details[open]) .close-btn {
         left: auto;
         right: -2vw;
         transform: rotateY(180deg) rotate(3deg);
+        
         & .options {
             transform: rotatey(180deg);
         }
@@ -816,35 +833,35 @@ main:has(.filing-cabinet > details[open]) .close-btn {
                 url(../src/documents/document4_medium.webp) 2x
             );
     }
-    .filing-cabinet__back {
+    .filing-cabinet-back {
         background-image: 
             image-set(
                 url(../src/fcabinet/fcabinet_slots_small.webp) 1x,
                 url(../src/fcabinet/fcabinet_slots_medium.webp) 2x
             );
     }
-    .filing-cabinet__folders-1, .filing-cabinet__folders-2 {
+    .filing-cabinet-folders-1, .filing-cabinet-folders-2 {
         background-image: 
             image-set(
                 url(../src/fcabinet/fcabinet_folders_small.webp) 1x,
                 url(../src/fcabinet/fcabinet_folders_medium.webp) 2x
             );
     }
-    .filing-cabinet__front {
+    .filing-cabinet-front {
         background-image: 
             image-set(
                 url(../src/fcabinet/fcabinet_structure_small.webp) 1x,
                 url(../src/fcabinet/fcabinet_structure_medium.webp) 2x
             );
     }
-    .filing-cabinet__drawer-1 {
+    .filing-cabinet-drawer-1 {
         background-image: 
             image-set(
                 url(../src/fcabinet/fcabinet_drawer1_small.webp) 1x,
                 url(../src/fcabinet/fcabinet_drawer1_medium.webp) 2x
             );
     }
-    .filing-cabinet__drawer-2 {
+    .filing-cabinet-drawer-2 {
         background-image: 
             image-set(
                 url(../src/fcabinet/fcabinet_drawer2_small.webp) 1x,
@@ -884,16 +901,19 @@ main:has(.filing-cabinet > details[open]) .close-btn {
 .nav-anchor {
     border-radius: 1.2vmin;
     padding: 0 5%;
+    
     &:hover, &:focus-visible {
         text-decoration: underline solid 6% currentColor;
         text-shadow: 0 0 10px hsl(from var(--main-text-color) h calc(s + 90) calc(l + 80));
         color: hsl(from var(--main-text-color) h calc(s + 10) calc(l + 20))
     }
+    
     &:active {
         text-decoration: underline solid 6% currentColor;
         text-shadow: 0 0 10px hsl(from var(--main-text-color) h calc(s + 90) calc(l + 80));
         color: hsl(from var(--main-text-color) h calc(s - 10) calc(l - 20))
     }
+
     &:focus-visible {
         outline: hsl(from var(--main-text-color) h calc(s + 10) calc(l + 20)) solid 3px;
         outline-offset: 2px; 
@@ -903,6 +923,7 @@ main:has(.filing-cabinet > details[open]) .close-btn {
 @supports (font-size: 1cqw) {
     .nav {
         container-type: inline-size;
+
         & > .nav-list {
            font-size: 10cqw;
         }
@@ -932,21 +953,26 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     font: 10px var(--font-serif);
     color: hsl(from var(--main-text-color) h s l / 85%);
     letter-spacing: .08vmax;
+    
     & header {
         row-gap: 2vmax;
     }
+    
     & small {
         color: hsl(from var(--main-text-color) h calc(s - 20) calc(l + 35) / 50%);
+        font-size: 143%;
         font-weight: bold;
-        filter: blur(.05vmax);
+        filter: blur(.03vmax);
     }
+    
     & h1 {
-        font: 20px var(--font-script);
+        font: 400% var(--font-script);
         letter-spacing: normal;
         color: #784E48;
         text-wrap: nowrap;
         line-height: .95;
     }
+
     & p {
         hyphens: none;
     }
@@ -955,14 +981,9 @@ main:has(.filing-cabinet > details[open]) .close-btn {
 @supports (font-size: 1cqw) {
     .home-content-wrapper {
         container-type: inline-size;
+
         & > * {
             font-size: 3.5cqw;
-        }
-        & small {
-            font-size: 5cqw;
-        }
-        & h1 {
-            font-size: 14cqw;
         }
     }
 }
@@ -977,9 +998,24 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     inset: 8% 11% 5%;
 }
 
+@supports (font-size: 1cqw) {
+    .about-me-content-wrapper {
+        container-type: inline-size;
+
+        & > * {
+            font-size: 3.05cqw;
+        }
+    }
+}
+
 .about-me-content-wrapper header {
     margin-bottom: 3%;
-    text-align: center
+    text-align: center;
+    letter-spacing: 5%;
+}
+
+.about-me-content-wrapper h2 {
+    font-size: 150%; 
 }
 
 /* TIMELINE */
@@ -990,6 +1026,7 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     column-gap: 2%;
     justify-content: center;
     position: relative;
+
     &:before {
         content: "";
         position: absolute;
@@ -1005,6 +1042,7 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     flex: 0 0 30%;
     text-align: center;
     position: relative;
+
     &:before {
         content: "";
         position: absolute;
@@ -1013,18 +1051,25 @@ main:has(.filing-cabinet > details[open]) .close-btn {
         width: 6%;
         aspect-ratio: 1;
         left: calc(50% - 3%);
-        top: calc(-5%)
+        top: calc(-5%);
     }
 }
 
 .about-me-timeline time {
+    font-size: 115%;
     text-wrap: nowrap;
+}
+
+.about-me-timeline p {
+    font-size: 82%;
 }
 
 /* TEXT */
 
 .about-me-text h3 {
     margin-block: 3.2% .5%;
+    font-size: 117%;
+    font-weight: bold;
     padding-left: 3%; 
 }
 
@@ -1032,32 +1077,14 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     text-align: justify;
 }
 
-/* CONTAINER QUERY SIZING */
-
-@supports (font-size: 1cqw) {
-    .about-me-content-wrapper {
-        container-type: inline-size;
-        & > * {
-            font-size: 3.05cqw;
-        }
-    }
-    .about-me-timeline {
-        & time {
-            font-size: 3.5cqw;
-        }
-        & p {
-            font-size: 2.5cqw;
-        }
-    }
-}
-
-/* MEDIA QUERY */
+/* MEDIA QUERY VERTICAL PHONES */
 
 @media (max-aspect-ratio: .6) and (max-width: 1200px) {
     .about-me-text {
         width: 92%;
         margin: 0 auto;
     }
+
     @supports (font-size: 1cqw) {
         .about-me-text {
             font-size: 2.95cqw;
@@ -1077,26 +1104,42 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     inset: 2% 4% 5%;
 }
 
+@supports (font-size: 1cqw) {
+    .skills-content-wrapper {
+        container-type: inline-size;
+
+        & > * {
+            font-size: 3cqw;
+        }
+    }
+}
+
 .skills-content-wrapper header {
     position: absolute;
     inset: 0 15% auto auto;
-    text-transform: uppercase;
+
+    & h2 {
+    font-size: 250%;
+    font-weight: normal;
     letter-spacing: .3vmax;
+    text-transform: uppercase;
+    }
 }
 
 .skills-group {
     flex: 0 0 20%;
     anchor-scope: --skills-group-border;
-}
 
-.skills-group h3 {
-    position: absolute;
-    color: #784E48;
-    text-wrap: nowrap;
-    position-anchor: --skills-group-border;
-    left: anchor(right);
-    top: calc(anchor(top) + 4%);
-    writing-mode: sideways-rl;
+    & h3 {
+        position: absolute;
+        font-size: 115%;
+        color: #784E48;
+        writing-mode: sideways-rl;  
+        text-wrap: nowrap;
+        position-anchor: --skills-group-border;
+        left: anchor(right);
+        top: calc(anchor(top) + 4%);
+    }
 }
 
 /* SKILLSTAMPS */
@@ -1109,8 +1152,8 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     anchor-name: --skills-group-border;
     padding-block: 2%;
     border-bottom: .2vmax dashed #784E4877;
-    /* border-radius: 2vmax; */
     column-gap: 5%;
+    
     & li {
         flex: 0 0 19%;
     }
@@ -1125,6 +1168,7 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     padding: none;
     border: none;
     column-gap: 8%;
+    
     & li {
         flex: 0 0 24.7%;
     }
@@ -1134,6 +1178,7 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     list-style: none;
     text-align: center;
     line-height: .95;
+    cursor: pointer;
 }
 
 .skills-stamp {
@@ -1210,6 +1255,7 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     scale: 1.05;
     text-shadow: 0 0 10px hsl(from var(--main-text-color) h calc(s + 90) calc(l + 80));
     color: hsl(from var(--main-text-color) h calc(s + 10) calc(l + 20));
+    
     & .skills-stamp {
         filter: invert(32%) sepia(22%) saturate(820%) hue-rotate(319deg) brightness(110%) contrast(86%) drop-shadow(0 0 3px #DFCEAC);
     }
@@ -1219,6 +1265,7 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     scale: .95;
     text-shadow: 0 0 10px hsl(from var(--main-text-color) h calc(s + 90) calc(l + 80));
     color: hsl(from var(--main-text-color) h calc(s + 10) calc(l + 20));
+    
     & .skills-stamp {
         scale: .95;
         filter: invert(32%) sepia(22%) saturate(780%) hue-rotate(319deg) brightness(70%) contrast(86%) drop-shadow(0 0 3px #DFCEAC);
@@ -1234,9 +1281,11 @@ main:has(.filing-cabinet > details[open]) .close-btn {
 .skills-list details:open summary {
     scale: 1.1;
     color: hsl(from var(--alt-text-color) h calc(s + 10) calc(l + 30));
+    
     & .skills-stamp {
         filter: invert(50%) sepia(8%) saturate(1755%) hue-rotate(177deg) brightness(88%) contrast(91%) drop-shadow(0 0 3px #DFCEAC);
     }
+    
     &:focus-visible {
         outline-color: hsl(from var(--alt-text-color) h calc(s + 10) calc(l + 30));
     }
@@ -1244,9 +1293,14 @@ main:has(.filing-cabinet > details[open]) .close-btn {
 
 .skills-list summary {
     transition: scale .3s, filter .3s, color .3s;
+    
     & .skills-stamp {
         transition: filter .2s;
     }
+}
+
+.skills-group:has(details:open) h3 {
+    color: hsl(from var(--alt-text-color) h calc(s + 10) calc(l + 30));
 }
 
 .skills-description {
@@ -1312,6 +1366,7 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     flex: 0 0 78%;
     align-self: end;
     position: relative;
+    
     &::before {
         content: "";
         position: absolute;
@@ -1358,23 +1413,392 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     85.8% { background-position: 100% 100%; }
 }
 
-/* CONTAINER QUERY SIZING */
+/****************************************
+               PROJECTS
+*****************************************/
+
+.projects-content-wrapper {
+    flex-flow: column nowrap;
+    position: absolute;
+    font: 10px var(--font-sans);
+    color: #000A;
+    inset: 9% 4% 3% 6%;
+}
 
 @supports (font-size: 1cqw) {
-    .skills-content-wrapper {
+    .projects-content-wrapper {
         container-type: inline-size;
+
         & > * {
-            font-size: 3cqw;
-        }
-        & header {
-            font-size: 5cqw;
+            font-size: 2.8cqw;
         }
     }
 }
 
-/****************************************
-               PROJECTS
-*****************************************/
+.projects-content-wrapper > header {
+    position: absolute;
+    inset: -7.8% 68% 104% 4%;
+
+    & h2 {
+        font-family: var(--font-handwritten);
+        font-size: 150%;
+        text-align: center;
+        letter-spacing: 15%;
+        text-transform: uppercase;
+    }
+}
+
+/* CARD GRID & SLEEVES */
+
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 100%;
+    gap: 1%;
+}
+
+.projects-item {
+    position: relative;
+    cursor: alias;
+}
+
+.projects-cardsleeve {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: .15vmax solid hsl(from var(--alt-text-color) h s l / 20%);
+    border-top: none;
+    border-bottom-left-radius: .3vmax;
+    border-bottom-right-radius: .3vmax;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.projects-item {
+    &:nth-child(2n) .projects-cardsleeve {
+        background-image: linear-gradient(150deg, #FFF2 0 30%, #FFFFFF36 35%, #FFF2 40%, #FFFFFF36 45% 50%, #FFF2 55% 65%, #FFFFFF36 70%, #FFF2 75% 100%);
+    }
+    
+    &:nth-child(2n-1) .projects-cardsleeve {
+        background-image: linear-gradient(150deg, #FFF2 0 30%, #FFFFFF36 35% 45%, #FFF2 50%, #FFFFFF36 55%, #FFF2 60% 100%);
+    }
+}
+
+/* CARDS FRONT & BACK */
+
+.projects-card {
+    width: 90%;
+    height: 95%;
+    background-color: inherit;
+    border-radius: .8vmax;
+    margin: 3% auto 0;
+    box-shadow: 0 0 .3vmax hsl(from var(--alt-text-color) h s l / 70%);
+    transform-style: preserve-3d;
+    transition: transform .7s ease-in-out;
+}
+
+.projects-card-front, .projects-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: .2vmax solid #000A;
+    border-radius: .8vmax;
+    backface-visibility: hidden;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        box-sizing: border-box;
+        position: absolute;
+        inset: 0;
+        border: #FFF9 solid .3vmax;
+        z-index: 10;
+        pointer-events: none;
+    }
+}
+
+.projects-card-back {
+   transform: rotateY(180deg);
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: .25vmax;
+        background-image: repeating-conic-gradient(from 5deg, #FFF1 0 5%, #0001 5% 10%);
+    }
+}
+
+.projects-item:hover .projects-card, .projects-item:focus-within .projects-card {
+    transform: rotateY(180deg);
+}
+
+/* CARDS COLOR ALTERNATIVES */
+
+.projects-item-red {
+    --project-card-color: #9C655D;
+    & .projects-card-front {
+
+        background-color: #9C655D;
+    }
+
+    & .projects-card-back {
+        background-color: #784E48;
+    }
+}
+
+.projects-item-yellow {
+    --project-card-color: #9C875D;
+    & .projects-card-front {
+        background-color: #9C875D;
+    }
+
+    & .projects-card-back {
+        background-color: #786848;
+    }
+}
+
+.projects-item-blue {
+    --project-card-color: #5D769C;
+    & .projects-card-front {
+        background-color: #5D769C;
+    }
+
+    & .projects-card-back {
+        background-color: #485B78;
+    }
+}
+
+.projects-item-green {
+    --project-card-color: #619C5D;
+    & .projects-card-front {
+        background-color: #619C5D;
+    }
+
+    & .projects-card-back {
+        background-color: #4B7848;
+    }
+}
+
+/* CARDS FRONT INFO */
+
+.projects-card-title {
+    display: grid;
+    width: 85%;
+    height: auto;
+    max-height: 20%;
+    padding: 3% 2%;
+    margin: 12% auto 0;
+    background-color: #FFF2;
+    font-size: 110%;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+.projects-card-img-container {
+    position: relative;
+    width: 85%;
+    aspect-ratio: .85;
+    margin: 6% auto auto;
+    background-color: #777D;
+    border: .15vmax solid #0009;
+
+    &::before {
+        content: "?";
+        position: absolute;
+        inset: 0;
+        width: min-content;
+        height: min-content;
+        margin: auto;
+        font: bold 800% var(--font-serif);
+        color: #FFF2;
+        filter: blur(.1vmax);
+    }
+
+    & img {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        filter: brightness(90%) contrast(70%);
+        object-fit: cover;
+    }
+}
+
+.projects-card-techs {
+    position: absolute;
+    inset: 27% 6% 8.5%;
+    display: flex;
+    flex-flow: column-reverse;
+    row-gap: 3%;
+    font-size: 80%;
+    font-weight: bold;
+}
+
+.projects-card-techs li {
+    align-self: end;
+    width: min-content;
+    height: min-content;
+    min-width: 22%;
+    padding: 1% 2% 1% 4%;
+    border: .15vmax solid #FFF6;
+    border-radius: 1vmax 0 0 1vmax;
+    text-align: right;
+    text-wrap: nowrap;
+    
+    &:nth-child(n + 4) {
+        align-self: start;
+        padding: 1% 4% 1% 2%;
+        border-radius: 0 1vmax 1vmax 0;
+        text-align: left;
+    }
+}
+
+.projects-card-techs .projects-card-html {
+    background-color: #C49776;
+}
+.projects-card-techs .projects-card-css {
+    background-color: #7695C4;
+}
+.projects-card-techs .projects-card-js {
+    background-color: #C4AA76;
+}
+.projects-card-techs .projects-card-py {
+    background-color: #7BC476;
+}
+
+/* CARDS BACK INFO */
+
+.projects-card-description {
+    position: absolute;
+    inset: 8% 8% auto;
+    font-size: 85%;
+    z-index: 20;
+}
+
+.projects-card-description p {
+    padding: 4%;
+    background-color: hsl(from var(--project-card-color) h calc(s - 10) calc(l + 15));
+    border-radius: .6vmax;
+    line-height: 1.4;
+}
+
+.projects-card-links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 7%;
+
+    & li {
+        width: 100%;
+        margin-bottom: 3%;
+    }
+}
+
+.projects-card-links a {
+    display: block;
+    width: min-content;
+    height: 100%;
+    margin-inline: auto;
+    padding: 5% 7%;
+    background-color: hsl(from var(--project-card-color) h s calc(l - 10));
+    border: .15vmax solid hsl(from var(--project-card-color) h calc(s + 20) calc(l - 30));
+    border-radius: 1.5vmax;
+    font-weight: bold;
+    letter-spacing: 8%;
+    color: hsl(from var(--project-card-color) h calc(s - 10) calc(l + 25));
+    text-align: center;
+    text-wrap: nowrap;
+    transition:
+        background-color .3s ease-out,
+        scale .2s;
+
+    &:hover, &:focus-visible {
+        background-color: var(--project-card-color);
+        color: hsl(from var(--project-card-color) h calc(s - 10) calc(l + 35));
+        filter: drop-shadow(0 0 .3vmax hsl(from var(--project-card-color) h calc(s + 10) calc(l + 20)));
+    }
+    
+    &:active {
+        background-color: hsl(from var(--project-card-color) h calc(s + 20) calc(l - 30));
+        scale: .95;
+    }
+    
+    &:focus-visible {
+        outline:  solid .15vmax hsl(from var(--project-card-color) h calc(s - 10) calc(l + 35));
+        outline-offset: .1vmax;
+    }
+}
+
+.projects-card-links li:nth-child(2) a {
+    background-color: hsl(from var(--project-card-color) h calc(s - 10) calc(l + 15));
+    color: hsl(from var(--project-card-color) h calc(s + 20) calc(l - 30)); 
+    
+    &:hover, &:focus-visible {
+        background-color: hsl(from var(--project-card-color) h calc(s + 10) calc(l + 20));
+    }
+    
+    &:active {
+        background-color: hsl(from var(--project-card-color) h calc(s + 5) calc(l + 5));
+    }
+}
+
+
+/* MAIN PROJECTS STYLE */
+
+#projects-item-main-1, #projects-item-main-2 {
+    & .projects-card {
+        width: 95%;
+        margin-block: 1.5% 0;
+    }
+
+    & .projects-card-title {
+        width: 90%;
+        margin-top: 6%;
+        padding-block: 1.5%;
+    }
+
+    & .projects-card-img-container {
+        width: 90%;
+        aspect-ratio: 2.02;
+        margin: 3% 5% auto;
+    }
+
+    & .projects-card-techs {
+        inset: 30% 4% 9%;
+        row-gap: 2.5%;
+
+        & li {
+            min-width: 10%;
+            padding: .45% 1% .45% 2%;
+
+            &:nth-child(n + 4) {
+                padding: .45% 2% .45% 1%;
+            }
+        }
+    }
+
+    & .projects-card-description {
+        inset: 8% 3.5% auto;
+    }
+
+    & .projects-card-links {
+        flex-direction: row;
+        width: 90%;
+        margin: 3% auto;
+
+        & a {
+            width: 85%;
+        }
+    }
+}
+
+#projects-item-main-1 {
+    grid-area: 1/2/span 1/span 2;
+}
+
+#projects-item-main-2 {
+    grid-area: 3/1/span 1/span 2;
+}
 
 /****************************************
                 CONTACT

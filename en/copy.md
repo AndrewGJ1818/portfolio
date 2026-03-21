@@ -72,9 +72,11 @@ I’m now seeking remote opportunities where I can apply my scientific backgroun
 
 # Projects
 
-## Personal Portfolio
+## No-JS Portfolio
 
-A creative and technical challenge built under one rule: no JavaScript. The site delivers interactivity and animation using only HTML and CSS, supported by thorough planning and documentation that mimic a real development workflow. All illustrations are hand-drawn, giving the portfolio a distinctive and personal visual style.
+No-JS portfolio built as a challenge using modern CSS instead for rich interactivity with self-made illustrations.
+
+View code!
 
 HTML CSS
 
