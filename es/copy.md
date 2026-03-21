@@ -72,9 +72,11 @@ Actualmente, busco oportunidades de trabajo remoto donde pueda aplicar mi formac
 
 # Proyectos
 
-## Portfolio Personal
+## No-JS Portfolio
 
-Un reto técnico y creativo diseñado bajo una regla principal: nada de JavaScript. El sitio mantiene interactividad y animaciones únicamente con HTML y CSS, apoyándose en una planificación y documentación que imitan un flujo de trabajo real. Todas las ilustraciones están hechas a mano, dando al portfolio un estilo visual distintivo y personal.
+Portfolio sin JS creado como desafío usando CSS moderno en su lugar para lograr interactividad sobre ilustraciones propias.
+
+Ver código!
 
 HTML CSS
 

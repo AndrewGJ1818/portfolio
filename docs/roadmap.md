@@ -30,7 +30,7 @@
 - [x] Apply basic layout and base styles.
 - [x] Implement the main scroll navigation.
 - [ ] Style portfolio section documents.
-- [ ] Style project cards.
+- [x] Style project cards.
 - [x] Add responsive design for all screen sizes.
 - [x] Apply additional animations and transitions.
 
