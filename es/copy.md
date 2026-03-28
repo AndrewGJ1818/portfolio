@@ -84,17 +84,15 @@ HTML CSS
 
 El envío de este formulario solo garantiza el potencial procesamiento del mensaje recibido y no implica confirmación alguna de revisión inmediata ni priorización de su contenido.
 
-Este documento tiene como finalidad registrar su mensaje dentro del sistema. Se informa que, una vez recibido, será procesado en un plazo estimado de entre 1 minuto y 27 años, dependiendo de la ortografía empleada, la disponibilidad de café y la paciencia del personal encargado.
+Este documento tiene como finalidad registrar su mensaje dentro del sistema. Se informa que, una vez recibido, será procesado en un plazo estimado de entre 1 minuto y 27 años, dependiendo de la ortografía empleada, la disponibilidad de café y la paciencia del personal encargado. Su mensaje seguirá un protocolo de tramitación multietapa que determinará si el mensaje merece ser leído, pospuesto o celebrado eufóricamente.
 
-Su mensaje seguirá un protocolo de tramitación multietapa que consiste en un registro preliminar del formulario, una asignación de un número de seguimiento en nuestra base de datos, un análisis rápido para evaluar su potencial interés, una revisión secundaria por nuestro gabinete de signos de puntuación y, finalmente, una revisión por pares que determinará si el mensaje merece ser leído, pospuesto o celebrado eufóricamente.
-
-A continuación, le invitamos a completar sus datos y a redactar el mensaje que desea enviar, proporcionando nombre, correo electrónico y cualquier información relevante que considere necesaria para iniciar la comunicación.
+A continuación, se le invita a completar sus datos y a redactar el mensaje que desea enviar proporcionando nombre, correo electrónico y cualquier información relevante que considere necesaria para iniciar la comunicación.
 
 Nombre
 
 Email
 
-Contenido
+Mensaje
 
 Enviar
 
@@ -108,4 +106,4 @@ La cumplimentación de este formulario demuestra la conformidad del remitente co
 
 - Confirmación de que cualquier intento de contactar en horario poco razonable podría generar consecuencias legales.
 
-- Declaración de que cualquier interpretación literal de las etapas del protocolo de tramitación y/o de estos aspectos será considerada una prueba de excesiva seriedad.
+- Declaración de que cualquier interpretación literal del protocolo de tramitación y/o de estos aspectos será considerada una prueba de excesiva seriedad.
