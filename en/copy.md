@@ -84,9 +84,7 @@ HTML CSS
 
 Submitting this form only guarantees the potential processing of the message received and does not imply any confirmation of immediate review or prioritization of its content.
 
-This document is intended to register your message within the system. Please note that, once received, it will be processed within an estimated timeframe of between 1 minute and 27 years, depending on spelling accuracy, coffee availability, and the patience of the staff in charge.
-
-Your message will follow a multi-step processing protocol consisting of a preliminary registration of the form, the assignment of a tracking number in our database, a quick analysis to evaluate its potential interest, a secondary review by our punctuation oversight team, and finally a peer review that will determine whether the message deserves to be read, postponed, or euphorically celebrated.
+This document is intended to register your message within the system. Please note that, once received, it will be processed within an estimated timeframe of between 1 minute and 27 years, depending on spelling accuracy, coffee availability, and the patience of the staff in charge. Your message will follow a multi-step processing protocol that will determine whether the message deserves to be read, postponed, or euphorically celebrated.
 
 You are invited to complete your details and compose the message you wish to send, providing your name, email, and any relevant information necessary to initiate communication.
 
@@ -108,4 +106,4 @@ Completion of this form demonstrates the sender's agreement with the following p
 
 - Confirmation that any attempt to contact outside reasonable hours may result in legal consequences.
 
-- Declaration that any literal interpretation of the processing protocol steps and/or these points will be considered evidence of excessive seriousness.
+- Declaration that any literal interpretation of the processing protocol and/or these points will be considered evidence of excessive seriousness.
