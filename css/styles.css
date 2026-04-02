@@ -66,7 +66,15 @@ body {
 
 /* BACKGROUND IMAGES */
 
-body, .home, .section-doc, .nav, .options, .filing-cabinet > div > div, .skills-stamp, .skills-stickman-animation {
+body, 
+.home, 
+.section-doc, 
+.nav, 
+.options, 
+.filing-cabinet > div > div, 
+.skills-stamp, 
+.skills-stickman-animation, 
+.contact-mail-icon {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain; 
@@ -1193,7 +1201,7 @@ main:has(.filing-cabinet > details[open]) .close-btn {
             url(../src/sprites/skillstamps_sprite_medium.webp) 1x,
             url(../src/sprites/skillstamps_sprite_large.webp) 2x
         );
-    filter: invert(32%) sepia(22%) saturate(796%) hue-rotate(319deg) brightness(95%) contrast(86%);
+    filter: invert(32%) sepia(22%) saturate(796%) hue-rotate(319deg) brightness(95%) contrast(86%); /* Converted with https://codepen.io/sosuke/pen/Pjoqqp */
 }
 
 @media (max-width: 1200px) {
@@ -1258,7 +1266,7 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     color: hsl(from var(--main-text-color) h calc(s + 10) calc(l + 20));
     
     & .skills-stamp {
-        filter: invert(32%) sepia(22%) saturate(820%) hue-rotate(319deg) brightness(110%) contrast(86%) drop-shadow(0 0 3px #DFCEAC);
+        filter: invert(32%) sepia(22%) saturate(820%) hue-rotate(319deg) brightness(110%) contrast(86%) drop-shadow(0 0 3px #DFCEAC); /* Converted with https://codepen.io/sosuke/pen/Pjoqqp */
     }
 }
 
@@ -1269,7 +1277,7 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     
     & .skills-stamp {
         scale: .95;
-        filter: invert(32%) sepia(22%) saturate(780%) hue-rotate(319deg) brightness(70%) contrast(86%) drop-shadow(0 0 3px #DFCEAC);
+        filter: invert(32%) sepia(22%) saturate(780%) hue-rotate(319deg) brightness(70%) contrast(86%) drop-shadow(0 0 3px #DFCEAC); /* Converted with https://codepen.io/sosuke/pen/Pjoqqp */
     }
 }
 
@@ -1284,7 +1292,7 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     color: hsl(from var(--alt-text-color) h calc(s + 10) calc(l + 30));
     
     & .skills-stamp {
-        filter: invert(50%) sepia(8%) saturate(1755%) hue-rotate(177deg) brightness(88%) contrast(91%) drop-shadow(0 0 3px #DFCEAC);
+        filter: invert(50%) sepia(8%) saturate(1755%) hue-rotate(177deg) brightness(88%) contrast(91%) drop-shadow(0 0 3px #DFCEAC); /* Converted with https://codepen.io/sosuke/pen/Pjoqqp */
     }
     
     &:focus-visible {
@@ -1345,7 +1353,7 @@ main:has(.filing-cabinet > details[open]) .close-btn {
             url(../src/sprites/skillanimation_sprite_medium.webp) 1x,
             url(../src/sprites/skillanimation_sprite_large.webp) 2x
         );
-    filter: invert(32%) sepia(22%) saturate(796%) hue-rotate(319deg) brightness(20%) contrast(86%);
+    filter: invert(32%) sepia(22%) saturate(796%) hue-rotate(319deg) brightness(20%) contrast(86%); /* Converted with https://codepen.io/sosuke/pen/Pjoqqp */
     animation: 1.3s steps(1) infinite static-animation;
 }
 
@@ -1824,7 +1832,7 @@ main:has(.filing-cabinet > details[open]) .close-btn {
 
 .contact-content-wrapper h2, .contact-fake-text {
     color: hsl(from var(--main-text-color) h s l / 40%);
-    filter: blur(.04vmax);
+    filter: blur(.05vmax);
 }
 
 .contact-fake-text > div {
@@ -1847,17 +1855,19 @@ main:has(.filing-cabinet > details[open]) .close-btn {
 
 .contact-form-container {
     height: 28%;
-    /* padding: 1.5%; */
+    padding: 2.5% 1.5% 3.3%;
     margin: 3% 2%;
-    /* border: .15vmax solid var(--contact-form-color); */
+    border: .2vmax solid var(--contact-form-color);
     border-radius: .2vmax;
+    background-color: hsl(from var(--contact-form-color) h s l / 25%);
 }
 
 .contact-form-container form {
     display: grid;
+    justify-items: center;
     height: 85%;
     margin-bottom: 2%;
-    gap: 5% 1%;
+    gap: 5% 1.5%;
     grid-template: 
         "name email" 1fr
         "message message" 3fr
@@ -1868,24 +1878,26 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     display: block;
     width: 100%;
     padding: .2vmax .3vmax;
-    background-color: transparent;
+    background-color: hsl(from var(--contact-form-color) h s calc(l + 60) / 40%);
     color: inherit;
     border: .15vmax solid var(--contact-form-color);
     border-radius: .2vmax;
 }
-
+    
 .contact-form-container label {
     position: absolute;
     font-size: 80%;
     background-color: var(--contact-form-color);
-    color: hsl(from var(--contact-form-color) h s calc(l + 70));
+    color: hsl(from var(--contact-form-color) h s calc(l + 60));
     letter-spacing: 20%;
-    padding: .1vmax .3vmax;
-    top: -20%;
-    right: 1vmax;
+    padding: .1vmax .5vmax;
+    border-radius: .2vmax;
+    top: -35%;
+    right: .5vmax;
 }
 
 .contact-form-container form div {
+    width: 100%;
     position: relative;
     &:has(input[name="name"]) {
         display: block;
@@ -1896,7 +1908,8 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     }
 }
 
-.contact-form-container form textarea {
+
+.contact-form-container textarea {
     display: block;
     height: 100%;
     width: 100%;
@@ -1907,13 +1920,100 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     grid-area: message;
 }
 
-.contact-form-container form button {
+.contact-form-container input::placeholder, .contact-form-container textarea::placeholder {
+    color: hsl(from var(--contact-form-color) h calc(s - 15) calc(l + 30));
+    font-style: italic;
+}
+
+.contact-form-container button {
     display: block;
+    width: 60%;
+    background-color: var(--contact-form-color);
+    color: hsl(from var(--contact-form-color) h s calc(l + 60));
+    letter-spacing: 20%;
+    cursor: pointer;
     grid-area: submit;
 }
 
 .contact-form-container a {
+    display: flex;
+    align-items: center;
+    padding-inline: .5%;
+    column-gap: 1%;
+    height: 15%;
     font-style: italic;
+    border-radius: .2vmax;
+}
+
+.contact-mail-icon {
+    height: 100%;
+    aspect-ratio: 1.1;
+    background-size: 200% 200%;
+    background-image: url(../src/sprites/socialmedia_sprite_alt.png);
+    background-image: url(../src/sprites/socialmedia_sprite_small.webp);
+    background-position: 100% 100%;
+    filter: invert(14%) sepia(13%) saturate(1639%) hue-rotate(325deg) brightness(96%) contrast(83%); /* Converted with https://codepen.io/sosuke/pen/Pjoqqp */ 
+}
+
+/* FORM TRANSITIONS */
+
+.contact-form-container input, .contact-form-container textarea {
+    transition:
+        background-color .3s ease-out;
+
+    &:hover, &:focus-visible {
+        background-color:  hsl(from var(--contact-form-color) h s calc(l + 80) / 40%);
+    }
+
+    &:focus-visible {
+        outline: #D4C079CC solid .1vmax;
+    }
+}
+
+.contact-form-container button {
+    transition:
+        background-color .2s ease-out;
+
+    &:hover, &:focus-visible {
+        background-color: hsl(from var(--contact-form-color) h calc(s - 10) calc(l + 20));
+    }
+    
+    &:active {
+        background-color: hsl(from var(--contact-form-color) h calc(s + 10) calc(l - 10));
+    }
+    
+    &:focus-visible {
+        outline: #D4C079 solid .15vmax;
+        outline-offset: .1vmax;
+    }
+}
+
+.contact-form-container a {
+    transition:
+        background-color .2s ease-out;
+
+    &:hover, &:focus-visible {
+        background-color:  hsl(from var(--contact-form-color) h s calc(l + 60) / 40%);
+        color: hsl(from var(--contact-form-color) h calc(s - 10) calc(l + 15));
+
+        & .contact-mail-icon {
+            filter: invert(34%) sepia(18%) saturate(461%) hue-rotate(317deg) brightness(92%) contrast(87%); /* Converted with https://codepen.io/sosuke/pen/Pjoqqp */
+        }
+    }
+    
+    &:active {
+        background-color: hsl(from var(--contact-form-color) h calc(s - 10) calc(l + 20) / 40%);
+        color: hsl(from var(--contact-form-color) h calc(s - 10) calc(l + 15));
+
+        & .contact-mail-icon {
+            filter: invert(34%) sepia(18%) saturate(461%) hue-rotate(317deg) brightness(92%) contrast(87%); /* Converted with https://codepen.io/sosuke/pen/Pjoqqp */
+        }
+    }
+    
+    &:focus-visible {
+        outline: #D4C079 solid .15vmax;
+        outline-offset: 0;
+    }
 }
 
 /****************************************
