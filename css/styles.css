@@ -74,7 +74,8 @@ body,
 .filing-cabinet > div > div, 
 .skills-stamp, 
 .skills-stickman-animation, 
-.contact-mail-icon {
+.contact-mail-icon,
+.socialmedia-icon {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain; 
@@ -431,7 +432,7 @@ to this expression.
     top: -5vh;
     left: 2vw;
     transform: rotate(4deg);
-    z-index: 50;
+    z-index: 60;
     filter: drop-shadow(0 0 5px #130D0C);
 }
 
@@ -448,7 +449,7 @@ to this expression.
     bottom: -2vh;
     left: 2.5vw;
     transform: rotate(-2deg);
-    z-index: 50;
+    z-index: 60;
     filter: drop-shadow(0 0 5px #130D0C);
 }
 
@@ -470,7 +471,7 @@ to this expression.
     pointer-events: none;
 }
 
-.footer-overlay-gradient {
+.layout-overlay-lower-gradient {
     background: radial-gradient(110% 80% at center bottom, #1D130F 60%, 85%, transparent);
     height: 70vh;
     max-height: 30%;
@@ -902,8 +903,9 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     flex-flow: column nowrap;
     justify-content: center;
     position: fixed;
-    inset: 22% 10% 10% 22%;
+    inset: 22% 10% 10% 18%;
     font: max(1.4rem, 4.5vmin) var(--font-handwritten);
+    letter-spacing: 8%;
     user-select: none;
 }
 
@@ -1498,9 +1500,9 @@ main:has(.filing-cabinet > details[open]) .close-btn {
 .projects-card {
     width: 90%;
     height: 95%;
+    margin: 3% auto 0;
     background-color: inherit;
     border-radius: .8vmax;
-    margin: 3% auto 0;
     box-shadow: 0 0 .3vmax hsl(from var(--alt-text-color) h s l / 70%);
     transform-style: preserve-3d;
     transition: transform .7s ease-in-out;
@@ -1977,11 +1979,11 @@ main:has(.filing-cabinet > details[open]) .close-btn {
     &:hover, &:focus-visible {
         background-color: hsl(from var(--contact-form-color) h calc(s - 10) calc(l + 20));
     }
-    
+
     &:active {
         background-color: hsl(from var(--contact-form-color) h calc(s + 10) calc(l - 10));
     }
-    
+
     &:focus-visible {
         outline: #D4C079 solid .15vmax;
         outline-offset: .1vmax;
@@ -2000,7 +2002,7 @@ main:has(.filing-cabinet > details[open]) .close-btn {
             filter: invert(34%) sepia(18%) saturate(461%) hue-rotate(317deg) brightness(92%) contrast(87%); /* Converted with https://codepen.io/sosuke/pen/Pjoqqp */
         }
     }
-    
+
     &:active {
         background-color: hsl(from var(--contact-form-color) h calc(s - 10) calc(l + 20) / 40%);
         color: hsl(from var(--contact-form-color) h calc(s - 10) calc(l + 15));
@@ -2009,7 +2011,7 @@ main:has(.filing-cabinet > details[open]) .close-btn {
             filter: invert(34%) sepia(18%) saturate(461%) hue-rotate(317deg) brightness(92%) contrast(87%); /* Converted with https://codepen.io/sosuke/pen/Pjoqqp */
         }
     }
-    
+
     &:focus-visible {
         outline: #D4C079 solid .15vmax;
         outline-offset: 0;
@@ -2019,3 +2021,239 @@ main:has(.filing-cabinet > details[open]) .close-btn {
 /****************************************
                 FOOTER
 *****************************************/
+
+footer {
+    position: fixed;
+    inset: 0 0 10% 80%;
+    font: bold 25px var(--font-handwritten);
+    color: var(--contact-form-color);
+    z-index: 50;
+}
+
+@supports (font-size: 1cqw) {
+    footer {
+        container-type: inline-size;
+
+        & > * {
+            font-size: 8cqw;
+        }
+    }
+}
+
+.socialmedia-list {
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 10%;
+    justify-content: center;
+    height: 100%;
+}
+
+.socialmedia-list li {   
+    &:nth-child(2) a {
+        border-radius: 1.8vmax;
+
+        & .socialmedia-icon {
+            border-radius: 1.8vmax;
+        }
+    }
+}
+
+.socialmedia-list a {
+    display: block;
+    position: relative;
+    height: 20vh;
+    aspect-ratio: 1;
+    margin: auto;
+    border-radius: 50%;
+    background-color: var(--light-ui-color);
+    filter: drop-shadow(0 0 .3vmax #130D0C);
+}
+
+.socialmedia-icon {
+    position: absolute;
+    inset: -1%;
+    margin: auto;
+    border-radius: 50%;
+    background-size: 200% 200%;
+    background-image: url(../src/sprites/socialmedia_sprite_alt.png);
+    background-image:
+        image-set(
+            url(../src/sprites/socialmedia_sprite_medium.webp) 1x,
+            url(../src/sprites/socialmedia_sprite_large.webp) 2x
+        );
+    filter: invert(10%) sepia(13%) saturate(1818%) hue-rotate(343deg) brightness(92%) contrast(83%); /* Converted with https://codepen.io/sosuke/pen/Pjoqqp */
+}
+
+@media (max-width: 1200px) {
+    .socialmedia-icon {
+        background-image:         
+            image-set(
+                url(../src/sprites/socialmedia_sprite_small.webp) 1x,
+                url(../src/sprites/socialmedia_sprite_medium.webp) 2x
+            );
+    }
+}
+
+.socialmedia-icon-1 {
+    background-position: 0 0;
+}
+
+.socialmedia-icon-2 {
+    background-position: 100% 0;
+}
+
+.socialmedia-icon-3 {
+    background-position: 0 100%;
+}
+
+/* TOOLTIPS */
+
+.socialmedia-list p {
+    visibility: hidden;
+    position: absolute;
+    inset: 100% 0 0;
+    width: min-content;
+    height: min-content;
+    padding: 1% 5%;
+    margin-top: 5%;
+    margin-inline: auto;
+    border: .15vmax solid var(--light-ui-color);
+    border-radius: .7vmax;
+    background-color: var(--dark-ui-color);
+    color: var(--light-ui-color);
+    letter-spacing: 10%;
+    z-index: 100;
+    user-select: none;
+} 
+
+.socialmedia-list a:hover p {
+    visibility: visible;
+}
+
+.socialmedia-list a:focus-visible p {
+    visibility: visible;
+    margin-top: 8%;
+}
+
+/* TRANSITIONS */
+
+.socialmedia-list a {
+    transition:
+        background-color 1s,
+        transform 1s ease-in-out;
+    
+    &:hover, &:focus-visible {
+        background-color: hsl(from var(--light-ui-color) h s calc(l + 10));
+        filter: drop-shadow(0 0 .3vmax #DFCEAC);
+    }
+    
+    &:active {
+        background-color: hsl(from var(--light-ui-color) h calc(s - 10) calc(l - 20));
+    }
+    
+    &:focus-visible {
+        outline: #C4AA76 solid .2vmax;
+        outline-offset: .4vmax;
+    }
+}
+
+/* SCROLL ANIMATION */
+
+.socialmedia-list li:first-child {
+    animation: 1ms linear both scroll-grow-socialmedia-icon-1; /* 'animation-duration: 1ms' is a Firefox requirement (MDN) */
+    animation-timeline: scroll();
+}
+
+.socialmedia-list li:nth-child(2) {
+    animation: 1ms linear both scroll-grow-socialmedia-icon-2; /* 'animation-duration: 1ms' is a Firefox requirement (MDN) */
+    animation-timeline: scroll();
+}
+
+.socialmedia-list li:last-child {
+    animation: 1ms linear both scroll-grow-socialmedia-icon-3; /* 'animation-duration: 1ms' is a Firefox requirement (MDN) */
+    animation-timeline: scroll();
+}
+
+@keyframes scroll-grow-socialmedia-icon-1 {
+    5%, 65% { transform: translateX(0); scale: 1; }
+    30%, 40% { transform: translateX(-7%); scale: 1.07; }
+}
+
+@keyframes scroll-grow-socialmedia-icon-2 {
+    22.5%, 82.5% { transform: translateX(0); scale: 1; }
+    47.5%, 57.5% { transform: translateX(-7%); scale: 1.07; }
+}
+
+@keyframes scroll-grow-socialmedia-icon-3 {
+    40%, 100% { transform: translateX(0); scale: 1; }
+    65%, 75% { transform: translateX(-7%); scale: 1.07; }
+}
+
+/* FOOTER MEDIA QUERIES */
+
+@media (orientation: portrait) and (max-width: 1200px), (orientation: landscape) and (max-width: 1500px) {
+    footer {
+        position: absolute;
+        inset: 87% 0 0;
+    }
+
+    @supports (font-size: 1cqw) {
+        footer > * {
+            font-size: 4cqw;
+        }
+    }
+
+    .socialmedia-list {
+        flex-flow: row nowrap;
+        column-gap: 2%;
+    }
+
+    .socialmedia-list li {   
+        &:nth-child(2) a {
+            transform: translateY(-8%);
+        }
+    }
+
+    .socialmedia-list a {
+        width: 20vw;
+        height: auto;
+    }
+
+    .socialmedia-list p {
+        visibility: visible;
+    }
+
+    @keyframes scroll-grow-socialmedia-icon-1 {
+        0%, 80% { transform: translate(0, 0); scale: .8; opacity: 0; }
+        100% { transform: translate(-40%, -50%); scale: 1; opacity: 1; }
+    }
+
+    @keyframes scroll-grow-socialmedia-icon-2 {
+        0%, 80% { transform: translateY(0); scale: .8; opacity: 0; }
+        100% { transform: translateY(-50%); scale: 1; opacity: 1; }
+    }
+
+    @keyframes scroll-grow-socialmedia-icon-3 {
+        0%, 80% { transform: translate(0, 0); scale: .8; opacity: 0; }
+        100% { transform: translate(40%, -50%); scale: 1; opacity: 1; }
+    }
+}
+
+@media (orientation: portrait) and (max-width: 1200px) {
+    footer {
+        transform: translateY(-20%)
+    }
+}
+
+@media (orientation: landscape) and (max-width: 1500px) {
+    footer {
+        left: 30vw;
+        width: 50vw;
+        max-width: 80rem;
+        margin: 0 auto;
+    }
+
+    .socialmedia-list a {
+        width: 12vw;
+    }
+}

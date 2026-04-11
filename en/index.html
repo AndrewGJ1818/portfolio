@@ -644,16 +644,24 @@
                     method="POST"
                   >
                     <input type="hidden" name="_captcha" value="false" />
-                    <input type="hidden" name="_subject" value="¡Nuevo mensaje desde tu portfolio!">
-                    <input type="hidden" name="_next" value="https://AndrewGJ1818.github.io/portfolio/en/">
+                    <input
+                      type="hidden"
+                      name="_subject"
+                      value="¡Nuevo mensaje desde tu portfolio!"
+                    />
+                    <input
+                      type="hidden"
+                      name="_next"
+                      value="https://AndrewGJ1818.github.io/portfolio/en/"
+                    />
                     <div>
                       <label for="name">name</label>
                       <input
                         id="name"
                         type="text"
                         name="name"
-                        placeholder="John Doe"
-                        maxlength="25"
+                        placeholder="Andrew García Jean"
+                        maxlength="40"
                         required
                       />
                     </div>
@@ -663,7 +671,7 @@
                         id="email"
                         type="email"
                         name="email"
-                        placeholder="johndoe13@gmail.com"
+                        placeholder="andrew&#103;arcia&#106;ean&#64;gmail&#46;com"
                         maxlength="50"
                         required
                       />
@@ -679,7 +687,7 @@
                   <a
                     href="mailto:andrew&#103;arcia&#106;ean&#64;gmail&#46;com?subject=Contact%20from%20Portfolio"
                   >
-                    <div class="contact-mail-icon" aria-hidden="true"></div>  
+                    <div class="contact-mail-icon" aria-hidden="true"></div>
                     You may also use your trusted email service.
                   </a>
                 </div>
@@ -703,8 +711,8 @@
                   </div>
                   <div>
                     - Declaration that any literal interpretation of the
-                    processing protocol and/or these points will be
-                    considered evidence of excessive seriousness.
+                    processing protocol and/or these points will be considered
+                    evidence of excessive seriousness.
                   </div>
                 </div>
               </div>
@@ -720,22 +728,48 @@
           <div class="filing-cabinet-drawer-1"></div>
         </div>
       </div>
+      <div class="layout-overlay-lower-gradient" aria-hidden="true"></div>
     </main>
     <footer>
-      <!-- <menu class="social-media-list">
-        <li class="social-media-item">
-          <a href="https://github.com/" class="social-media-anchor">GitHub</a>
-        </li>
-        <li class="social-media-item">
-          <a href="https://www.linkedin.com/" class="social-media-anchor"
-            >LinkedIn</a
+      <menu class="socialmedia-list">
+        <li>
+          <a
+            href="https://github.com/"
+            target="_blank"
+            rel="noreferrer"
+            aria-describedby="tooltip-github"
           >
+            <div
+              class="socialmedia-icon socialmedia-icon-1"
+              aria-hidden="true"
+            ></div>
+            <p role="tooltip" id="tooltip-github">GitHub</p>
+          </a>
         </li>
-        <li class="social-media-item">
-          <a href="" class="social-media-cv">CV</a>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/andrew-garcía-jean-a11739308"
+            target="_blank"
+            rel="noreferrer"
+            aria-describedby="tooltip-linkedin"
+          >
+            <div
+              class="socialmedia-icon socialmedia-icon-2"
+              aria-hidden="true"
+            ></div>
+            <p role="tooltip" id="tooltip-linkedin">LinkedIn</p>
+          </a>
         </li>
-      </menu> -->
-      <div class="footer-overlay-gradient" aria-hidden="true"></div>
+        <li>
+          <a href="" download aria-describedby="tooltip-cv">
+            <div
+              class="socialmedia-icon socialmedia-icon-3"
+              aria-hidden="true"
+            ></div>
+            <p role="tooltip" id="tooltip-cv">Resume</p>
+          </a>
+        </li>
+      </menu>
     </footer>
   </body>
 </html>
