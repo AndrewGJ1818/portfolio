@@ -134,7 +134,7 @@ body {
 
 .section-doc {
     position: fixed;
-    z-index: 30;
+    z-index: 40;
     height: 95vh;
     inset: 0;
     margin: auto;
@@ -248,7 +248,7 @@ The home label behaves as a closing document button.
     width: max(9vh, 4.5vw);
     border: clamp(.45vh, .3vw, 8px) var(--dark-ui-color) solid;
     border-radius: 50%;
-    z-index: 50;
+    z-index: 40;
     list-style: none;
     cursor: pointer;
     user-select: none;
@@ -458,7 +458,7 @@ to this expression.
     position: fixed;
     inset: 0 0 auto 0;
     height: 10vh;
-    z-index: 40;
+    z-index: 50;
     pointer-events: none;
 }
 
@@ -467,7 +467,7 @@ to this expression.
     position: fixed;
     inset: auto 0 0 0;
     height: 10vh;
-    z-index: 40;
+    z-index: 50;
     pointer-events: none;
 }
 
@@ -598,6 +598,7 @@ details[open] .section-doc {
     0% {
         transform: translateY(20vh);
         opacity: 0;
+        display: block;
         scale: .7 .4;        
     }
     50% {
@@ -618,6 +619,7 @@ details[open] .section-doc {
     to {
         transform: translateX(100vh);
         opacity: 0;
+        display: none;
     }
 }
 
@@ -773,7 +775,7 @@ main:has(.filing-cabinet > details[open]) .close-btn {
             inset: 0 0 0 30vw;
             margin: auto;
             overflow: hidden auto;
-            z-index: 30;
+            z-index: 40;
             opacity: 0;
             transform: translateX(60vw);
             transition: opacity .3s, transform .3s;
@@ -2027,7 +2029,7 @@ footer {
     inset: 0 0 10% 80%;
     font: bold 25px var(--font-handwritten);
     color: var(--contact-form-color);
-    z-index: 50;
+    z-index: 30;
 }
 
 @supports (font-size: 1cqw) {
