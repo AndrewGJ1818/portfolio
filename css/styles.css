@@ -45,11 +45,17 @@
     9.1 CONTACT FORM
     9.2 FORM TRASITIONS
 
-10. FOOTER
-    10.1 TOOLTIPS
-    10.2 TRANSITIONS
-    10.3 SCROLL ANIMATION
-    10.4 FOOTER MEDIA
+10. SECTION MOBILE LAYOUTS
+    10.1 ABOUT ME MOBILE LAYOUT
+    10.2 SKILLS MOBILE LAYOUT
+    10.3 PROJECTS MOBILE LAYOUT
+    10.4 CONTACT MOBILE LAYOUT
+
+11. FOOTER
+    11.1 TOOLTIPS
+    11.2 TRANSITIONS
+    11.3 SCROLL ANIMATION
+    11.4 FOOTER MEDIA QUERIES
 */
 
 /****************************************
@@ -1222,7 +1228,7 @@ Only for mobile devices in portrait orientation.
     }
 }
 
-.about-me-timeline ul li {
+.about-me-timeline li {
     padding: 1% 2% 0;
     flex: 0 0 30%;
     text-align: center;
@@ -1236,7 +1242,7 @@ Only for mobile devices in portrait orientation.
         width: 6%;
         aspect-ratio: 1;
         left: calc(50% - 3%);
-        top: calc(-5%);
+        top: -5%;
     }
 }
 
@@ -1667,7 +1673,8 @@ Only for mobile devices in portrait orientation.
     transition: transform .7s ease-in-out;
 }
 
-.projects-card-front, .projects-card-back {
+.projects-card-front, 
+.projects-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -1698,7 +1705,8 @@ Only for mobile devices in portrait orientation.
     }
 }
 
-.projects-item:hover .projects-card, .projects-item:focus-within .projects-card {
+.projects-item:hover .projects-card, 
+.projects-item:focus-within .projects-card {
     transform: rotateY(180deg);
 }
 
@@ -1991,7 +1999,8 @@ Only for mobile devices in portrait orientation.
     }
 }
 
-.contact-content-wrapper h2, .contact-fake-text {
+.contact-content-wrapper h2, 
+.contact-fake-text {
     color: hsl(from var(--main-text-color) h s l / 40%);
     filter: blur(.05vmax);
 }
@@ -2061,14 +2070,12 @@ Only for mobile devices in portrait orientation.
     width: 100%;
     position: relative;
     &:has(input[name="name"]) {
-        display: block;
         grid-area: name;
     }
     &:has(input[name="email"]) {
         grid-area: email;
     }
 }
-
 
 .contact-form-container textarea {
     display: block;
@@ -2202,14 +2209,99 @@ Only for mobile devices in portrait orientation.
     /* ABOUT ME MOBILE LAYOUT */
 
     .about-me-content-wrapper header {
-        margin-bottom: 12%;
+        margin-bottom: 5%;
     }
     .about-me-content-wrapper h2 {
         font-size: 300%;
     }
+    .about-me-timeline ul {
+        column-gap: 4%;
 
+        &::before {
+            width: 85%;
+        }
+    }
+    .about-me-timeline li {
+        padding-top: 3%;
+
+        &::before {
+            width: 1vmax;
+            left: calc(50% - .5vmax);
+            top: -2%;
+        }
+    }
+    .about-me-timeline time {
+        font-size: 95%;
+    }
+    .about-me-text h3 {
+        margin-block: 15% 3%;
+    }
+    .about-me-text p {
+        text-align: left;
+        line-height: 1.5;
+    }
+
+    /* SKILLS MOBILE LAYOUT */
+
+    /* PROJECTS MOBILE LAYOUT */
+
+    /* CONTACT MOBILE LAYOUT */
+
+    .contact-content-wrapper {
+        top: 15vh;
+    }
+    .contact-content-wrapper h2 {
+        font-size: 180%;
+        margin-bottom: 6%;
+    }
+    .contact-content-wrapper h2,
+    .contact-fake-text {
+        filter: blur(.08vmax);
+    }
+    .contact-fake-text > div {
+        font-size: 70%;
+        margin-bottom: 2%;
+        line-height: 1.4;
+    }
+    .contact-fake-text > div:nth-child(2) {
+        display: none;
+    }
+    .contact-form-container {
+        height: auto;
+        padding: 3% 4% 2.5%;
+        margin: 10% 4%;
+        border-width: .4vmax;
+        border-radius: .4vmax;
+    }
+    .contact-form-container form {
+        margin-bottom: 6%;
+        gap: 4% 0;
+        grid-template:
+            "name" 1fr
+            "email" 1fr
+            "message" 3fr
+            "submit" 1fr / auto;
+    }
+    .contact-form-container :is(input, textarea, button) {
+        padding: .8vmax;
+        border-width: .25vmax;
+        border-radius: .4vmax;
+    }
+    .contact-form-container input {
+        margin-top: 2%;
+    }
+    .contact-form-container label {
+        padding-inline: .8vmax;
+        top: -8%;
+        right: 1.5vmax;
+    }
+    .contact-form-container a {
+        font-size: 80%;
+        height: 4.5vmax;
+        column-gap: 2%;
+        padding-right: 2%;
+    }
 }
-
 
 /****************************************
                 FOOTER
