@@ -18,15 +18,15 @@ I want to combine my background in biology with software development to support 
 
 ### \> Academic Background
 
-I hold a Bachelor’s in Biology and a Master’s in Bioinformatics and Biostatistics, during which I worked on a range of research projects, from entomological data to clinical trials. This diversity gave me a broad scientific perspective and the ability to adapt quickly to new biological contexts.
+I hold a Bachelor’s in Biology and a Master’s in Bioinfor­matics and Biosta­tistics, where I worked on research projects ranging from entomological data analysis to clinical trials. This experience made me feel at ease working across different biological contexts.
 
-### \> Transition to Software Development
+### \> Transition to Software
 
-After completing my Master’s, I dedicated the past year and a half to bridging the gap between biology and computer science. Coming from a biological background, there was a lot to learn; not only programming, but also hardware, operating systems, and even improving my typing speed. I also dove into web development, exploring version control, the fundamentals of frontend and backend, and the overall process of building applications. These experiences helped me stop feeling like a visitor in the world of computing and start thinking like a developer.
+After completing my Master’s, I decided to shift into software development. Coming from a biological background, I had a lot to learn, not only about programming, but also about things like hardware, operating systems and even typing efficiency. Then, I focused on web development, covering version control, frontend and backend fundamentals and the application development process. Now I don't think like a biologist smashing keys, I think like a developer.
 
 ### \> Strong Point
 
-While I consider myself naturally analytical, my curiosity has driven me to take on creative projects of all kinds: from music, writing, and drawing to video game design and the creation of a collectible card game (for some reason). Each has challenged me to learn quickly and adapt, cultivating a strong creative side that complements my logical mindset.
+I have both an analytical and a creative side. I’ve always had strong analytical skills, especially in understanding how things work. But at the same time, I enjoy building things. I’ve explored music, writing, drawing and game design. Each of them has challenged me to learn quickly, adapt, and turn ideas into actual projects.
 
 ### \> Current Goal
 

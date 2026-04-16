@@ -18,19 +18,19 @@ Me gustaría combinar mi formación en biología con el desarrollo de software p
 
 \> Formación Académica
 
-Me gradué en Biología e hice un Máster en Bioinformática y Bioestadística. En ellos participé en diversos proyectos de investigación, desde datos entomológicos hasta ensayos clínicos. Esta variedad me ha dado una visión científica amplia y una gran capacidad de adaptación a nuevos contextos biológicos.
+Me gradué en Biología e hice un Máster en Bioinformática y Bioestadística. En ellos, participé en diversos proyectos de investigación, trabajando desde datos entomológicos hasta ensayos clínicos. Gracias a ellos, me siento cómodo trabajando en cualquier contexto biológico.
 
-\> Transición hacia el Desarrollo de Software
+\> Transición a Software
 
-Tras finalizar el máster, he dedicado el último año y medio a acortar la distancia entre la biología y la informática. Para alguien con una formación biológica, había mucho que aprender; no solo programación, sino también hardware, sistemas operativos e incluso algo tan simple como mejorar mi velocidad de mecanografía. También me adentré en el desarrollo web, aprendiendo sobre control de versiones, fundamentos de frontend y backend, y el proceso de creación de una aplicación. Gracias a ello dejé de sentirme un extraño en el mundo de la informática para empezar a pensar como un desarrollador.
+Tras finalizar el máster, decidí dar el salto al desarrollo de software. Para un biólogo como yo había mucho por aprender, ya no sobre programación, sino sobre otros temas fundamentales como el hardware, los sistemas operativos o incluso la mecanografía. Después， me enfoque en el desarrollo web, aprendiendo sobre control de versiones, fundamentos de frontend y backend, y fases del desarrollo. Ya no pienso como un biólogo aporreando teclas, sino como un desarrollador.
 
 \> Punto Fuerte
 
-Aunque me considero naturalmente analítico, mi curiosidad me ha llevado a emprender proyectos creativos de todo tipo: desde música, escritura y dibujo hasta el diseño de videojuegos o de un juego de cartas coleccionables (no me preguntes por qué). Cada uno me ha obligado a aprender con rapidez y a adaptarme, cultivando una fuerte faceta creativa que complementa mi mentalidad lógica.
+Tengo tanto un lado analítico como uno creativo. Siempre se me ha dado bien usar razonamientos lógicos para entender cómo funcionan las cosas. Pero al mismo tiempo, me encanta crear. Habiendo practicado música, escritura, dibujo y diseño de videojuegos; me he habituado a aprender rápido, adaptarme y transformar ideas en proyectos.
 
 \> Objetivo Actual
 
-Actualmente, busco oportunidades de trabajo remoto donde pueda aplicar mi formación científica y mis habilidades técnicas a problemas reales de bioinformática. El trabajo en remoto me permite colaborar de forma eficiente, manteniendo al mismo tiempo la autonomía que ha definido mi forma de aprender.
+Actualmente busco oportunidades de trabajo remoto para aplicar mi formación científica y técnica a problemas reales de bioinformática. De forma remota puedo colaborar de eficientemente, manteniendo, al mismo tiempo, la autonomía que ha caracterizado mi aprendizaje.
 
 # Habilidades
 
