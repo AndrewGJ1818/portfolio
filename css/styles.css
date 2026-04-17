@@ -275,7 +275,7 @@ the post-it nav.
 @supports (font-size: 1cqw) {
     .section-label {
         container-type: inline-size;
-        
+
         & > div {
             font-size: 11cqw;
             border-width: 1.2cqw;
@@ -306,7 +306,7 @@ Both of them have similar stylings.
     list-style: none;
     cursor: pointer;
     user-select: none;
-    
+
     &::before, 
     &::after {
         content: "";
@@ -1457,6 +1457,7 @@ Only for mobile devices in portrait orientation.
 .skills-list details:open summary {
     scale: 1.1;
     color: hsl(from var(--alt-text-color) h calc(s + 10) calc(l + 30));
+    text-shadow: none;
     
     & .skills-stamp {
         filter: invert(50%) sepia(8%) saturate(1755%) hue-rotate(177deg) brightness(88%) contrast(91%) drop-shadow(0 0 3px #DFCEAC); /* Converted with https://codepen.io/sosuke/pen/Pjoqqp */
@@ -1471,7 +1472,7 @@ Only for mobile devices in portrait orientation.
     transition: scale .3s, filter .3s, color .3s;
     
     & .skills-stamp {
-        transition: filter .2s;
+        transition: scale .2s, filter .2s;
     }
 }
 
@@ -2202,7 +2203,7 @@ Only for mobile devices in portrait orientation.
         padding: 20vh 5vw 25vh 5vw;
         scrollbar-width: none;
         & > * {
-            font-size: clamp(1.15rem, 4vw, 1.8rem);
+            font-size: clamp(1.15rem, 4vw, 3rem);
         }
     }
 
@@ -2242,6 +2243,52 @@ Only for mobile devices in portrait orientation.
     }
 
     /* SKILLS MOBILE LAYOUT */
+
+    .skills-content-wrapper header {
+        position: static;
+        & h2 {
+            font-size: 300%;
+            text-align: right;
+            padding-right: 6%;
+        }
+    }
+    .skills-group {
+        position: relative;
+        flex: 0 0 auto;
+        padding-block: 8%;
+        margin-block: 17%;
+        border-block: .4vmax dashed #784E4877;
+
+        & h3 {
+            position: static;
+            font-size: 160%;
+            writing-mode: horizontal-tb;
+        }
+    }
+    .skills-list {
+        width: 100%;
+        border-bottom: none;
+        font-size: 95%;
+        column-gap: 5%;
+
+        & li {
+            flex: 0 0 30%;
+        }
+    }
+    .skills-group:first-of-type {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+    }
+    .skills-description {
+        position: absolute;
+        inset: 103% 5% auto;
+        letter-spacing: 10%;
+        font-size: 85%;
+    }
+    .skills-description-container {
+        display: none;
+    }
 
     /* PROJECTS MOBILE LAYOUT */
 
