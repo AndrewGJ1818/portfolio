@@ -272,6 +272,12 @@ the post-it nav.
     }
 }
 
+:lang(es) :is(.skills-label, .projects-label) > div {
+    width: 90%;
+    letter-spacing: 1.5px;
+    font-size: .78vmax;
+}
+
 @supports (font-size: 1cqw) {
     .section-label {
         container-type: inline-size;
@@ -896,8 +902,12 @@ Only for mobile devices in portrait orientation.
         height: clamp(25vw, 18vh, 30vw);
         left: auto;
         right: -2vw;
-        transform: rotateY(180deg) rotate(3deg);        
-    }       
+        transform: rotateY(180deg) rotate(3deg);
+
+        & > * {
+            transform: rotateY(180deg);
+        }        
+    }
 
     body:has(.filing-cabinet > details[open]) .nav {
         transform: translate(-33%, -45%) rotate(-3deg);
@@ -1117,7 +1127,7 @@ Only for mobile devices in portrait orientation.
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    position: fixed;
+    position: absolute;
     inset: 22% 10% 10% 18%;
     font: max(1.4rem, 4.5vmin) var(--font-handwritten);
     letter-spacing: 8%;
@@ -1149,16 +1159,71 @@ Only for mobile devices in portrait orientation.
 @supports (font-size: 1cqw) {
     .nav {
         container-type: inline-size;
-
+        
         & > .nav-list {
-           font-size: 10cqw;
+            font-size: 10cqw;
         }
+    }
+}
+
+:lang(es) .nav-list {
+    left: 10%;
+}
+
+@media (orientation: portrait) and (max-width: 1200px) {
+    :lang(es) .nav-list {
+        left: 15%;
     }
 }
 
 /****************************************
            LANGUAGE SELECTOR
 *****************************************/
+
+.lang-list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    position: absolute;
+    inset: 10% 2% 15% 7%;
+    justify-content: space-evenly;
+    align-items: center;
+    font: bold max(1rem, 3vmin) var(--font-handwritten);
+    letter-spacing: 8%;
+    user-select: none;
+}
+
+.lang-list li {
+    flex: 0 0 40%;
+    text-align: center;
+}
+
+.lang-flag {
+    width: 100%;
+    filter: drop-shadow(0 0 .3vmax #130D0C);
+    border: var(--main-text-color) solid .2vmax;
+    border-radius: 1vmax;
+    aspect-ratio: 1.4;
+    margin-bottom: 5%;
+}
+
+.spanish-flag {
+    background-image: linear-gradient(#BA2D18 0% 29%, #d9c632 30% 70%, #BA2D18 71% 100%)
+}
+
+.english-flag {
+    background:
+        linear-gradient(90deg, transparent 43%, #BA2D18 44% 56%, transparent 57%),
+        linear-gradient(transparent 35%, #e3e1de 36% 41%, #BA2D18 42% 58%, #e3e1de 59% 64%, transparent 65%),
+        linear-gradient(90deg, transparent 38%, #e3e1de 39% 61%, transparent 62%), 
+        linear-gradient(34deg, transparent 46%, #BA2D18 47% 53%, transparent 54%) 0% 6% / 50% 50% no-repeat,
+        linear-gradient(34deg, transparent 46%, #BA2D18 47% 53%, transparent 54%) 100% 94% / 50% 50% no-repeat,
+        linear-gradient(146deg, transparent 46%, #BA2D18 47% 53%, transparent 54%) 100% -2% / 50% 50% no-repeat,
+        linear-gradient(146deg, transparent 46%, #BA2D18 47% 53%, transparent 54%) 0% 102% / 50% 50% no-repeat,
+        linear-gradient(34deg, transparent 45%, #e3e1de 46% 54%, transparent 55%),
+        linear-gradient(146deg, transparent 45%, #e3e1de 46% 54%, transparent 55%),
+        #12315e;
+}
 
 /****************************************
                  HOME
@@ -1330,11 +1395,20 @@ Only for mobile devices in portrait orientation.
     inset: 0 15% auto auto;
 
     & h2 {
-    font-size: 250%;
-    font-weight: normal;
-    letter-spacing: .3vmax;
-    text-transform: uppercase;
+        font-size: 250%;
+        font-weight: normal;
+        letter-spacing: .3vmax;
+        text-transform: uppercase;
     }
+
+    & :lang(es) h2 {
+        font-size: 500%;
+    }
+}
+
+:lang(es) .skills-content-wrapper h2 {
+    font-size: 230%;
+    padding-right: 2%;
 }
 
 .skills-group {
@@ -2596,7 +2670,7 @@ footer {
 .socialmedia-list p {
     visibility: hidden;
     position: absolute;
-    inset: 100% 0 0;
+    inset: 100% -20% auto;
     width: min-content;
     height: min-content;
     padding: 1% 5%;
@@ -2606,6 +2680,7 @@ footer {
     border-radius: .7vmax;
     background-color: var(--dark-ui-color);
     color: var(--light-ui-color);
+    text-wrap: nowrap;
     letter-spacing: 10%;
     z-index: 100;
     user-select: none;

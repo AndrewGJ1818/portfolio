@@ -22,6 +22,9 @@
       type="image/png"
       sizes="16x16 32x32"
     />
+    <link rel="canonical" href="https://AndrewGJ1818.github.io/portfolio/" />
+    <link rel="alternate" hreflang="en" href="https://AndrewGJ1818.github.io/portfolio/en/" />
+    <link rel="alternate" hreflang="es" href="https://AndrewGJ1818.github.io/portfolio/es/" />
     <meta name="author" content="Andrew García Jean" />
     <meta
       name="keywords"
@@ -48,6 +51,7 @@
       property="og:url"
       content="https://AndrewGJ1818.github.io/portfolio/en/"
     />
+    <meta property="og:locale" content="en_UK" />
     <meta name="twitter:card" content="summary" />
     <meta
       name="twitter:title"
@@ -90,7 +94,20 @@
     </header>
     <aside>
       <div class="options">
-        <!-- <a class="lang-selector">English</a> -->
+        <menu class="lang-list">
+          <li>
+            <div id="lang-current">
+              <div class="english-flag lang-flag" aria-hidden="true"></div>
+              English
+            </div>
+          </li>
+          <li>
+            <a class="lang-selector" href="/es/">
+              <div class="spanish-flag lang-flag" aria-hidden="true"></div>
+              Spanish
+            </a>
+          </li>
+        </menu>
       </div>
     </aside>
     <div aria-hidden="true">
@@ -715,7 +732,13 @@
             </article>
           </div>
         </details>
-        <input type="checkbox" class="ui-hide-switch" id="ui-hide-switch" role="switch" aria-checked="false" />
+        <input
+          type="checkbox"
+          class="ui-hide-switch"
+          id="ui-hide-switch"
+          role="switch"
+          aria-checked="false"
+        />
         <div aria-hidden="true">
           <div class="filing-cabinet-back"></div>
           <div class="filing-cabinet-folders-2"></div>
@@ -758,7 +781,7 @@
           </a>
         </li>
         <li>
-          <a href="" download aria-describedby="tooltip-cv">
+          <a href="" aria-describedby="tooltip-cv">
             <div
               class="socialmedia-icon socialmedia-icon-3"
               aria-hidden="true"
