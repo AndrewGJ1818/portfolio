@@ -845,36 +845,45 @@ Only for mobile devices in portrait orientation.
         width: 90vw;
         margin-top: 20vh;
     }
+
     .filing-cabinet {
         width: 95vw;
         top: -1vh;
     }
+
     .section-doc {
         height: 120vh;
         inset: -100vw;
     }
+
     .skills {
         height: 130vh;
     }
+
     .contact {
         height: 130vh;
         bottom: -80vw;
     }
+
     .close-btn {
         top: 7vw;
         right: 7vw;
         width: max(10vw, 5.5vh);
         transition-delay: .1s;
     }
+
     .ui-hide-switch {
         display: grid; /* 2.2 SECTION LABELS & ANCHORS' TARGETS */
     }
+
     #about-me-anchor, #skills-anchor {
         top: calc((90vw*806/1200 + 20vh + 100% - 100dvh) * .3 - 90vw*806/1200 - 20vh);
     }
+
     #projects-anchor, #contact-anchor {
         top: calc((90vw*806/1200 + 20vh + 100% - 100dvh) * .75 - 90vw*806/1200 - 20vh);
     }
+
     .nav {
         height: 60vw;
         max-height: 30vh;
@@ -882,28 +891,34 @@ Only for mobile devices in portrait orientation.
         left: -5vw;
         transform: rotate(5deg);
     }
+
     .options {
         height: clamp(25vw, 18vh, 30vw);
         left: auto;
         right: -2vw;
         transform: rotateY(180deg) rotate(3deg);        
     }       
+
     body:has(.filing-cabinet > details[open]) .nav {
         transform: translate(-33%, -45%) rotate(-3deg);
         pointer-events: none;
     }
+
     body:has(.filing-cabinet > details[open]) .options {
         transform: translate(25%, 35%) rotate(3deg) rotateY(180deg);
         pointer-events: none;
     }
+
     body:has(#ui-hide-switch:checked) .nav {
         transform: translate(0) rotate(4deg);
         pointer-events: auto;
     } 
+
     body:has(#ui-hide-switch:checked) .options {
         transform: translate(0) rotate(-2deg) rotateY(180deg);
         pointer-events: auto;
     } 
+
     @keyframes show-document {
         0% {
             transform: translateY(20vh);
@@ -927,19 +942,24 @@ Only for mobile devices in portrait orientation.
         width: 50vw;
         left: 15vw;
     }
+
     .filing-cabinet {
         width: 50vw;
         left: 15vw;
     }
+
     .section-doc {
         left: 30vw;
     }
+
     .close-btn {
         right: max(35vw - 95vh*1218/1600/2 - 7vw, 1vw);
     }
+
     #about-me-anchor, #skills-anchor {
         top: calc((50vw*806/1200 + 10vh + 100% - 100dvh) * .3 - 50vw*806/1200 - 10vh);
     }
+
     #projects-anchor, #contact-anchor {
         top: calc((50vw*806/1200 + 10vh + 100% - 100dvh) * .75 - 50vw*806/1200 - 10vh);
     }
@@ -960,10 +980,12 @@ Only for mobile devices in portrait orientation.
             scrollbar-color: var(--light-ui-color) transparent;
             scrollbar-width: thin;
         }
+
         details[open] .section-doc-wrapper {
             opacity: 1;
             transform: translateX(0);
         }
+
         .section-doc {
             position: static;
             margin: 5vh auto;
@@ -971,6 +993,7 @@ Only for mobile devices in portrait orientation.
             max-height: 180vh;
             width: 90%;
         }
+
         .close-btn {
             right: 1.5vw;
         }
@@ -988,6 +1011,7 @@ Only for mobile devices in portrait orientation.
                 url(../src/background/background_medium.webp) 2x
             );
     }
+
     .home {
         background-image: 
             image-set(
@@ -995,6 +1019,7 @@ Only for mobile devices in portrait orientation.
                 url(../src/fcabinet/certificate_medium.webp) 2x
             );
     }
+
     .about-me {
         background-image: 
             image-set(
@@ -1002,6 +1027,7 @@ Only for mobile devices in portrait orientation.
                 url(../src/documents/document1_medium.webp) 2x
             );
     }
+
     .skills {
         background-image: 
             image-set(
@@ -1009,6 +1035,7 @@ Only for mobile devices in portrait orientation.
                 url(../src/documents/document2_medium.webp) 2x
             );
     }
+
     .projects {
         background-image: 
             image-set(
@@ -1016,6 +1043,7 @@ Only for mobile devices in portrait orientation.
                 url(../src/documents/document3_medium.webp) 2x
             );
     }
+
     .contact {
         background-image: 
             image-set(
@@ -1023,6 +1051,7 @@ Only for mobile devices in portrait orientation.
                 url(../src/documents/document4_medium.webp) 2x
             );
     }
+
     .filing-cabinet-back {
         background-image: 
             image-set(
@@ -1030,6 +1059,7 @@ Only for mobile devices in portrait orientation.
                 url(../src/fcabinet/fcabinet_slots_medium.webp) 2x
             );
     }
+
     .filing-cabinet-folders-1, .filing-cabinet-folders-2 {
         background-image: 
             image-set(
@@ -1037,6 +1067,7 @@ Only for mobile devices in portrait orientation.
                 url(../src/fcabinet/fcabinet_folders_medium.webp) 2x
             );
     }
+
     .filing-cabinet-front {
         background-image: 
             image-set(
@@ -1044,6 +1075,7 @@ Only for mobile devices in portrait orientation.
                 url(../src/fcabinet/fcabinet_structure_medium.webp) 2x
             );
     }
+
     .filing-cabinet-drawer-1 {
         background-image: 
             image-set(
@@ -1051,6 +1083,7 @@ Only for mobile devices in portrait orientation.
                 url(../src/fcabinet/fcabinet_drawer1_medium.webp) 2x
             );
     }
+
     .filing-cabinet-drawer-2 {
         background-image: 
             image-set(
@@ -1058,6 +1091,7 @@ Only for mobile devices in portrait orientation.
                 url(../src/fcabinet/fcabinet_drawer2_medium.webp) 2x
             );
     }
+
     .nav {
         background-image: 
             image-set(
@@ -1065,6 +1099,7 @@ Only for mobile devices in portrait orientation.
                 url(../src/ui/postit_medium.webp) 2x
             );
     }
+
     .options {
         background-image: 
             image-set(
@@ -1616,8 +1651,7 @@ Only for mobile devices in portrait orientation.
     inset: -7.8% 68% 104% 4%;
 
     & h2 {
-        font-family: var(--font-handwritten);
-        font-size: 150%;
+        font: 150% var(--font-handwritten);
         text-align: center;
         letter-spacing: 15%;
         text-transform: uppercase;
@@ -1820,14 +1854,14 @@ Only for mobile devices in portrait orientation.
     min-width: 22%;
     padding: 1% 2% 1% 4%;
     border: .15vmax solid #FFF6;
-    border-radius: 1vmax 0 0 1vmax;
+    border-radius: 3vmax 0 0 3vmax;
     text-align: right;
     text-wrap: nowrap;
     
     &:nth-child(n + 4) {
         align-self: start;
         padding: 1% 4% 1% 2%;
-        border-radius: 0 1vmax 1vmax 0;
+        border-radius: 0 3vmax 3vmax 0;
         text-align: left;
     }
 }
@@ -1880,7 +1914,7 @@ Only for mobile devices in portrait orientation.
     padding: 5% 7%;
     background-color: hsl(from var(--project-card-color) h s calc(l - 10));
     border: .15vmax solid hsl(from var(--project-card-color) h calc(s + 20) calc(l - 30));
-    border-radius: 1.5vmax;
+    border-radius: 4vmax;
     font-weight: bold;
     letter-spacing: 8%;
     color: hsl(from var(--project-card-color) h calc(s - 10) calc(l + 25));
@@ -2202,8 +2236,9 @@ Only for mobile devices in portrait orientation.
         margin: auto;
         padding: 20vh 5vw 25vh 5vw;
         scrollbar-width: none;
+
         & > * {
-            font-size: clamp(1.15rem, 4vw, 3rem);
+            font-size: clamp(1.15rem, 5vw, 4rem);
         }
     }
 
@@ -2212,9 +2247,11 @@ Only for mobile devices in portrait orientation.
     .about-me-content-wrapper header {
         margin-bottom: 5%;
     }
+
     .about-me-content-wrapper h2 {
         font-size: 300%;
     }
+
     .about-me-timeline ul {
         column-gap: 4%;
 
@@ -2222,6 +2259,7 @@ Only for mobile devices in portrait orientation.
             width: 85%;
         }
     }
+
     .about-me-timeline li {
         padding-top: 3%;
 
@@ -2231,12 +2269,15 @@ Only for mobile devices in portrait orientation.
             top: -2%;
         }
     }
+
     .about-me-timeline time {
         font-size: 95%;
     }
+
     .about-me-text h3 {
         margin-block: 15% 3%;
     }
+
     .about-me-text p {
         text-align: left;
         line-height: 1.5;
@@ -2246,12 +2287,14 @@ Only for mobile devices in portrait orientation.
 
     .skills-content-wrapper header {
         position: static;
+
         & h2 {
             font-size: 300%;
             text-align: right;
             padding-right: 6%;
         }
     }
+
     .skills-group {
         position: relative;
         flex: 0 0 auto;
@@ -2265,6 +2308,7 @@ Only for mobile devices in portrait orientation.
             writing-mode: horizontal-tb;
         }
     }
+
     .skills-list {
         width: 100%;
         border-bottom: none;
@@ -2275,44 +2319,148 @@ Only for mobile devices in portrait orientation.
             flex: 0 0 30%;
         }
     }
+
     .skills-group:first-of-type {
         margin-top: 0;
         padding-top: 0;
         border-top: none;
     }
+
     .skills-description {
         position: absolute;
         inset: 103% 5% auto;
         letter-spacing: 10%;
         font-size: 85%;
     }
+
     .skills-description-container {
         display: none;
     }
 
     /* PROJECTS MOBILE LAYOUT */
 
+    .projects-content-wrapper {
+        padding-inline: 2vw;
+    }
+
+    .projects-content-wrapper > header {
+        position: static;
+        margin-bottom: 10%;
+
+        & h2 {
+            font: 180% var(--font-sans);
+        }
+    }
+    
+    .projects-list {
+        height: 270%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+    .projects-list > li {
+        aspect-ratio: .71;
+        height: auto;
+        padding: 5% 4% 3%;
+    }
+
+    .projects-cardsleeve {
+        inset: 0;
+        border-width: .3vmax;
+        border-bottom-left-radius: .5vmax;
+        border-bottom-right-radius: .5vmax;
+    }
+
+    .projects-card {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        border-radius: 1.5vmax;
+    }
+
+    .projects-card-front,
+    .projects-card-back {
+        border-width: .3vmax;
+        border-radius: 1.5vmax;
+
+        &::before {
+            border-width: .5vmax;
+        }
+    }
+
+    .projects-card-title {
+        font-size: 90%;
+    }
+
+    .projects-card-techs {
+        top: 26.5%;
+        bottom: 7.5%;
+        font-size: 75%;
+
+        & li {
+            display: grid;
+            align-content: center;
+            border-width: .2vmax;
+        }
+    }
+
+    .projects-card-description {
+        font-size: 70%;
+    }
+
+    .projects-card-links a {
+        border-width: .3vmax;
+    }
+
+    #projects-item-main-1, 
+    #projects-item-main-2 {
+        aspect-ratio: 1.45;
+        padding: 2.5% 2% 1.5%;
+
+        & .projects-card {
+            width: 100%;
+            margin: 0;
+        }
+        & .projects-card-techs {
+            top: 31%;
+            bottom: 8.5%;
+        }
+    }
+
+    #projects-item-main-1 {
+        grid-area: 2/1/span 1/span 2;
+    }
+
+    #projects-item-main-2 {
+        grid-area: 3/1/span 1/span 2;
+    }
+
     /* CONTACT MOBILE LAYOUT */
 
     .contact-content-wrapper {
         top: 15vh;
     }
+
     .contact-content-wrapper h2 {
         font-size: 180%;
         margin-bottom: 6%;
     }
+
     .contact-content-wrapper h2,
     .contact-fake-text {
         filter: blur(.08vmax);
     }
+
     .contact-fake-text > div {
         font-size: 70%;
         margin-bottom: 2%;
         line-height: 1.4;
     }
+
     .contact-fake-text > div:nth-child(2) {
         display: none;
     }
+
     .contact-form-container {
         height: auto;
         padding: 3% 4% 2.5%;
@@ -2320,6 +2468,7 @@ Only for mobile devices in portrait orientation.
         border-width: .4vmax;
         border-radius: .4vmax;
     }
+
     .contact-form-container form {
         margin-bottom: 6%;
         gap: 4% 0;
@@ -2329,19 +2478,23 @@ Only for mobile devices in portrait orientation.
             "message" 3fr
             "submit" 1fr / auto;
     }
+
     .contact-form-container :is(input, textarea, button) {
         padding: .8vmax;
         border-width: .25vmax;
         border-radius: .4vmax;
     }
+
     .contact-form-container input {
         margin-top: 2%;
     }
+
     .contact-form-container label {
         padding-inline: .8vmax;
         top: -8%;
         right: 1.5vmax;
     }
+
     .contact-form-container a {
         font-size: 80%;
         height: 4.5vmax;
