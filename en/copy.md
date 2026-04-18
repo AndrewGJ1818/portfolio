@@ -14,7 +14,7 @@ I want to combine my background in biology with software development to support 
 
 2022 – 2023	MSc in Bioinformatics & Biostatistics
 
-2024 – 2025	Self-learning in Software Development
+2024 – 2026	Self-learning in Software Development
 
 ### \> Academic Background
 

@@ -14,7 +14,7 @@ Me gustaría combinar mi formación en biología con el desarrollo de software p
 
 2022 – 2023 Máster en Bioinformática y Bioestadística
 
-2024 – 2025 Formación autodidacta en Desarrollo de Software
+2024 – 202 Autoaprendizaje en Desarrollo de Software
 
 \> Formación Académica
 
@@ -64,7 +64,7 @@ Actualmente busco oportunidades de trabajo remoto para aplicar mi formación cie
 
 ### \> Soft Skills
 
-- **Autonomía en la Resolución de Problemas.** Nada me da más satisfacción que abordar un problema por mi cuenta y encontrar la solución de manera independiente.
+- **Autonomía en Resolución de Problemas.** Nada me da más satisfacción que abordar un problema por mi cuenta y encontrar la solución de manera independiente.
 
 - **Atención Meticulosa al Detalle.** Mi rigurosidad siempre me ha dado excelentes resultados en Matemáticas, Estadística y, años después, en Bioestadística.
 
@@ -74,7 +74,7 @@ Actualmente busco oportunidades de trabajo remoto para aplicar mi formación cie
 
 ## No-JS Portfolio
 
-Portfolio sin JS creado como desafío usando CSS moderno en su lugar para lograr interactividad sobre ilustraciones propias.
+Portfolio sin JS como desafío de CSS moderno para lograr interactividad sobre ilustraciones propias.
 
 Ver código!
 
@@ -96,7 +96,7 @@ Mensaje
 
 Enviar
 
-También puede utilizar su servicio de correo electrónico de confianza.
+También puede utilizar su servicio de correo de confianza.
 
 La cumplimentación de este formulario demuestra la conformidad del remitente con los siguientes aspectos:
 
