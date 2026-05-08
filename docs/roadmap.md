@@ -36,7 +36,7 @@
 
 # 5. Final Review & Deployment
 
-- [ ] Accessibility check — color contrast, keyboard navigation, etc.
-- [ ] Basic SEO optimization.
-- [ ] Cross-browser testing.
+- [x] Accessibility check — color contrast, keyboard navigation, etc.
+- [x] Basic SEO optimization.
+- [x] Cross-browser testing.
 - [x] Deploy to GitHub Pages.

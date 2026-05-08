@@ -48,7 +48,7 @@ This portfolio is not only intended to showcase my most relevant projects, but a
 
 ## 📌 Project Status
 
-**🚧 In progress**
+**✔️ Completed**
 
 ## 📄 Additional Documentation
 

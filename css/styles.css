@@ -7,7 +7,6 @@
     1.1 CUSTOM PROPERTIES
     1.2 CSS RESET
     1.3 BACKGROUND IMAGES SETUP
-    1.4 FONTS
 
 2. STRUCTURE
     2.1 PORTFOLIO SECTIONS
@@ -130,14 +129,6 @@ body,
     background-position: center;
     background-size: contain; 
 }
-
-/* FONTS */
-
-/* 
-Container query units are used along all the texts when the browser supports them.
-As a fallback, this system with custom properties is used.
-*/
-
 
 /****************************************
                STRUCTURE
@@ -909,24 +900,28 @@ Only for mobile devices in portrait orientation.
         }        
     }
 
-    body:has(.filing-cabinet > details[open]) .nav {
-        transform: translate(-33%, -45%) rotate(-3deg);
-        pointer-events: none;
+    body:has(.filing-cabinet > details[open]) {
+        & .nav {
+            transform: translate(-33%, -45%) rotate(-3deg);
+            pointer-events: none;
+        }
+
+        & .options {
+            transform: translate(25%, 35%) rotate(3deg) rotateY(180deg);
+            pointer-events: none;
+        }
     }
 
-    body:has(.filing-cabinet > details[open]) .options {
-        transform: translate(25%, 35%) rotate(3deg) rotateY(180deg);
-        pointer-events: none;
-    }
+    body:has(#ui-hide-switch:checked) {
+        & .nav {
+            transform: translate(0) rotate(4deg);
+            pointer-events: auto;
+        }
 
-    body:has(#ui-hide-switch:checked) .nav {
-        transform: translate(0) rotate(4deg);
-        pointer-events: auto;
-    } 
-
-    body:has(#ui-hide-switch:checked) .options {
-        transform: translate(0) rotate(-2deg) rotateY(180deg);
-        pointer-events: auto;
+        & .options {
+            transform: translate(0) rotate(-2deg) rotateY(180deg);
+            pointer-events: auto;
+        }
     } 
 
     @keyframes show-document {
@@ -1207,6 +1202,42 @@ Only for mobile devices in portrait orientation.
     margin-bottom: 5%;
 }
 
+#lang-current,
+.lang-alternative {
+    transition: scale .3s ease-in-out;
+
+    & .lang-flag {
+        transition: filter .3s;
+    }
+}
+
+#lang-current {
+    scale: 1.10;
+}
+
+.lang-alternative {
+    display: block;
+
+    &:hover, &:focus-visible {
+        scale: 1.10;
+        outline: none;
+
+        & .lang-flag {
+            outline: #D4C079 solid .2vmax;
+            outline-offset: .15vmax;
+            filter: drop-shadow(0 0 .3vmax #D4C097);
+        }
+    }
+
+    &:active {
+        scale: 1;
+    }
+}
+
+.lang-list:has(.lang-alternative:is(:hover, :focus-visible)) #lang-current {
+    scale: 1;
+}
+
 .spanish-flag {
     background-image: linear-gradient(#BA2D18 0% 29%, #d9c632 30% 70%, #BA2D18 71% 100%)
 }
@@ -1223,6 +1254,16 @@ Only for mobile devices in portrait orientation.
         linear-gradient(34deg, transparent 45%, #e3e1de 46% 54%, transparent 55%),
         linear-gradient(146deg, transparent 45%, #e3e1de 46% 54%, transparent 55%),
         #12315e;
+}
+
+@supports (font-size: 1cqw) {
+    .options {
+        container-type: inline-size;
+        
+        & > .lang-list {
+            font-size: 6.5cqw;
+        }
+    }
 }
 
 /****************************************
@@ -1536,7 +1577,7 @@ Only for mobile devices in portrait orientation.
     background-position: 100% 100%;
 }
 
-.skills-list summary:hover, .skills-list summary:focus-visible {
+.skills-list :is(summary:hover, summary:focus-visible) {
     scale: 1.05;
     text-shadow: 0 0 10px hsl(from var(--main-text-color) h calc(s + 90) calc(l + 80));
     color: hsl(from var(--main-text-color) h calc(s + 10) calc(l + 20));
@@ -1814,8 +1855,7 @@ Only for mobile devices in portrait orientation.
     }
 }
 
-.projects-item:hover .projects-card, 
-.projects-item:focus-within .projects-card {
+:is(.projects-item:hover, .projects-item:focus-within) .projects-card {
     transform: rotateY(180deg);
 }
 
@@ -2699,8 +2739,8 @@ footer {
 
 .socialmedia-list a {
     transition:
-        background-color 1s,
-        transform 1s ease-in-out;
+        background-color .5s,
+        filter .2s ease-in-out;
     
     &:hover, &:focus-visible {
         background-color: hsl(from var(--light-ui-color) h s calc(l + 10));
