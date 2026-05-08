@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width initial-scale=1.0" />
     <link rel="stylesheet" href="../css/normalize.css" />
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="preload" as="image" href="../src/fcabinet/certificate_large.webp">
+    <link rel="preload" as="image" href="../src/fcabinet/certificate_medium.webp">
+    <link rel="preload" as="image" href="../src/fcabinet/fcabinet_structure_large.webp">
+    <link rel="preload" as="image" href="../src/fcabinet/fcabinet_structure_medium.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,8 +27,16 @@
       sizes="16x16 32x32"
     />
     <link rel="canonical" href="https://AndrewGJ1818.github.io/portfolio/" />
-    <link rel="alternate" hreflang="en" href="https://AndrewGJ1818.github.io/portfolio/en/" />
-    <link rel="alternate" hreflang="es" href="https://AndrewGJ1818.github.io/portfolio/es/" />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://AndrewGJ1818.github.io/portfolio/en/"
+    />
+    <link
+      rel="alternate"
+      hreflang="es"
+      href="https://AndrewGJ1818.github.io/portfolio/es/"
+    />
     <meta name="author" content="Andrew García Jean" />
     <meta
       name="keywords"
@@ -51,7 +63,7 @@
       property="og:url"
       content="https://AndrewGJ1818.github.io/portfolio/es/"
     />
-    <meta property="og:locale" content="es_ES">
+    <meta property="og:locale" content="es_ES" />
     <meta name="twitter:card" content="summary" />
     <meta
       name="twitter:title"
@@ -63,7 +75,7 @@
     />
     <meta
       name="twitter:image"
-      content="ttps://AndrewGJ1818.github.io/portfolio/src/projects/project_portfolio_large.webp"
+      content="https://AndrewGJ1818.github.io/portfolio/src/projects/project_portfolio_large.webp"
     />
     <meta
       name="twitter:url"
@@ -96,13 +108,13 @@
       <div class="options">
         <menu class="lang-list">
           <li>
-            <a class="lang-option" href="/portfolio/en/">
+            <a class="lang-alternative" href="/portfolio/en/">
               <div class="english-flag lang-flag" aria-hidden="true"></div>
               Inglés
             </a>
           </li>
           <li>
-            <div id="lang-current" >
+            <div id="lang-current">
               <div class="spanish-flag lang-flag" aria-hidden="true"></div>
               Español
             </div>
@@ -178,7 +190,7 @@
                     de software. Para un biólogo como yo había mucho por
                     aprender, ya no sobre programación, sino sobre otros temas
                     fundamentales como el hardware, los sistemas operativos o
-                    incluso la mecanografía. Después， me enfoque en el
+                    incluso la mecanografía. Después, me enfoque en el
                     desarrollo web, aprendiendo sobre control de versiones,
                     fundamentos de frontend y backend, y fases del desarrollo.
                     Ya no pienso como un biólogo aporreando teclas, sino como un
@@ -314,8 +326,8 @@
                         </summary>
                         <div class="skills-description">
                           HTML5 semántico, accesibilidad (ARIA), meta tags,
-                          optimización de SEO, formularios y validación de
-                          campos, menejo responsive de recursos.
+                          optimización de SEO, formularios y validación, menejo
+                          responsive de recursos.
                         </div>
                       </details>
                     </li>
@@ -389,8 +401,9 @@
                           Control de Versiones
                         </summary>
                         <div class="skills-description">
-                          Git, GitHub, branching (reset, rebase, cherry-pick),
-                          merging, pull requests, flujos de trabajo.
+                          Git, GitHub, GitLab, branching (reset, rebase,
+                          cherry-pick), merging, pull requests, flujos de
+                          trabajo.
                         </div>
                       </details>
                     </li>
@@ -782,7 +795,11 @@
           </a>
         </li>
         <li>
-          <a href="" aria-describedby="tooltip-cv">
+          <a
+            href="./Andrew_Garcia_Jean_CV_es.pdf"
+            target="_blank"
+            aria-describedby="tooltip-cv"
+          >
             <div
               class="socialmedia-icon socialmedia-icon-3"
               aria-hidden="true"

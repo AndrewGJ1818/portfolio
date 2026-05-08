@@ -22,7 +22,7 @@ Me gradué en Biología e hice un Máster en Bioinformática y Bioestadística. 
 
 \> Transición a Software
 
-Tras finalizar el máster, decidí dar el salto al desarrollo de software. Para un biólogo como yo había mucho por aprender, ya no sobre programación, sino sobre otros temas fundamentales como el hardware, los sistemas operativos o incluso la mecanografía. Después， me enfoque en el desarrollo web, aprendiendo sobre control de versiones, fundamentos de frontend y backend, y fases del desarrollo. Ya no pienso como un biólogo aporreando teclas, sino como un desarrollador.
+Tras finalizar el máster, decidí dar el salto al desarrollo de software. Para un biólogo como yo había mucho por aprender, ya no sobre programación, sino sobre otros temas fundamentales como el hardware, los sistemas operativos o incluso la mecanografía. Después me enfoque en el desarrollo web, aprendiendo sobre control de versiones, fundamentos de frontend y backend, y fases del desarrollo. Ya no pienso como un biólogo aporreando teclas, sino como un desarrollador.
 
 \> Punto Fuerte
 
@@ -48,7 +48,7 @@ Actualmente busco oportunidades de trabajo remoto para aplicar mi formación cie
 
 ### \> Desarrollo de Software
 
-- **HTML.** HTML5 semántico, accesibilidad (ARIA), meta tags, optimización de SEO, formularios y validación de campos, menejo responsive de recursos.
+- **HTML.** HTML5 semántico, accesibilidad (ARIA), meta tags, optimización de SEO, formularios y validación, menejo responsive de recursos.
 
 - **CSS.** Flexbox, Grid, animaciones, anchor positioning, container queries, selectores avanzados, custom properties, funciones CSS.
 
@@ -58,7 +58,7 @@ Actualmente busco oportunidades de trabajo remoto para aplicar mi formación cie
 
 - **Bases de Datos.** SQL, MongoDB, optimización de consultas, operaciones CRUD.
 
-- **Control de Versiones.** Git, GitHub, branching (reset, rebase, cherry-pick), merging, pull requests, flujos de trabajo.
+- **Control de Versiones.** Git, GitHub, GitLab, branching (reset, rebase, cherry-pick), merging, pull requests, flujos de trabajo.
 
 - **Otros Lenguajes y Herramientas.** Bash, R, Lua.
 

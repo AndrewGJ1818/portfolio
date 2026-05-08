@@ -58,7 +58,7 @@ I’m now seeking remote opportunities where I can apply my scientific backgroun
 
 - **Databases.** SQL, MongoDB, query optimization, CRUD.
 
-- **Version Control.** Git, GitHub, branching (reset, rebase, cherry-pick), merging, pull request, workflows.
+- **Version Control.** Git, GitHub, GitLab, branching (reset, rebase, cherry-pick), merging, pull request, workflows.
 
 - **Other Tools & Languages.** Bash, R, Lua.
 
